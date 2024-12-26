@@ -6,7 +6,7 @@ import CustomButton1 from "../common/CustomButton1";
 
 const Header = () => {
   return (
-    <header className="bg-white shadow-md fixed w-full top-0 z-10">
+    <header className="bg-white shadow-md fixed w-full top-0 z-20">
       <nav className="container mx-auto flex items-center justify-between px-6 py-4">
         <div>
           <a href="/" className="flex items-center">

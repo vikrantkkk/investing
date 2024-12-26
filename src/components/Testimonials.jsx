@@ -4,7 +4,6 @@ import Ellipse2 from "../assets/svg/Ellipse2.svg";
 import Ellipse3 from "../assets/svg/Ellipse3.svg";
 import Ellipse4 from "../assets/svg/Ellipse4.svg";
 
-
 const cardData1 = [
   {
     icon: Ellipse2,
@@ -48,7 +47,7 @@ const cardData2 = [
 
 const Testimonials = () => {
   return (
-    <div className="container flex border-b-2 gap-4 h-[160vh] bg-[#F1F1F1]">
+    <div className="container flex  gap-4 h-[160vh] bg-[#F1F1F1]">
       <div className="w-[45%] flex items-center justify-center">
         <div className="mt-6 font-poppins text-center text-[40px] leading-[60px] font-bold ">
           <span className="text-figmaGreen">Testimonials</span> in the From
