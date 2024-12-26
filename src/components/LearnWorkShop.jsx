@@ -1,40 +1,46 @@
 import React from "react";
 import CustomButton1 from "../common/CustomButton1";
 import CustomButton2 from "../common/CustomButton2";
+import image1 from "../assets/svg/image1.svg";
+import image2 from "../assets/svg/image2.svg";
+import image3 from "../assets/svg/image3.svg";
+import image4 from "../assets/svg/image4.svg";
+import image5 from "../assets/svg/image5.svg";
+import image6 from "../assets/svg/image6.svg";
 
 const allImage = [
   {
-    icon: "https://www.gstatic.com/webp/gallery/1.png", // Random Google image URL
+    icon: image1, 
     text1: "Enter Trades Before Big Moves Happen",
     text2:
       "Institutional trading helps you spot market trends & breakouts before they become obvious to everyone else.",
   },
   {
-    icon: "https://www.gstatic.com/webp/gallery/2.png", // Random Google image URL
+    icon: image2, 
     text1: "Avoid Retail Traps",
     text2:
       "Learn to stay ahead of retail traders who often buy when prices are high and sell when prices are low.",
   },
   {
-    icon: "https://www.gstatic.com/webp/gallery/3.png", // Random Google image URL
+    icon: image3, 
     text1: "Trade Like the Big Players",
     text2:
       "Understand the strategies used by banks, hedge funds, and institutions to stay profitable.",
   },
   {
-    icon: "https://www.gstatic.com/webp/gallery/4.png", // Random Google image URL
+    icon: image4, 
     text1: "Simple, Data-Driven Approach",
     text2:
       "No need for fancy indicators or complicated charts, just focus on price, time, and volume.",
   },
   {
-    icon: "https://www.gstatic.com/webp/gallery/5.png", // Random Google image URL
+    icon: image5, 
     text1: "Maximize Your Gains with Risk Management",
     text2:
       "Learn how to protect your capital by using stop losses and proper risk-to-reward ratios.",
   },
   {
-    icon: "https://www.gstatic.com/webp/gallery/3.png", // Random Google image URL
+    icon: image6, 
     text1: "Master Market Psychology",
     text2:
       "Understand how market sentiment affects price movements and how to use this knowledge to your advantage.",
