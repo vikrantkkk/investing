@@ -8,6 +8,8 @@ export default {
         sans: ['"SF Pro Text"', "sans-serif"],
         // Adding Poppins as a fallback or alternative font
         poppins: ['"Poppins"', "sans-serif"],
+        // Adding Inter as a third font option
+        inter: ["Inter", "sans-serif"],
       },
       fontSize: {
         base: ["18px", "20.06px"],

@@ -8,6 +8,7 @@ import Testimonials from "./Testimonials";
 import Mentor from "./Mentor";
 import Traders from "./Traders";
 import Faq from "./Faq";
+import Footer from "./Footer";
 
 const LandingPage = () => {
   return (
@@ -20,6 +21,7 @@ const LandingPage = () => {
       <Mentor/>
       <Traders/>
       <Faq/>
+      <Footer/>
     </MainLayout>
   );
 };

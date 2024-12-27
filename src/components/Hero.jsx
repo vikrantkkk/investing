@@ -28,7 +28,7 @@ const Hero = () => {
           }}
         />
         <div className="absolute bottom-0 z-0">
-          <img src={ceo} alt="CEO" className="w-[300px]" />
+          <img src={ceo} alt="CEO" className="h-[570px]"/>
         </div>
       </div>
 

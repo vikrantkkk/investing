@@ -10,37 +10,37 @@ import image6 from "../assets/svg/image6.svg";
 
 const allImage = [
   {
-    icon: image1, 
+    icon: image1,
     text1: "Enter Trades Before Big Moves Happen",
     text2:
       "Institutional trading helps you spot market trends & breakouts before they become obvious to everyone else.",
   },
   {
-    icon: image2, 
+    icon: image2,
     text1: "Avoid Retail Traps",
     text2:
       "Learn to stay ahead of retail traders who often buy when prices are high and sell when prices are low.",
   },
   {
-    icon: image3, 
+    icon: image3,
     text1: "Trade Like the Big Players",
     text2:
       "Understand the strategies used by banks, hedge funds, and institutions to stay profitable.",
   },
   {
-    icon: image4, 
+    icon: image4,
     text1: "Simple, Data-Driven Approach",
     text2:
       "No need for fancy indicators or complicated charts, just focus on price, time, and volume.",
   },
   {
-    icon: image5, 
+    icon: image5,
     text1: "Maximize Your Gains with Risk Management",
     text2:
       "Learn how to protect your capital by using stop losses and proper risk-to-reward ratios.",
   },
   {
-    icon: image6, 
+    icon: image6,
     text1: "Master Market Psychology",
     text2:
       "Understand how market sentiment affects price movements and how to use this knowledge to your advantage.",
@@ -64,7 +64,11 @@ const LearnWorkShop = () => {
           {allImage.map((item, index) => (
             <div
               key={index}
-              className="cursor-pointer w-80  h-[380px] bg-white p-6 rounded-2xl shadow-md flex flex-col items-center transition-all duration-300 ease-in-out hover:shadow-[rgba(0,_0,_0,_0.09)_0px_2px_1px,_rgba(0,_0,_0,_0.09)_0px_4px_2px,_rgba(0,_0,_0,_0.09)_0px_8px_4px,_rgba(0,_0,_0,_0.09)_0px_16px_8px,_rgba(0,_0,_0,_0.09)_0px_32px_16px]"
+              className={`cursor-pointer w-80 h-[380px] bg-white p-6 rounded-2xl flex flex-col items-center transition-all duration-300 ease-in-out ${
+                index === 1
+                  ? "shadow-[rgba(0,_0,_0,_0.09)_0px_2px_1px,_rgba(0,_0,_0,_0.09)_0px_4px_2px,_rgba(0,_0,_0,_0.09)_0px_8px_4px,_rgba(0,_0,_0,_0.09)_0px_16px_8px,_rgba(0,_0,_0,_0.09)_0px_32px_16px]"
+                  : "shadow-md hover:shadow-[rgba(0,_0,_0,_0.09)_0px_2px_1px,_rgba(0,_0,_0,_0.09)_0px_4px_2px,_rgba(0,_0,_0,_0.09)_0px_8px_4px,_rgba(0,_0,_0,_0.09)_0px_16px_8px,_rgba(0,_0,_0,_0.09)_0px_32px_16px]"
+              }`}
             >
               {/* Image Section */}
               <img
