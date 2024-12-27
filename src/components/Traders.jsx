@@ -14,7 +14,7 @@ const imageData = [
 ];
 const Traders = () => {
   return (
-    <div className="container relative flex border-b-2 flex-col gap-20  h-[120vh] w-full bg-[#F1F1F1]">
+    <div className="relative flex border-b-2 flex-col gap-20  h-[120vh] w-screen bg-[#F1F1F1]">
       <div className="mt-6 font-poppins text-center text-[40px] leading-[60px] font-bold ">
         Ready To Unlock Secrets Of
         <br />

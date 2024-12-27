@@ -5,7 +5,7 @@ import P from "../assets/svg/P.svg";
 
 const Mentor = () => {
   return (
-    <div className="container flex  justify-center items-center border-b-2 gap-4  h-[100vh] w-full bg-[#F1F1F1]">
+    <div className="flex  justify-center items-center border-b-2 gap-4  h-[100vh] w-screen bg-[#F1F1F1]">
       <div className="bg-[#0E0F19] flex h-[36rem] w-[75rem] rounded-2xl">
         <div className="w-[50%] flex">
           <div className="relative flex gap-20">

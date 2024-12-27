@@ -36,7 +36,7 @@ const allIcon = [
 
 const WorkShop = () => {
   return (
-    <div className="container flex border-b-2 flex-col gap-8  h-[90vh] w-full bg-[#F1F1F1]">
+    <div className=" flex border-b-2 flex-col gap-8  h-[90vh] w-screen bg-[#F1F1F1]">
       {/* Heading Section */}
       <div className="mt-6 font-poppins text-center text-[40px] leading-[60px] font-bold ">
         <span className="text-figmaGreen">4 Biggest Reasons</span> For You{" "}

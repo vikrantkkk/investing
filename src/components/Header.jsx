@@ -6,8 +6,8 @@ import CustomButton1 from "../common/CustomButton1";
 
 const Header = () => {
   return (
-    <header className="bg-white shadow-md fixed w-full top-0 z-20">
-      <nav className="container mx-auto flex items-center justify-between px-6 py-4">
+    <header className="bg-white border-b fixed w-screen top-0 z-20">
+      <nav className="container mx-auto flex items-center justify-between px-10 py-4">
         <div>
           <a href="/" className="flex items-center">
             <img src={logo} alt="MyBrand Logo" className="h-[50px] w-[167px]" />
@@ -21,7 +21,7 @@ const Header = () => {
             Contact Us
           </div>
         </div>
-        <div className="flex gap-4 items-center justify-center">
+        <div className="flex gap-6 items-center justify-center">
           <a href="/" className="flex items-center">
             <img
               src={whatsappLOgo}

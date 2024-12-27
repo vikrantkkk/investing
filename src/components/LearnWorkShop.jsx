@@ -48,7 +48,7 @@ const allImage = [
 ];
 const LearnWorkShop = () => {
   return (
-    <div className="container flex border-b-2 flex-col gap-4 w-full  h-[170vh] bg-[#F1F1F1]">
+    <div className="flex border-b-2 flex-col gap-4 w-screen  h-[170vh] bg-[#F1F1F1]">
       <div className="flex gap-6 p-4 bg-[#F9FAFB] justify-center items-center flex-row">
         Call. Offer Expires In Sign Up Now And Get 50% Discount + Free E-Book +
         Free Consultation Call. Offer Expires In
