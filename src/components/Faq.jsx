@@ -39,7 +39,7 @@ const Faq = () => {
   };
 
   return (
-    <div className="container border-b-2 flex flex-col h-[90vh] gap-12 py-8 px-4 bg-[#F1F1F1]">
+    <div className="container border-b-2 flex flex-col h-[90vh] w-full gap-12 py-8 px-4 bg-[#F1F1F1]">
       <div className="flex mt-6">
         {/* Header Section */}
         <div className="w-[40%] flex justify-center">

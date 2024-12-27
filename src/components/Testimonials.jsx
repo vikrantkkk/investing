@@ -47,7 +47,7 @@ const cardData2 = [
 
 const Testimonials = () => {
   return (
-    <div className="container flex  gap-4 h-[160vh] bg-[#F1F1F1]">
+    <div className="container flex w-full  gap-4 h-[160vh] bg-[#F1F1F1]">
       <div className="w-[45%] flex items-center justify-center">
         <div className="mt-6 font-poppins text-center text-[40px] leading-[60px] font-bold ">
           <span className="text-figmaGreen">Testimonials</span> in the From

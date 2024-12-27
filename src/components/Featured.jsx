@@ -39,7 +39,7 @@ const strategies = [
 
 const Featured = () => {
   return (
-    <section className="h-screen flex flex-col gap-8 bg-[#F1F1F1] border-b-2">
+    <section className="h-screen w-full flex flex-col gap-8 bg-[#F1F1F1] border-b-2">
       {/* Cryptos Section */}
       <div className="flex gap-6 p-2 bg-[#F9FAFB] justify-center items-center flex-row">
         {cryptos.map((crypto, index) => (

@@ -13,7 +13,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative container flex h-[100vh] bg-[#F1F1F1]"
+      className="relative container flex h-[100vh] w-full bg-[#F1F1F1]"
     >
       {/* Left Section with Circle Logo as background */}
       <div className="w-[50%] relative flex justify-center items-center">
