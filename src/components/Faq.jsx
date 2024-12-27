@@ -15,7 +15,7 @@ const faqData = [
     id: 2,
     question: "How do I start trading?",
     answer:
-      "To start trading, you need to open a brokerage account, learn the basics of stock markets, and begin with small investments.",
+      "To start trading, you need to open a account, learn the basics of stock markets, and begin with small investments.",
   },
   {
     id: 3,
