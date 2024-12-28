@@ -45,7 +45,7 @@ const WorkShop = () => {
         <div className="border-2 w-[200px] border-figmaGreen mx-auto mt-2" />
       </div>
       {/* Cards Section */}
-      <div className="flex gap-8 mt-8 justify-center">
+      <div className="flex gap-8 mt-8 flex-wrap justify-center">
         {allIcon.map((item, index) => (
           <div
             key={index}

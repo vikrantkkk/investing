@@ -60,7 +60,7 @@ const LearnWorkShop = () => {
         <div className="border-2 w-[200px] border-figmaGreen mx-auto mt-2" />
       </div>
       <div className="flex justify-center mt-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-center w-full max-w-5xl">
+        <div className="grid flex-wrap grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-center w-full max-w-5xl">
           {allImage.map((item, index) => (
             <div
               key={index}
@@ -70,14 +70,13 @@ const LearnWorkShop = () => {
                   : "shadow-md hover:shadow-[rgba(0,_0,_0,_0.09)_0px_2px_1px,_rgba(0,_0,_0,_0.09)_0px_4px_2px,_rgba(0,_0,_0,_0.09)_0px_8px_4px,_rgba(0,_0,_0,_0.09)_0px_16px_8px,_rgba(0,_0,_0,_0.09)_0px_32px_16px]"
               }`}
             >
-              {/* Image Section */}
+          
               <img
                 src={item.icon}
                 alt={`icon-${index}`}
                 className="w-full h-[150px] object-cover mb-6 rounded-md"
               />
 
-              {/* Text Section */}
               <div className="flex  flex-col items-start gap-4">
                 <div className="font-poppins text-[20px] leading-8 text-start font-bold text-[#0E0F19]">
                   {item.text1}
@@ -90,7 +89,7 @@ const LearnWorkShop = () => {
           ))}
         </div>
       </div>
-      {/* button section */}
+
       <div className="flex mt-8 justify-center gap-8">
         <CustomButton1
           sx={{
