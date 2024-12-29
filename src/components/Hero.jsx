@@ -10,6 +10,7 @@ import globe from "../assets/svg/globe.svg";
 import hero1 from "../assets/svg/hero1.svg";
 import hero2 from "../assets/svg/hero2.svg";
 import hero3 from "../assets/svg/hero3.svg";
+import correct from "../assets/svg/correct.svg";
 import { Box, Typography } from "@mui/material";
 
 const Hero = () => {
@@ -31,13 +32,37 @@ const Hero = () => {
               Parang Mehta
             </div>
             <div className="flex flex-col md:gap-2">
-              <div className="font-poppins font-normal md:text-[16px] text-[8px] md:leading-6 leading-4 text-[#0E0F19B2]/[0.7]">
+              <div className="flex justify-start items-center  font-poppins font-normal md:text-[16px] text-[8px] md:leading-6 leading-4 text-[#0E0F19B2]/[0.7]">
+                <span className="w-[20%]">
+                  {" "}
+                  <img
+                    src={correct}
+                    alt="correct"
+                    className="md:h-[24px] h-[12px] md:w-[24px] w-[12px]"
+                  />
+                </span>{" "}
                 SEBI Registered Research Analyst INH000013925
               </div>
-              <div className="font-poppins font-normal md:text-[16px] text-[8px] md:leading-6 leading-4 text-[#0E0F19B2]/[0.7]">
+              <div className=" flex justify-start items-center gap-2 font-poppins font-normal md:text-[16px] text-[8px] md:leading-6 leading-4 text-[#0E0F19B2]/[0.7]">
+                <span>
+                  {" "}
+                  <img
+                    src={correct}
+                    alt="correct"
+                    className="md:h-[24px] h-[12px] md:w-[24px] w-[12px]"
+                  />
+                </span>{" "}
                 10+ Years Trading Experience
               </div>
-              <div className="font-poppins font-normal md:text-[16px] text-[8px] md:leading-6 leading-4 text-[#0E0F19B2]/[0.7]">
+              <div className="flex justify-start items-center gap-2 font-poppins font-normal md:text-[16px] text-[8px] md:leading-6 leading-4 text-[#0E0F19B2]/[0.7]">
+                <span>
+                  {" "}
+                  <img
+                    src={correct}
+                    alt="correct"
+                    className="md:h-[24px] h-[12px] md:w-[24px] w-[12px]"
+                  />
+                </span>{" "}
                 Trained 50,000+ People
               </div>
             </div>
