@@ -6,27 +6,59 @@ import Rectangle9 from "../assets/svg/Rectangle9.svg";
 import Rectangle10 from "../assets/svg/Rectangle10.svg";
 import CustomButton1 from "../common/CustomButton1";
 import CustomButton2 from "../common/CustomButton2";
+import { height } from "@mui/system";
 
 const imageData = [
-  { id: 1, src: imageblur1, alt: "Image Blur 1" },
-  { id: 2, src: imageblur2, alt: "Image Blur 2" },
-  { id: 3, src: imagemiddle, alt: "Image Middle" },
+  {
+    id: 1,
+    src: imageblur1,
+    alt: "Image Blur 1",
+    height: "200px",
+    width: "200px",
+  },
+  {
+    id: 2,
+    src: imageblur2,
+    alt: "Image Blur 2",
+    height: "242px",
+    width: "242px",
+  },
+  {
+    id: 3,
+    src: imagemiddle,
+    alt: "Image Middle",
+    height: "200px",
+    width: "200px",
+  },
 ];
 const Traders = () => {
   return (
-    <div className="relative flex border-b-2 flex-col gap-20  h-[120vh] w-screen bg-[#F1F1F1]">
-      <div className="mt-6 font-poppins text-center text-[40px] leading-[60px] font-bold ">
+    <div className="relative flex border-b-2 flex-col md:gap-20 gap-12  h-[120vh] w-screen bg-[#F1F1F1]">
+      <div className="md:mt-6 mt-10 font-poppins text-center md:text-[40px] text-[32px] leading-[48px] md:leading-[60px] font-bold ">
         Ready To Unlock Secrets Of
         <br />
         <span className="text-figmaGreen">Successful Traders?</span>
         <div className="border-2 w-[200px] border-figmaGreen mx-auto mt-2" />
       </div>
-      <div className="flex justify-center gap-4">
+      <div className="md:flex hidden justify-center items-center gap-4">
         {imageData.map((image) => (
-          <img key={image.id} src={image.src} alt={image.alt} className="" />
+          <img key={image.id} src={image.src} alt={image.alt} />
         ))}
       </div>
-      <div className="flex justify-center gap-8">
+      <div className="md:hidden flex justify-center items-center gap-4">
+        {imageData.map((image) => (
+          <img
+            key={image.id}
+            src={image.src}
+            alt={image.alt}
+            style={{
+              width: image.width,
+              height: image.height,
+            }}
+          />
+        ))}
+      </div>
+      <div className="flex md:flex-row w-full flex-col justify-center md:items-start items-center md:gap-8 gap-4 mt-4">
         <CustomButton1
           sx={{
             width: "276px",
@@ -45,12 +77,22 @@ const Traders = () => {
       <img
         src={Rectangle9}
         alt={Rectangle9}
-        className="z-10 absolute right-0"
+        className="z-10 md:block hidden  absolute right-0"
       />
       <img
         src={Rectangle10}
         alt={Rectangle10}
-        className="z-10 absolute left-0"
+        className="z-10 md:block hidden absolute left-0"
+      />
+      <img
+        src={Rectangle9}
+        alt={Rectangle9}
+        className="absolute -right-12 top-48 h-1/3"
+      />
+      <img
+        src={Rectangle10}
+        alt={Rectangle10}
+        className="absolute -left-12 top-48 h-1/3"
       />
     </div>
   );
