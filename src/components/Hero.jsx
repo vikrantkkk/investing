@@ -27,7 +27,7 @@ const Hero = () => {
           <img src={ceo} alt="CEO" className="md:h-[570px] h-[363px]" />
         </div>
         <div className="md:h-[200px] h-[100px] shadow-2xl md:w-[300px] w-[173px] flex-wrap bg-white z-10 absolute md:bottom-10 bottom-4 md:left-44 left-16 rounded-md">
-          <div className="flex flex-col md:gap-2 md:p-4 p-2">
+          <div className="flex flex-col md:gap-2 gap-1 md:p-4 p-2">
             <div className="font-poppins font-semibold md:text-[20px] text-[11px] md:leading-8 leading-4 text-[#0E0F19]">
               Parang Mehta
             </div>
@@ -101,7 +101,7 @@ const Hero = () => {
           With
           <br /> a Proven System
         </div>
-        <div className="font-poppins text-center md:hidden block md:text-[48px] text-[28px] md:leading-[70px] leading-10 font-bold">
+        <div className="font-poppins text-center md:hidden block md:text-[48px] text-[29px] md:leading-[70px] leading-10 font-bold">
           Crack the Code to Trade
           <br /> in the{" "}
           <span className="text-figmaGreen">

@@ -48,19 +48,23 @@ const allImage = [
 ];
 const LearnWorkShop = () => {
   return (
-    <div className="flex border-b-2 flex-col gap-4 w-screen  h-[170vh] bg-[#F1F1F1]">
-      <div className="flex gap-6 p-4 bg-[#F9FAFB] justify-center items-center flex-row">
-        Call. Offer Expires In Sign Up Now And Get 50% Discount + Free E-Book +
-        Free Consultation Call. Offer Expires In
+    <div className="flex border-b-2 flex-col gap-4 w-screen  md:h-[170vh] md:px-0 px-2 h-auto bg-[#F1F1F1]">
+      <div className="md:flex hidden gap-6 p-4 bg-[#F9FAFB] justify-center items-center flex-row">
+        Call. Offer Expires In Sign Up Now And Get 50% Discount
       </div>
-      <div className="mt-2 font-poppins text-center text-[40px] leading-[60px] font-bold ">
+      <div className="mt-8 md:block hidden font-poppins text-center text-[40px] leading-[60px] font-bold ">
         What You Will <span className="text-figmaGreen">Learn</span> in the{" "}
         <br />
         Workshop
         <div className="border-2 w-[200px] border-figmaGreen mx-auto mt-2" />
       </div>
-      <div className="flex justify-center mt-8">
-        <div className="grid flex-wrap grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-center w-full max-w-5xl">
+      <div className="md:mt-8 mt-12 md:hidden block font-poppins text-center text-[32px] leading-[48px] font-bold ">
+        What You Will <span className="text-figmaGreen">Learn</span>
+        <br /> in the Workshop
+        <div className="border-2 w-[200px] border-figmaGreen mx-auto mt-2" />
+      </div>
+      <div className="flex justify-center items-center mt-8">
+        <div className="grid md:grid-cols-3 grid-cols-1 gap-8">
           {allImage.map((item, index) => (
             <div
               key={index}
@@ -70,14 +74,13 @@ const LearnWorkShop = () => {
                   : "shadow-md hover:shadow-[rgba(0,_0,_0,_0.09)_0px_2px_1px,_rgba(0,_0,_0,_0.09)_0px_4px_2px,_rgba(0,_0,_0,_0.09)_0px_8px_4px,_rgba(0,_0,_0,_0.09)_0px_16px_8px,_rgba(0,_0,_0,_0.09)_0px_32px_16px]"
               }`}
             >
-          
               <img
                 src={item.icon}
                 alt={`icon-${index}`}
                 className="w-full h-[150px] object-cover mb-6 rounded-md"
               />
 
-              <div className="flex  flex-col items-start gap-4">
+              <div className="flex flex-col items-start gap-4">
                 <div className="font-poppins text-[20px] leading-8 text-start font-bold text-[#0E0F19]">
                   {item.text1}
                 </div>
@@ -90,7 +93,7 @@ const LearnWorkShop = () => {
         </div>
       </div>
 
-      <div className="flex mt-8 justify-center gap-8">
+      <div className="flex md:flex-row w-full flex-col justify-center md:items-start items-center md:gap-8 gap-4 md:mt-4 mt-8">
         <CustomButton1
           sx={{
             width: "276px",

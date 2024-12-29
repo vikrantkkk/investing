@@ -47,16 +47,16 @@ const cardData2 = [
 
 const Testimonials = () => {
   return (
-    <div className="flex w-screen  gap-4 h-[160vh] bg-[#F1F1F1]">
-      <div className="w-[45%] flex items-center justify-center">
-        <div className="mt-6 font-poppins text-center text-[40px] leading-[60px] font-bold ">
-          <span className="text-figmaGreen">Testimonials</span> in the From
+    <div className="flex md:flex-row flex-col w-screen  gap-8  md:h-[160vh] h-auto md:px-0 px-2 bg-[#F1F1F1]">
+      <div className="md:w-[45%] w-full flex  items-center justify-center">
+        <div className="md:mt-6 mt-12 font-poppins text-center md:text-[40px] text-[32px] leading-[48px] md:leading-[60px] font-bold ">
+          <span className="text-figmaGreen">Testimonials</span> From
           <br />
           Past Attendees
           <div className="border-2 w-[200px] border-figmaGreen mx-auto mt-2" />
         </div>
       </div>
-      <div className="flex-1 flex gap-8 items-center">
+      <div className="flex-1 flex md:flex-row flex-col gap-8 items-center md:mt-0 mt-8">
         <div className="flex flex-col gap-8">
           {cardData1.map((item, index) => (
             <div
@@ -93,8 +93,8 @@ const Testimonials = () => {
             </div>
           ))}
         </div>
-        <div className="flex flex-col gap-1 mb-8">
-          {cardData2.map((item,index) => (
+        <div className="flex flex-col md:gap-1 gap-8 md:mb-8">
+          {cardData2.map((item, index) => (
             <div
               key={index}
               style={{ width: 300, height: "auto" }}
