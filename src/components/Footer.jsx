@@ -5,7 +5,7 @@ import instagram from "../assets/svg/instagram.svg";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col justify-center items-center md:h-[90vh] h-auto w-screen gap-8 py-8 pb-64 px-4 bg-[#F1F1F1]">
+    <footer className="flex flex-col justify-center items-center md:h-[90vh] h-auto w-screen gap-8 py-8 px-4 bg-[#F1F1F1]">
       <div>
         <a href="/" className="flex justify-center items-center">
           <img src={logo} alt="MyBrand Logo" className="h-[50px] w-[167px]" />
@@ -51,7 +51,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="border-b-4 md:w-[90%] w-full md:gap-0 gap-4 text-[#00000033]/[0.2]" />
-      <div className="flex w-[80%] md:gap-0 gap-4 items-center justify-center flex-col">
+      <div className="flex w-[80%] items-center justify-center flex-col">
         <div className="text-center font-light text-[14px] leading-4 text-[#00000033]/[0.7]">
           2024 StockWiz Technologies LLP. All rights reserved.
         </div>
