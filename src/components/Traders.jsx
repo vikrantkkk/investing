@@ -33,7 +33,7 @@ const imageData = [
 ];
 const Traders = () => {
   return (
-    <div className="relative flex border-b-2 flex-col md:gap-20 gap-12  h-[120vh] w-screen bg-[#F1F1F1]">
+    <div className="relative flex md:border-b-2 flex-col md:gap-20 gap-14  md:h-[120vh] h-auto w-screen bg-[#F1F1F1]">
       <div className="md:mt-6 mt-10 font-poppins text-center md:text-[40px] text-[32px] leading-[48px] md:leading-[60px] font-bold ">
         Ready To Unlock Secrets Of
         <br />
@@ -87,12 +87,12 @@ const Traders = () => {
       <img
         src={Rectangle9}
         alt={Rectangle9}
-        className="absolute -right-12 top-48 h-1/3"
+        className="absolute -right-10 top-52 h-1/2"
       />
       <img
         src={Rectangle10}
         alt={Rectangle10}
-        className="absolute -left-12 top-48 h-1/3"
+        className="absolute -left-10 top-52 h-1/2"
       />
     </div>
   );
