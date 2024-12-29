@@ -60,7 +60,7 @@ const Testimonials = () => {
         <div className="flex flex-col gap-8">
           {cardData1.map((item, index) => (
             <div
-              key={item.id}
+              key={index}
               style={{ width: 300, height: "auto" }}
               className={`bg-white p-6 rounded-2xl ${
                 index === 0 &&
@@ -94,9 +94,9 @@ const Testimonials = () => {
           ))}
         </div>
         <div className="flex flex-col gap-1 mb-8">
-          {cardData2.map((item) => (
+          {cardData2.map((item,index) => (
             <div
-              key={item.id}
+              key={index}
               style={{ width: 300, height: "auto" }}
               className="bg-white cursor-pointer p-6 rounded-2xl shadow-md flex flex-col transition-all duration-300 ease-in-out hover:shadow-[rgba(0,_0,_0,_0.09)_0px_2px_1px,_rgba(0,_0,_0,_0.09)_0px_4px_2px,_rgba(0,_0,_0,_0.09)_0px_8px_4px,_rgba(0,_0,_0,_0.09)_0px_16px_8px,_rgba(0,_0,_0,_0.09)_0px_32px_16px]"
             >
