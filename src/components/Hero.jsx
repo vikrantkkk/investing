@@ -18,7 +18,7 @@ const Hero = () => {
       id="hero"
       className="flex md:flex-row flex-col-reverse md:h-[100vh] h-auto md:px-0 px-2 w-screen bg-[#F1F1F1]"
     >
-      <div className="md:w-[50%] w-full md:h-auto h-[70vh] relative flex  justify-center items-center">
+      <div className="md:w-[50%] w-full md:h-auto h-[50vh] relative flex  justify-center items-center">
         <div className="absolute md:block hidden bottom-44 left-36 z-10">
           <img src={circleLogo} alt="CEO" className="w-[95%]" />
         </div>
@@ -62,7 +62,7 @@ const Hero = () => {
           +13.20 (+4.65%)
         </div>
       </div>
-      <div className="md:w-[50%] w-full md:h-auto h-[70vh]  flex flex-col md:gap-4 gap-2  justify-center md:items-start items-center">
+      <div className="md:w-[50%] w-full md:h-auto h-[50vh]  flex flex-col md:gap-4 gap-2  justify-center md:items-start items-center">
         <div className="font-poppins p-2 font-normal text-figmaGreen rounded-[8px] w-[271px] bg-greenbackgrond">
           <span className="font-semibold text-[16px] leading-6">50000+</span>{" "}
           Traders Already Joined
