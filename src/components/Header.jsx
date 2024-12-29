@@ -54,7 +54,7 @@ const Header = () => {
           <div className="md:block hidden">
             <CustomButton1 className="shadow-none">Sign Up</CustomButton1>
           </div>
-          <div>
+          <div className="md:hidden block">
             <TemporaryDrawer />
           </div>
         </div>
