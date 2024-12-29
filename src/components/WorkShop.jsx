@@ -36,7 +36,7 @@ const allIcon = [
 
 const WorkShop = () => {
   return (
-    <div className=" flex border-b-2 flex-col md:gap-8 gap-4  md:h-[90vh] h-auto w-screen md:px-0 px-2 bg-[#F1F1F1]">
+    <div className=" flex md:border-b-2 flex-col md:gap-8 gap-4  md:h-[90vh] h-auto w-screen md:px-0 px-2 bg-[#F1F1F1]">
       <div className="mt-16 md:hidden flex  p-4 bg-[#F9FAFB] justify-center items-center flex-row">
         Sign Up Now And Get 50% Discount
       </div>
