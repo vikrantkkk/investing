@@ -3,6 +3,7 @@ import Ellipse1 from "../assets/svg/Ellipse1.svg";
 import Ellipse2 from "../assets/svg/Ellipse2.svg";
 import Ellipse3 from "../assets/svg/Ellipse3.svg";
 import Ellipse4 from "../assets/svg/Ellipse4.svg";
+import rocket from "../assets/svg/rocket.svg";
 
 const cardData1 = [
   {
@@ -47,7 +48,7 @@ const cardData2 = [
 
 const Testimonials = () => {
   return (
-    <div className="flex md:flex-row flex-col w-screen  gap-8  md:h-[160vh] h-auto md:px-0 px-2 bg-[#F1F1F1]">
+    <div className="relative flex md:flex-row flex-col w-screen  gap-8  md:h-[160vh] ld:h-[130vh] h-auto md:px-0 px-4 bg-[#F1F1F1]">
       <div className="md:w-[45%] w-full flex  items-center justify-center">
         <div className="md:mt-6 mt-12 font-poppins text-center md:text-[40px] text-[32px] leading-[48px] md:leading-[60px] font-bold ">
           <span className="text-figmaGreen">Testimonials</span> From
@@ -56,13 +57,13 @@ const Testimonials = () => {
           <div className="border-2 w-[200px] border-figmaGreen mx-auto mt-2" />
         </div>
       </div>
-      <div className="flex-1 flex md:flex-row flex-col gap-8 items-center md:mt-0 mt-8">
-        <div className="flex flex-col gap-8">
+      <div className="flex-1 w-full flex md:flex-row flex-col gap-8 items-center md:mt-0 mt-8">
+        <div className="flex  flex-col gap-8">
           {cardData1.map((item, index) => (
             <div
               key={index}
               style={{ width: 300, height: "auto" }}
-              className={`bg-white p-6 rounded-2xl ${
+              className={`bg-white p-8 rounded-2xl ${
                 index === 0 &&
                 "shadow-[rgba(0,_0,_0,_0.09)_0px_2px_1px,_rgba(0,_0,_0,_0.09)_0px_4px_2px,_rgba(0,_0,_0,_0.09)_0px_8px_4px,_rgba(0,_0,_0,_0.09)_0px_16px_8px,_rgba(0,_0,_0,_0.09)_0px_32px_16px]"
               } flex flex-col transition-all duration-300 ease-in-out hover:shadow-[rgba(0,_0,_0,_0.09)_0px_2px_1px,_rgba(0,_0,_0,_0.09)_0px_4px_2px,_rgba(0,_0,_0,_0.09)_0px_8px_4px,_rgba(0,_0,_0,_0.09)_0px_16px_8px,_rgba(0,_0,_0,_0.09)_0px_32px_16px]`}
@@ -127,6 +128,11 @@ const Testimonials = () => {
           ))}
         </div>
       </div>
+      <img
+        src={rocket}
+        alt="rocket"
+        className="md:w-[100px] w-[60px] absolute  md:top-24 top-36 md:left-32 left-4"
+      />
     </div>
   );
 };

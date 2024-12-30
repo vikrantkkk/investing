@@ -3,6 +3,7 @@ import one from "../assets/svg/01.svg";
 import two from "../assets/svg/02.svg";
 import three from "../assets/svg/03.svg";
 import four from "../assets/svg/04.svg";
+import rupaiya from "../assets/svg/rupaiya.svg";
 import CustomButton1 from "../common/CustomButton1";
 import CustomButton2 from "../common/CustomButton2";
 
@@ -36,12 +37,12 @@ const allIcon = [
 
 const WorkShop = () => {
   return (
-    <div className=" flex md:border-b-2 flex-col md:gap-8 gap-4  md:h-[90vh] h-auto w-screen md:px-0 px-2 bg-[#F1F1F1]">
-      <div className="mt-16 md:hidden flex  p-4 bg-[#F9FAFB] justify-center items-center flex-row">
+    <div className="relative flex md:border-b-2 flex-col md:gap-8 ld:gap-16 gap-4  md:h-[90vh] h-auto w-screen  bg-[#F1F1F1]">
+      <div className="mt-12 w-full md:hidden flex  p-4 bg-[#F9FAFB] justify-center items-center flex-row">
         Sign Up Now And Get 50% Discount
       </div>
       {/* Heading Section */}
-      <div className="font-poppins md:block hidden text-center text-[40px] leading-[60px] font-bold ">
+      <div className="md:mt-8 font-poppins md:block hidden text-center text-[40px] leading-[60px] font-bold ">
         <span className="text-figmaGreen">4 Biggest Reasons</span> For You{" "}
         <br />
         to Join the Workshop
@@ -54,11 +55,11 @@ const WorkShop = () => {
         <div className="border-2 w-[200px] border-figmaGreen mx-auto mt-2" />
       </div>
       {/* Cards Section */}
-      <div className="flex md:gap-8 gap-4 mt-8 flex-wrap justify-center">
+      <div className="flex w-full md:gap-8 ld:gap-20 gap-4 mt-8 flex-wrap justify-center md:px-0 px-4">
         {allIcon.map((item, index) => (
           <div
             key={index}
-            className={`md:w-64 w-full cursor-pointer scale-90 h-[300px] bg-white p-6 rounded-2xl flex flex-col items-start transition-all duration-300 ease-in-out ${
+            className={`md:w-64 ld:w-72 w-full cursor-pointer scale-90 h-[300px] bg-white p-6 rounded-2xl flex flex-col items-start transition-all duration-300 ease-in-out ${
               index === 0
                 ? "shadow-[rgba(0,_0,_0,_0.09)_0px_2px_1px,_rgba(0,_0,_0,_0.09)_0px_4px_2px,_rgba(0,_0,_0,_0.09)_0px_8px_4px,_rgba(0,_0,_0,_0.09)_0px_16px_8px,_rgba(0,_0,_0,_0.09)_0px_32px_16px]"
                 : "shadow-md hover:shadow-[rgba(0,_0,_0,_0.09)_0px_2px_1px,_rgba(0,_0,_0,_0.09)_0px_4px_2px,_rgba(0,_0,_0,_0.09)_0px_8px_4px,_rgba(0,_0,_0,_0.09)_0px_16px_8px,_rgba(0,_0,_0,_0.09)_0px_32px_16px]"
@@ -81,7 +82,7 @@ const WorkShop = () => {
         ))}
       </div>
       {/* button section */}
-      <div className="flex md:flex-row w-full flex-col justify-center md:items-start items-center md:gap-8 gap-4 md:mt-4 mt-8">
+      <div className="flex md:flex-row w-full flex-col justify-center md:items-start items-center md:gap-8 gap-4 md:mt-4 ld:mt-12 mt-8">
         <CustomButton1
           sx={{
             width: "276px",
@@ -97,6 +98,7 @@ const WorkShop = () => {
           Join Now (Hindi) at ₹199
         </CustomButton2>
       </div>
+      <img src={rupaiya} alt="rupaiya" className="md:w-[100px] w-[60px] absolute md:top-10 top-60 md:right-20 right-4" />
     </div>
   );
 };

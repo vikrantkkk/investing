@@ -1,9 +1,11 @@
 import React from "react";
 import { cryptos } from "../utils/Cryptos";
-import hindustan from "../assets/svg/hindustan.svg";
-import cnbc from "../assets/svg/cnbc.svg";
-import ted from "../assets/svg/ted.svg";
-import business from "../assets/svg/business.svg";
+import cnbc from "../assets/png/cnbc.png";
+import financial from "../assets/png/financial.png";
+import hindustan from "../assets/png/hindustan.png";
+import moneycontrol from "../assets/png/moneycontrol.png";
+import tedx from "../assets/png/tedx.png";
+import theprint from "../assets/png/theprint.png";
 import Frame1 from "../assets/svg/Frame1.svg";
 import Frame2 from "../assets/svg/Frame2.svg";
 import Frame3 from "../assets/svg/Frame3.svg";
@@ -13,10 +15,12 @@ import CustomButton2 from "../common/CustomButton2";
 
 // Corrected logos array with specific widths and heights
 const logos = [
-  { icon: business, name: "Business Standard", width: 200 },
-  { icon: ted, name: "TED", width: 100 },
-  { icon: hindustan, name: "Hindustan Times", width: 230 },
-  { icon: cnbc, name: "CNBC", width: 230 },
+  { icon: cnbc, name: "cnbc" },
+  { icon: financial, name: "financial" },
+  { icon: hindustan, name: "hindustan" },
+  { icon: moneycontrol, name: "moneycontrol" },
+  { icon: tedx, name: "tedx" },
+  { icon: theprint, name: "theprint" },
 ];
 const strategies = [
   {
@@ -39,9 +43,9 @@ const strategies = [
 
 const Featured = () => {
   return (
-    <section className="h-screen w-screen flex flex-col gap-8 bg-[#F1F1F1] md:border-b-2">
+    <section className="md:h-[100vh] h-auto w-screen flex flex-col gap-8 ld:gap-20 md:px-0 px-4 bg-[#F1F1F1] md:border-b-2">
       {/* Cryptos Section */}
-      <div className="flex gap-6 p-2 bg-[#F9FAFB] justify-center items-center">
+      <div className="flex gap-6 w-screen p-2 bg-[#F9FAFB] justify-center items-center">
         {cryptos.map((crypto, index) => (
           <div key={index} className="flex flex-row items-center mr-4">
             <img
@@ -69,31 +73,25 @@ const Featured = () => {
       </div>
 
       {/* Logos Section */}
-      <div className="flex flex-col items-center md:px-0 px-2">
-        <div className="flex bg-white gap-8 p-8 flex-col justify-center items-center md:w-[70%] w-full rounded-md">
+      <div className="flex flex-col w-full items-center md:px-0 px-2">
+        <div className="flex bg-white gap-8 p-8 flex-col justify-center items-center md:w-[80vw]  w-full rounded-md">
           <div className="flex flex-col gap-1 items-center justify-center">
             <div className="font-poppins font-bold text-[32px] md:text-[40px] leading-[48px] md:leading-[60px] flex justify-center">
               Featured in
             </div>
             <div className="border-2 w-[200px] border-figmaGreen " />
           </div>
-          <div className="w-full gap-6 md:flex md:flex-row md:justify-center grid grid-cols-2">
+          <div className="w-full mt-4 md:gap-6 gap-16 ld:gap-12 md:flex md:flex-row md:justify-center grid grid-cols-2">
             {logos.map((logo, index) => (
               <div key={index} className="flex justify-center items-center">
-                <img
-                  src={logo.icon}
-                  alt={logo.name}
-                  style={{
-                    width: `${logo.width}px`,
-                  }}
-                />
+                <img src={logo.icon} alt={logo.name} />
               </div>
             ))}
           </div>
         </div>
       </div>
       {/* third section */}
-      <div className="md:flex mt-8 gap-4 w-full md:items-center md:justify-center grid grid-cols-2">
+      <div className="md:flex mt-8 ld:mt-12 gap-8 ld:gap-32 w-full md:items-center md:justify-center grid grid-cols-2">
         {strategies.map((strategy, index) => (
           <div
             key={index}
@@ -104,13 +102,13 @@ const Featured = () => {
               alt="Strategy Icon"
               className="md:w-[72px]  w-[48px]"
             />
-            <div className="font-poppins h-20 text-center md:w-[263px] w-full font-medium text-[#0E0F19] text-[16px] leading-6">
+            <div className="font-poppins h-20 text-center md:w-[263px] w-full font-medium text-[#0E0F19] md:text-[16px] text-[14px] leading-6">
               {strategy.text}
             </div>
           </div>
         ))}
       </div>
-      <div className="flex md:flex-row w-full flex-col justify-center md:items-start items-center md:gap-8 gap-4 md:mt-4 mt-8">
+      <div className="flex md:flex-row w-full flex-col justify-center md:items-start items-center md:gap-8 ld:gap-12 gap-4 mt-12">
         <CustomButton1
           sx={{
             width: "276px",
@@ -126,6 +124,7 @@ const Featured = () => {
           Join Now (Hindi) at ₹199
         </CustomButton2>
       </div>
+    
     </section>
   );
 };

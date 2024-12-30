@@ -39,7 +39,7 @@ const Faq = () => {
   };
 
   return (
-    <div className="md:border-b-2 flex flex-col md:h-[90vh] h-auto w-screen gap-12 py-8 px-4 bg-[#F1F1F1]">
+    <div className="md:border-b-2 flex flex-col md:h-[90vh] ld:h-[75vh] h-auto w-screen gap-12 ld:gap-16 py-8 px-4 bg-[#F1F1F1]">
       <div className="flex md:flex-row flex-col mt-6">
         {/* Header Section */}
         <div className="md:w-[40%] w-full flex justify-center">
@@ -89,7 +89,7 @@ const Faq = () => {
           </div>
         </div>
       </div>
-      <div className="flex md:flex-row w-full flex-col justify-center md:items-start items-center md:gap-8 gap-4 md:mt-4">
+      <div className="flex md:flex-row w-full flex-col justify-center md:items-start items-center md:gap-8 ld:gap-12 gap-4 md:mt-4 ld:mt-8">
         <CustomButton1
           sx={{
             width: "276px",

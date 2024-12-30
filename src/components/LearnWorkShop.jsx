@@ -7,6 +7,7 @@ import image3 from "../assets/svg/image3.svg";
 import image4 from "../assets/svg/image4.svg";
 import image5 from "../assets/svg/image5.svg";
 import image6 from "../assets/svg/image6.svg";
+import learn from "../assets/svg/learn.svg";
 
 const allImage = [
   {
@@ -48,7 +49,7 @@ const allImage = [
 ];
 const LearnWorkShop = () => {
   return (
-    <div className="flex md:border-b-2 flex-col gap-4 w-screen  md:h-[170vh] md:px-0 px-2 h-auto bg-[#F1F1F1]">
+    <div className="relative flex md:border-b-2 flex-col gap-4 md:gap-8 ld:gap-16 w-screen  md:h-[180vh] ld:h-[170vh]  md:px-0 px-4 h-auto bg-[#F1F1F1]">
       <div className="md:flex hidden gap-6 p-4 bg-[#F9FAFB] justify-center items-center flex-row">
         Call. Offer Expires In Sign Up Now And Get 50% Discount
       </div>
@@ -63,12 +64,12 @@ const LearnWorkShop = () => {
         <br /> in the Workshop
         <div className="border-2 w-[200px] border-figmaGreen mx-auto mt-2" />
       </div>
-      <div className="flex justify-center items-center mt-8">
-        <div className="grid md:grid-cols-3 grid-cols-1 gap-8">
+      <div className="flex justify-center w-full items-center mt-8">
+        <div className="grid md:grid-cols-3 grid-cols-1 gap-8 ld:gap-20">
           {allImage.map((item, index) => (
             <div
               key={index}
-              className={`cursor-pointer w-80 h-[380px] bg-white p-6 rounded-2xl flex flex-col items-center transition-all duration-300 ease-in-out ${
+              className={`cursor-pointer w-80 h-[400px] bg-white p-6 rounded-2xl flex flex-col items-center transition-all duration-300 ease-in-out ${
                 index === 1
                   ? "shadow-[rgba(0,_0,_0,_0.09)_0px_2px_1px,_rgba(0,_0,_0,_0.09)_0px_4px_2px,_rgba(0,_0,_0,_0.09)_0px_8px_4px,_rgba(0,_0,_0,_0.09)_0px_16px_8px,_rgba(0,_0,_0,_0.09)_0px_32px_16px]"
                   : "shadow-md hover:shadow-[rgba(0,_0,_0,_0.09)_0px_2px_1px,_rgba(0,_0,_0,_0.09)_0px_4px_2px,_rgba(0,_0,_0,_0.09)_0px_8px_4px,_rgba(0,_0,_0,_0.09)_0px_16px_8px,_rgba(0,_0,_0,_0.09)_0px_32px_16px]"
@@ -93,7 +94,7 @@ const LearnWorkShop = () => {
         </div>
       </div>
 
-      <div className="flex md:flex-row w-full flex-col justify-center md:items-start items-center md:gap-8 gap-4 md:mt-4 mt-8">
+      <div className="flex md:flex-row w-full flex-col justify-center md:items-start items-center md:gap-8 ld:gap-12 gap-4 mt-4 md:mt-8 ld:mt-12">
         <CustomButton1
           sx={{
             width: "276px",
@@ -109,6 +110,11 @@ const LearnWorkShop = () => {
           Join Now (Hindi) at ₹199
         </CustomButton2>
       </div>
+      <img
+        src={learn}
+        alt="learn"
+        className="md:w-[100px] w-[60px] absolute  top-32 md:left-20 left-4"
+      />
     </div>
   );
 };

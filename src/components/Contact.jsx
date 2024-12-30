@@ -119,7 +119,7 @@ const cardData = [
 
 const Contact = () => {
   return (
-    <div className="flex flex-col items-start justify-center md:gap-12  px-4 md:px-36 md:h-[100vh] h-auto  bg-[#F1F1F1]">
+    <div className="flex flex-col items-start justify-center md:gap-12  px-4 md:px-36 md:h-[100vh] ld:h-[75vh] h-auto  bg-[#F1F1F1]">
       {/* Contact Section */}
       <div className="flex flex-col gap-2 md:my-0 my-4">
         <div className="text-figmaGreen font-semibold text-base">
@@ -138,7 +138,7 @@ const Contact = () => {
         {cardData.map((card, index) => (
           <div
             key={index}
-            className="flex flex-col items-start w-full sm:w-[380px] gap-4 p-4 bg-white rounded-md shadow-md"
+            className="flex flex-col items-start w-full md:w-[380px] ld:w-[500px] gap-4 p-4 bg-white rounded-md shadow-md"
           >
             {/* Image at the top */}
             <div className="flex justify-center mb-4">

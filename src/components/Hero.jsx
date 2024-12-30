@@ -18,7 +18,7 @@ const Hero = () => {
   return (
     <div
       id="hero"
-      className="flex md:flex-row flex-col-reverse md:h-[100vh]  h-auto md:px-0 px-2 w-screen bg-[#F1F1F1]"
+      className="flex md:flex-row flex-col-reverse md:h-[100vh] h-auto md:px-0 px-2 w-screen bg-[#F1F1F1]"
     >
       <div className="md:w-[50vw] w-full md:h-auto h-[50vh] relative flex  justify-center items-center">
         <div className="absolute md:block hidden bottom-44 ld:bottom-80 left-36 md:left-44 z-10">
