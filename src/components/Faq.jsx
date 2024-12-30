@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
-import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
 import CustomButton1 from "../common/CustomButton1";
 import CustomButton2 from "../common/CustomButton2";
+import RemoveCircleIcon from "@mui/icons-material/RemoveCircle";
 
 const faqData = [
   {
@@ -61,14 +61,24 @@ const Faq = () => {
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-4">
-                    <span className="w-8 h-8 rounded-full bg-figmaGreen flex items-center justify-center font-bold text-white">
+                    {/* <span className="border flex items-center justify-center font-bold text-[#0E0F19B2]/[0.7]">
+                      {index + 1 < 10 ? `0${index + 1}` : index + 1}
+                    </span> */}
+                    <span
+                      className="border flex items-center justify-center font-bold text-[#0E0F19B2]/[0.7]"
+                      style={{
+                        fontSize: "calc(10px + 2vmin)",
+                        lineHeight: "1",
+                      }}
+                    >
                       {index + 1 < 10 ? `0${index + 1}` : index + 1}
                     </span>
+
                     <h3 className="font-poppins text-start font-bold md:text-[24px] text-[20px] leading-8 md:leading-9  text-[#0E0F19]">
                       {item.question}
                     </h3>
                   </div>
-                  <button
+                  {/* <button
                     aria-expanded={activeIndex === index}
                     onClick={() => toggleFAQ(index)}
                   >
@@ -76,6 +86,16 @@ const Faq = () => {
                       <RemoveCircleOutlineIcon />
                     ) : (
                       <AddCircleOutlineIcon />
+                    )}
+                  </button> */}
+                  <button
+                    aria-expanded={activeIndex === index}
+                    onClick={() => toggleFAQ(index)}
+                  >
+                    {activeIndex === index ? (
+                      <RemoveCircleIcon style={{ color: "#26AD00",fontSize: "30px"  }} />
+                    ) : (
+                      <AddCircleOutlineIcon style={{fontSize: "30px"  }}/>
                     )}
                   </button>
                 </div>
