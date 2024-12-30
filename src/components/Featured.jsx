@@ -12,11 +12,14 @@ import Frame3 from "../assets/svg/Frame3.svg";
 import Frame4 from "../assets/svg/Frame4.svg";
 import CustomButton1 from "../common/CustomButton1";
 import CustomButton2 from "../common/CustomButton2";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 // Corrected logos array with specific widths and heights
 const logos = [
   { icon: cnbc, name: "cnbc" },
-  { icon: financial, name: "financial" },
+  { icon: tedx, name: "tedx" },
   { icon: hindustan, name: "hindustan" },
   { icon: moneycontrol, name: "moneycontrol" },
   { icon: tedx, name: "tedx" },
@@ -40,6 +43,26 @@ const strategies = [
     text: "Focused on risk management & disciplined trading systems.",
   },
 ];
+
+const sliderSettings = {
+  dots: false,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  responsive: [
+    {
+      breakpoint: 1590,
+      settings: {
+        slidesToShow: 4,
+        infinite: true,
+        autoplay: true,
+      },
+    },
+  ],
+};
 
 const Featured = () => {
   return (
@@ -81,7 +104,20 @@ const Featured = () => {
             </div>
             <div className="border-2 w-[200px] border-figmaGreen " />
           </div>
-          <div className="w-full mt-4 md:gap-6 gap-16 ld:gap-12 md:flex md:flex-row md:justify-center grid grid-cols-2">
+          <div className="w-full md:flex hidden mt-4">
+            <Slider {...sliderSettings} className="w-full">
+              {logos.map((logo, index) => (
+                <div key={index} className="">
+                  <img
+                    src={logo.icon}
+                    alt={logo.name}
+                    className="flex justify-between gap-16 ld:gap-12 items-center"
+                  />
+                </div>
+              ))}
+            </Slider>
+          </div>
+          <div className="w-full md:hidden grid mt-4 gap-16 grid-cols-2">
             {logos.map((logo, index) => (
               <div key={index} className="flex justify-center items-center">
                 <img src={logo.icon} alt={logo.name} />
@@ -124,7 +160,6 @@ const Featured = () => {
           Join Now (Hindi) at ₹199
         </CustomButton2>
       </div>
-    
     </section>
   );
 };
