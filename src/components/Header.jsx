@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <header className="bg-white border-b fixed w-screen top-0 z-20">
-      <nav className=" mx-auto flex items-center justify-between md:px-10 pl-4 py-4">
+      <nav className=" mx-auto flex items-center justify-between md:px-10 ld:px-20 pl-4 py-4">
         <div>
           <a href="/" className="flex items-center">
             <img src={logo} alt="MyBrand Logo" className="h-[50px] w-[167px]" />
