@@ -58,11 +58,10 @@ const Testimonials = () => {
         </div>
       </div>
       <div className="flex-1 w-full flex md:flex-row flex-col gap-8 items-center md:mt-0 mt-8">
-        <div className="flex  flex-col gap-8">
+        <div className="md:w-80 w-full px-4 flex justify-center items-center flex-col gap-8">
           {cardData1.map((item, index) => (
             <div
               key={index}
-              style={{ width: 300, height: "auto" }}
               className={`bg-white p-8 rounded-2xl ${
                 index === 0 &&
                 "shadow-[rgba(0,_0,_0,_0.09)_0px_2px_1px,_rgba(0,_0,_0,_0.09)_0px_4px_2px,_rgba(0,_0,_0,_0.09)_0px_8px_4px,_rgba(0,_0,_0,_0.09)_0px_16px_8px,_rgba(0,_0,_0,_0.09)_0px_32px_16px]"
@@ -94,11 +93,11 @@ const Testimonials = () => {
             </div>
           ))}
         </div>
-        <div className="flex flex-col md:gap-1 gap-8 md:mb-8">
+        <div className="flex md:w-80 w-full px-4 flex-col md:gap-1 gap-8 md:mb-8">
           {cardData2.map((item, index) => (
             <div
               key={index}
-              style={{ width: 300, height: "auto" }}
+              // style={{ width: 300, height: "auto" }}
               className="bg-white cursor-pointer p-6 rounded-2xl shadow-md flex flex-col transition-all duration-300 ease-in-out hover:shadow-[rgba(0,_0,_0,_0.09)_0px_2px_1px,_rgba(0,_0,_0,_0.09)_0px_4px_2px,_rgba(0,_0,_0,_0.09)_0px_8px_4px,_rgba(0,_0,_0,_0.09)_0px_16px_8px,_rgba(0,_0,_0,_0.09)_0px_32px_16px]"
             >
               <div className="flex gap-4">

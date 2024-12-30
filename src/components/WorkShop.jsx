@@ -49,8 +49,8 @@ const WorkShop = () => {
         <div className="border-2 w-[200px] border-figmaGreen mx-auto mt-2" />
       </div>
       <div className="font-poppins md:hidden block text-center md:text-[40px] text-[32px] leading-[48px] md:leading-[60px] font-bold ">
-        <span className="text-figmaGreen">4 Biggest Reasons</span> For You to
-        Join the <br />
+        <span className="text-figmaGreen">4 Biggest Reasons</span><br /> For You to
+        Join the 
         Workshop
         <div className="border-2 w-[200px] border-figmaGreen mx-auto mt-2" />
       </div>

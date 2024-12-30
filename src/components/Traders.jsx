@@ -40,7 +40,7 @@ const Traders = () => {
         <span className="text-figmaGreen">Successful Traders?</span>
         <div className="border-2 w-[200px] border-figmaGreen mx-auto mt-2" />
       </div>
-      <div className="md:flex hidden justify-center items-center gap-4">
+      <div className="md:flex hidden justify-center items-center md:gap-4 ld:gap-44">
         {imageData.map((image) => (
           <img key={image.id} src={image.src} alt={image.alt} />
         ))}

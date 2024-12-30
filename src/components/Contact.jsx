@@ -27,7 +27,7 @@ const cardData = [
 
 const Contact = () => {
   return (
-    <div className="flex flex-col items-start justify-center md:gap-12 px-4 md:px-36 md:h-[100vh] ld:h-[75vh] h-auto  bg-[#F1F1F1]">
+    <div className="flex flex-col items-start justify-center md:gap-12 gap-4 px-4 md:px-36 md:h-[100vh] ld:h-[75vh] h-auto  bg-[#F1F1F1]">
 
       <div className="flex flex-col gap-2 md:my-0 my-4">
         <div className="text-figmaGreen font-semibold text-base">
@@ -77,9 +77,9 @@ const Contact = () => {
           <div className="font-poppins font-medium text-md text-[#101828]">
             Registered Address
           </div>
-          <div className="font-light text-sm text-[#475467]">
+          {/* <div className="font-light text-sm text-[#475467]">
             979, 3rd Floor Mehta Sonography Building Jodhpur, 342003
-          </div>
+          </div> */}
         </div>
         <div className="text-figmaGreen font-semibold text-sm">
           979, 3rd Floor Mehta Sonography Building Jodhpur, 342003

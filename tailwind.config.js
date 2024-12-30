@@ -5,6 +5,7 @@ export default {
     extend: {
       screens: {
         "ld": "1920px",
+        "xld": "2560px",
       },
       fontFamily: {
         // Primary font is SF Pro Text

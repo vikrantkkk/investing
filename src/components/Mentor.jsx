@@ -25,7 +25,7 @@ const Mentor = () => {
               className="absolute md:bottom-0 bottom-10 md:left-16 left-0"
               alt="M"
             />
-            <div className="flex gap-4 p-2 justify-center items-center rounded-md absolute md:bottom-32 bottom-24 md:left-10 left-0 font-poppins md:text-[14px] text-[10px] leading-5 text-white bg-[#26AD00]/[0.5] md:w-80 w-60 md:h-20 h-14">
+            <div className="flex gap-4 p-2 justify-center items-center rounded-md absolute md:bottom-32 bottom-24 md:left-10 left-0 font-poppins md:text-[14px] text-[10px] leading-5 text-white bg-[#26AD00] md:w-80 w-60 md:h-20 h-14">
               <img
                 src={mentor}
                 alt="MyBrand Logo"

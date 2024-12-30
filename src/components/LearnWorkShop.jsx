@@ -49,11 +49,11 @@ const allImage = [
 ];
 const LearnWorkShop = () => {
   return (
-    <div className="relative flex md:border-b-2 flex-col gap-4 md:gap-8 ld:gap-16 w-screen  md:h-[180vh] ld:h-[170vh]  md:px-0 px-4 h-auto bg-[#F1F1F1]">
+    <div className="relative flex md:border-b-2 flex-col gap-4 md:gap-8 ld:gap-20 w-screen  md:h-[180vh] ld:h-[170vh]  md:px-0 px-4 h-auto bg-[#F1F1F1]">
       <div className="md:flex hidden gap-6 p-4 bg-[#F9FAFB] justify-center items-center flex-row">
         Call. Offer Expires In Sign Up Now And Get 50% Discount
       </div>
-      <div className="mt-8 md:block hidden font-poppins text-center text-[40px] leading-[60px] font-bold ">
+      <div className="mt-8 ld:mt-0 md:block hidden font-poppins text-center text-[40px] leading-[60px] font-bold ">
         What You Will <span className="text-figmaGreen">Learn</span> in the{" "}
         <br />
         Workshop

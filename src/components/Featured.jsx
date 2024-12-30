@@ -47,11 +47,12 @@ const strategies = [
 const sliderSettings = {
   dots: false,
   infinite: true,
-  speed: 500,
+  speed: 5000,
   slidesToShow: 5,
-  slidesToScroll: 1,
+  slidesToScroll: 1, 
   autoplay: true,
-  autoplaySpeed: 3000,
+  autoplaySpeed: 0, 
+  cssEase: "linear", 
   responsive: [
     {
       breakpoint: 1590,
@@ -59,15 +60,19 @@ const sliderSettings = {
         slidesToShow: 4,
         infinite: true,
         autoplay: true,
+        speed: 0,
+        autoplaySpeed: 0,
+        cssEase: "linear",
       },
     },
   ],
 };
 
+
 const Featured = () => {
   return (
     <section className="md:h-[100vh] h-auto w-screen flex flex-col gap-8 ld:gap-20 md:px-0 px-4 bg-[#F1F1F1] md:border-b-2">
-      {/* Cryptos Section */}
+ 
       <div className="flex gap-6 w-screen p-2 bg-[#F9FAFB] justify-center items-center">
         {cryptos.map((crypto, index) => (
           <div key={index} className="flex flex-row items-center mr-4">
@@ -95,7 +100,6 @@ const Featured = () => {
         ))}
       </div>
 
-      {/* Logos Section */}
       <div className="flex flex-col w-full items-center md:px-0 px-2">
         <div className="flex bg-white gap-8 p-8 flex-col justify-center items-center md:w-[80vw]  w-full rounded-md">
           <div className="flex flex-col gap-1 items-center justify-center">
@@ -126,7 +130,7 @@ const Featured = () => {
           </div>
         </div>
       </div>
-      {/* third section */}
+  
       <div className="md:flex mt-8 ld:mt-12 gap-8 ld:gap-32 w-full md:items-center md:justify-center grid grid-cols-2">
         {strategies.map((strategy, index) => (
           <div

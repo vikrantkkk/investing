@@ -52,7 +52,7 @@ const Faq = () => {
         </div>
 
         {/* FAQ Section */}
-        <div className="flex-1">
+        {/* <div className="flex-1">
           <div className="flex flex-col items-start md:w-[80%] w-full">
             {faqData.map((item, index) => (
               <div
@@ -89,14 +89,63 @@ const Faq = () => {
                   </button>
                 </div>
                 {activeIndex === index && (
-                  <p className="font-poppins text-start md:w-[90%] w-auto font-medium md:text-[16px] text-[14px] leading-5 md:leading-6 text-[#0E0F19B2]/[0.7] ml-12">
+                  <p className="font-poppins text-start flex  md:w-[90%] w-[90%] font-medium md:text-[16px] text-[14px] leading-5 md:leading-6 text-[#0E0F19B2]/[0.7]">
                     {item.answer}
                   </p>
                 )}
               </div>
             ))}
           </div>
+        </div> */}
+        <div className="flex-1">
+  <div className="flex flex-col items-start w-full md:w-[80%] mx-auto">
+    {faqData.map((item, index) => (
+      <div
+        key={item.id}
+        className="w-full border-b border-gray-300 py-8 transition-all"
+      >
+        {/* Question Section */}
+        <div className="flex items-center justify-between w-full">
+          <div className="flex items-center gap-4 flex-grow">
+            <span
+              className="text-start font-bold text-[#0E0F19B2]/[0.7]"
+              style={{
+                fontSize: "calc(10px + 2vmin)",
+                lineHeight: "1",
+              }}
+            >
+              {index + 1 < 10 ? `0${index + 1}` : index + 1}
+            </span>
+
+            <h3 className="font-poppins text-start font-bold text-[clamp(20px,2vw,24px)] leading-[1.2] text-[#0E0F19]">
+              {item.question}
+            </h3>
+          </div>
+          <button
+            aria-expanded={activeIndex === index}
+            onClick={() => toggleFAQ(index)}
+          >
+            {activeIndex === index ? (
+              <RemoveCircleIcon
+                style={{ color: "#26AD00", fontSize: "30px" }}
+              />
+            ) : (
+              <AddCircleOutlineIcon style={{ fontSize: "30px" }} />
+            )}
+          </button>
         </div>
+
+        {/* Answer Section */}
+        {activeIndex === index && (
+          <p className="font-poppins text-start md:w-full w-[80%] font-medium text-[clamp(14px,1.5vw,16px)] leading-[1.6] text-[#0E0F19B2]/[0.7] mt-4 md:ml-0 ml-8">
+            {item.answer}
+          </p>
+        )}
+      </div>
+    ))}
+  </div>
+</div>
+
       </div>
       <div className="flex md:flex-row w-full flex-col justify-center md:items-start items-center md:gap-8 ld:gap-12 gap-4 md:mt-4 ld:mt-8">
         <CustomButton1
