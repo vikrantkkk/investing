@@ -62,7 +62,7 @@ const Faq = () => {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center  gap-4">
                     <span
-                      className="border text-start font-bold text-[#0E0F19B2]/[0.7]"
+                      className="text-start font-bold text-[#0E0F19B2]/[0.7]"
                       style={{
                         fontSize: "calc(10px + 2vmin)",
                         lineHeight: "1",
