@@ -60,12 +60,9 @@ const Faq = () => {
                 className="w-full border-b border-gray-300 py-8 transition-all"
               >
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-4">
-                    {/* <span className="border flex items-center justify-center font-bold text-[#0E0F19B2]/[0.7]">
-                      {index + 1 < 10 ? `0${index + 1}` : index + 1}
-                    </span> */}
+                  <div className="flex items-center  gap-4">
                     <span
-                      className="border flex items-center justify-center font-bold text-[#0E0F19B2]/[0.7]"
+                      className="border text-start font-bold text-[#0E0F19B2]/[0.7]"
                       style={{
                         fontSize: "calc(10px + 2vmin)",
                         lineHeight: "1",
@@ -78,24 +75,16 @@ const Faq = () => {
                       {item.question}
                     </h3>
                   </div>
-                  {/* <button
-                    aria-expanded={activeIndex === index}
-                    onClick={() => toggleFAQ(index)}
-                  >
-                    {activeIndex === index ? (
-                      <RemoveCircleOutlineIcon />
-                    ) : (
-                      <AddCircleOutlineIcon />
-                    )}
-                  </button> */}
                   <button
                     aria-expanded={activeIndex === index}
                     onClick={() => toggleFAQ(index)}
                   >
                     {activeIndex === index ? (
-                      <RemoveCircleIcon style={{ color: "#26AD00",fontSize: "30px"  }} />
+                      <RemoveCircleIcon
+                        style={{ color: "#26AD00", fontSize: "30px" }}
+                      />
                     ) : (
-                      <AddCircleOutlineIcon style={{fontSize: "30px"  }}/>
+                      <AddCircleOutlineIcon style={{ fontSize: "30px" }} />
                     )}
                   </button>
                 </div>
