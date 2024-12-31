@@ -137,7 +137,7 @@ const Faq = () => {
 
         {/* Answer Section */}
         {activeIndex === index && (
-          <p className="font-poppins text-start md:w-full w-[80%] font-medium text-[clamp(14px,1.5vw,16px)] leading-[1.6] text-[#0E0F19B2]/[0.7] mt-4 md:ml-0 ml-8">
+          <p className="font-poppins text-start md:w-[90%] w-[80%] font-medium text-[clamp(14px,1.5vw,16px)] leading-[1.6] text-[#0E0F19B2]/[0.7] mt-4 md:ml-10 ml-8">
             {item.answer}
           </p>
         )}
