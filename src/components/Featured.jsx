@@ -71,8 +71,7 @@ const sliderSettings = {
 
 const Featured = () => {
   return (
-    <section className="md:h-[100vh] h-auto w-screen flex flex-col gap-8 ld:gap-20 md:px-0 px-4 bg-[#F1F1F1] md:border-b-2">
- 
+    <section className="md:h-[93vh] ld:h-[75vh] h-auto w-screen flex flex-col gap-12 md:px-0 py-0 px-4 bg-[#F1F1F1] md:border-b-2">
       <div className="flex gap-6 w-screen p-2 bg-[#F9FAFB] justify-center items-center">
         {cryptos.map((crypto, index) => (
           <div key={index} className="flex flex-row items-center mr-4">
@@ -131,7 +130,7 @@ const Featured = () => {
         </div>
       </div>
   
-      <div className="md:flex mt-8 ld:mt-12 gap-8 ld:gap-32 w-full md:items-center md:justify-center grid grid-cols-2">
+      <div className="md:flex gap-8 ld:gap-32 w-full md:items-center md:justify-center grid grid-cols-2">
         {strategies.map((strategy, index) => (
           <div
             key={index}
@@ -148,7 +147,7 @@ const Featured = () => {
           </div>
         ))}
       </div>
-      <div className="flex md:flex-row w-full flex-col justify-center md:items-start items-center md:gap-8 ld:gap-12 gap-4 mt-12">
+      <div className="flex md:flex-row w-full flex-col justify-center md:items-start items-center md:gap-8 gap-4">
         <CustomButton1
           sx={{
             width: "276px",

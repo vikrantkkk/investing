@@ -33,8 +33,8 @@ const imageData = [
 ];
 const Traders = () => {
   return (
-    <div className="relative flex md:border-b-2 flex-col md:gap-20 gap-14 ld:gap-20 md:h-[120vh] ld:h-[100vh] h-auto w-screen md:px-0 px-4 bg-[#F1F1F1]">
-      <div className="md:mt-12 mt-10 font-poppins text-center md:text-[40px] text-[32px] leading-[48px] md:leading-[60px] font-bold ">
+    <div className="relative flex md:border-b-2 flex-col md:gap-12 gap-8  md:h-[100vh] ld:h-[85vh] h-auto w-screen md:px-0 md:py-8 px-4 bg-[#F1F1F1]">
+      <div className="font-poppins text-center md:text-[40px] text-[32px] leading-[48px] md:leading-[60px] font-bold">
         Ready To Unlock Secrets Of
         <br />
         <span className="text-figmaGreen">Successful Traders?</span>
@@ -58,7 +58,7 @@ const Traders = () => {
           />
         ))}
       </div>
-      <div className="flex md:flex-row w-full flex-col justify-center md:items-start items-center md:gap-8 ld:gap-12 gap-4 mt-4 ld:mt-8">
+      <div className="flex md:flex-row w-full flex-col justify-center md:items-start items-center md:gap-8 ld:gap-12 gap-4">
         <CustomButton1
           sx={{
             width: "276px",
@@ -82,17 +82,17 @@ const Traders = () => {
       <img
         src={Rectangle10}
         alt={Rectangle10}
-        className="z-10 md:block hidden absolute left-0"
+        className="z-10 md:block hidden absolute left-0 top-0"
       />
       <img
         src={Rectangle9}
         alt={Rectangle9}
-        className="absolute -right-10 top-52 h-1/2"
+        className="absolute -right-10 top-52 h-[40%]"
       />
       <img
         src={Rectangle10}
         alt={Rectangle10}
-        className="absolute -left-10 top-52 h-1/2"
+        className="absolute -left-10 top-52 h-[40%]"
       />
     </div>
   );

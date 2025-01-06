@@ -49,23 +49,23 @@ const allImage = [
 ];
 const LearnWorkShop = () => {
   return (
-    <div className="relative flex md:border-b-2 flex-col gap-4 md:gap-8 ld:gap-20 w-screen  md:h-[180vh] ld:h-[170vh]  md:px-0 px-4 h-auto bg-[#F1F1F1]">
-      <div className="md:flex hidden gap-6 p-4 bg-[#F9FAFB] justify-center items-center flex-row">
+    <div className="relative flex md:border-b-2 flex-col gap-8 w-screen  md:h-[165vh] ld:h-[132vh]  md:px-0 md:py-0 py-8 h-auto bg-[#F1F1F1]">
+      <div className="md:flex hidden gap-6 p-4 bg-[#F9FAFB] justify-center items-center flex-row relative">
         Call. Offer Expires In Sign Up Now And Get 50% Discount
       </div>
-      <div className="mt-8 ld:mt-0 md:block hidden font-poppins text-center text-[40px] leading-[60px] font-bold ">
+      <div className="md:block hidden font-poppins text-center text-[40px] leading-[60px] font-bold ">
         What You Will <span className="text-figmaGreen">Learn</span> in the{" "}
         <br />
         Workshop
         <div className="border-2 w-[200px] border-figmaGreen mx-auto mt-2" />
       </div>
-      <div className="md:mt-8 mt-12 md:hidden block font-poppins text-center text-[32px] leading-[48px] font-bold ">
+      <div className="md:mt-8 md:hidden block font-poppins text-center text-[32px] leading-[48px] font-bold ">
         What You Will <span className="text-figmaGreen">Learn</span>
         <br /> in the Workshop
         <div className="border-2 w-[200px] border-figmaGreen mx-auto mt-2" />
       </div>
-      <div className="flex justify-center w-full items-center mt-8">
-        <div className="grid md:grid-cols-3 grid-cols-1 gap-8 ld:gap-20">
+      <div className="flex justify-center w-full items-center">
+        <div className="grid md:grid-cols-3 grid-cols-1 gap-8">
           {allImage.map((item, index) => (
             <div
               key={index}
@@ -94,7 +94,7 @@ const LearnWorkShop = () => {
         </div>
       </div>
 
-      <div className="flex md:flex-row w-full flex-col justify-center md:items-start items-center md:gap-8 ld:gap-12 gap-4 mt-4 md:mt-8 ld:mt-12">
+      <div className="flex md:flex-row w-full flex-col justify-center md:items-start items-center md:gap-8 ld:gap-12 gap-4">
         <CustomButton1
           sx={{
             width: "276px",
@@ -113,7 +113,7 @@ const LearnWorkShop = () => {
       <img
         src={learn}
         alt="learn"
-        className="md:w-[100px] w-[60px] absolute  top-32 md:left-20 left-4"
+        className="md:w-[100px] w-[60px] absolute top-20 md:top-32 md:left-20 left-2"
       />
     </div>
   );

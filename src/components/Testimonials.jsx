@@ -48,19 +48,19 @@ const cardData2 = [
 
 const Testimonials = () => {
   return (
-    <div className="relative flex md:flex-row flex-col w-screen  gap-8  md:h-[160vh] ld:h-[130vh] h-auto md:px-0 px-4 bg-[#F1F1F1]">
-      <div className="md:w-[45%] w-full flex  items-center justify-center">
-        <div className="md:mt-6 mt-12 font-poppins text-center md:text-[40px] text-[32px] leading-[48px] md:leading-[60px] font-bold ">
+    <div className="relative flex md:flex-row flex-col w-screen  gap-8  md:h-[140vh] ld:h-[115vh] h-auto md:px-0 py-8 px-4 bg-[#F1F1F1]">
+      <div className="md:w-[40%] w-full flex  items-center justify-center">
+        <div className="font-poppins text-center md:text-[40px] text-[32px] leading-[48px] md:leading-[60px] font-bold ">
           <span className="text-figmaGreen">Testimonials</span> From
           <br />
           Past Attendees
           <div className="border-2 w-[200px] border-figmaGreen mx-auto mt-2" />
         </div>
       </div>
-      <div className="flex-1 w-full flex md:flex-row flex-col gap-8 items-center md:mt-0 mt-8">
-        <div className="md:w-80 w-full px-4 flex justify-center items-center flex-col gap-8">
+      <div className="flex-1 w-full flex md:flex-row flex-col gap-4 items-center">
+        <div className="md:w-[350px] w-full p-2 flex justify-center items-center flex-col gap-8">
           {cardData1.map((item, index) => (
-            <div
+              <div
               key={index}
               className={`bg-white p-8 rounded-2xl ${
                 index === 0 &&
@@ -93,7 +93,7 @@ const Testimonials = () => {
             </div>
           ))}
         </div>
-        <div className="flex md:w-80 w-full px-4 flex-col md:gap-1 gap-8 md:mb-8">
+        <div className="flex md:w-[350px] w-full p-2 flex-col md:gap-1 gap-8">
           {cardData2.map((item, index) => (
             <div
               key={index}
@@ -130,7 +130,7 @@ const Testimonials = () => {
       <img
         src={rocket}
         alt="rocket"
-        className="md:w-[100px] w-[60px] absolute  md:top-24 top-36 md:left-32 left-4"
+        className="md:w-[100px] w-[60px] absolute  md:top-24 top-28 md:left-32 left-2"
       />
     </div>
   );

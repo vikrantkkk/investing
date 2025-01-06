@@ -118,7 +118,7 @@ const Hero = () => {
           Spot Big Market Moves Before They <br /> Happen with Institutional
           Trading
         </div>
-        <div className="flex md:flex-row flex-col md:gap-8 ld:gap-16 gap-4 mt-4">
+        <div className="flex md:flex-row flex-col md:gap-8 gap-4">
           <CustomButton1
             sx={{
               width: "276px",

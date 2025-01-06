@@ -6,8 +6,8 @@ import mentor from "../assets/svg/mentor.svg";
 
 const Mentor = () => {
   return (
-    <div className="flex justify-center items-center md:border-b-2 gap-4  md:h-[100vh] ld:h-[80vh]  w-screen md:px-0 px-4 bg-[#F1F1F1]">
-      <div className="bg-[#0E0F19]  md:mt-0 mt-40 flex md:flex-row flex-col md:h-[36rem] h-auto p-4 md:w-[75rem]  w-full rounded-2xl">
+    <div className="flex justify-center items-center md:border-b-2 gap-8  md:h-[90vh] ld:h-[75vh]  w-screen md:px-0 py-8 px-4 bg-[#F1F1F1]">
+      <div className="bg-[#0E0F19]  flex md:flex-row flex-col md:h-[36rem] h-auto p-4 md:w-[75rem]  w-full rounded-2xl ">
         <div className="relative md:w-[50%] w-full flex">
           <div className="relative flex gap-20">
             <img
@@ -22,7 +22,7 @@ const Mentor = () => {
             />
             <img
               src={ceo}
-              className="absolute md:bottom-0 bottom-10 md:left-16 left-0"
+              className="absolute bottom-0 md:left-16 left-0"
               alt="M"
             />
             <div className="flex gap-4 p-2 justify-center items-center rounded-md absolute md:bottom-32 bottom-24 md:left-10 left-0 font-poppins md:text-[14px] text-[10px] leading-5 text-white bg-[#26AD00] md:w-80 w-60 md:h-20 h-14">
