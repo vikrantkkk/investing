@@ -1,9 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import CustomButton1 from "../common/CustomButton1";
 import CustomButton2 from "../common/CustomButton2";
 import secrets from "../assets/video/secrets.mp4";
 
 const TimeTiking = () => {
+  // Initialize the countdown state with 5 minutes (300 seconds)
+  const [time, setTime] = useState(300);
+
+  useEffect(() => {
+    // If the time is zero, reset it back to 5 minutes (300 seconds)
+    if (time === 0) {
+      setTime(300);
+    }
+
+    // Set up a timer that decreases the time every second
+    const timer = setInterval(() => {
+      setTime((prevTime) => prevTime - 1);
+    }, 1000);
+
+    // Clear the timer when the component unmounts
+    return () => clearInterval(timer);
+  }, [time]);
+
+  // Calculate minutes and seconds from the time in seconds
+  const minutes = Math.floor(time / 60);
+  const seconds = time % 60;
+
   return (
     <div className="relative flex items-center justify-center min-h-screen">
       {/* Video Background */}
@@ -31,16 +53,7 @@ const TimeTiking = () => {
         <div className="flex gap-20 justify-center items-center">
           <div className="flex flex-col items-center">
             <div className="text-white font-extrabold text-[80px] md:text-[120px]">
-              12
-            </div>
-            <div className="text-figmaGreen font-semibold text-[20px] md:text-[24px]">
-              Hours
-            </div>
-          </div>
-
-          <div className="flex flex-col items-center">
-            <div className="text-white font-extrabold text-[80px] md:text-[120px]">
-              34
+              {String(minutes).padStart(2, "0")}
             </div>
             <div className="text-figmaGreen font-semibold text-[20px] md:text-[24px]">
               Minutes
@@ -49,7 +62,7 @@ const TimeTiking = () => {
 
           <div className="flex flex-col items-center">
             <div className="text-white font-extrabold text-[80px] md:text-[120px]">
-              56
+              {String(seconds).padStart(2, "0")}
             </div>
             <div className="text-figmaGreen font-semibold text-[20px] md:text-[24px]">
               Seconds
@@ -59,23 +72,15 @@ const TimeTiking = () => {
 
         {/* Banner Text */}
         <div className="font-poppins p-2 font-normal text-white rounded-[8px] w-auto bg-[#A928284D]/[0.3]">
-          Last Few Seats Left ! Grab your seat now
+          Last Few Seats Left! Grab your seat now
         </div>
 
         {/* Buttons */}
         <div className="flex md:flex-row w-full flex-col justify-center md:items-start items-center md:gap-8 ld:gap-12 gap-4">
-          <CustomButton1
-            sx={{
-              width: "300px",
-            }}
-          >
+          <CustomButton1 sx={{ width: "300px" }}>
             Join Now (English) at ₹199
           </CustomButton1>
-          <CustomButton2
-            sx={{
-              width: "300px",
-            }}
-          >
+          <CustomButton2 sx={{ width: "300px" }}>
             Join Now (Hindi) at ₹199
           </CustomButton2>
         </div>

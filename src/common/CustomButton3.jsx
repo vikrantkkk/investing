@@ -5,7 +5,7 @@ const CustomButton3 = () => {
     <div className="flex">
       {/* Left Button: Gradient Background with Box Shadow */}
       <button
-        className="p-4 text-black rounded-l-md w-[300px] transition-all duration-300"
+        className="p-4 text-white rounded-l-md w-[300px] transition-all duration-300"
         style={{
           background: "linear-gradient(263.67deg, #007AFF, #1064BF 100%)", // Desired gradient
           boxShadow:

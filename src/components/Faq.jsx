@@ -39,7 +39,7 @@ const Faq = () => {
   };
 
   return (
-    <div className="md:border-b-2 flex flex-col  h-auto w-screen gap-8 py-8 px-4 bg-[#F1F1F1]">
+    <div className="flex flex-col  h-auto w-screen gap-8 py-8 px-4 bg-[#F1F1F1]">
       <div className="flex md:flex-row flex-col">
         {/* Header Section */}
         <div className="md:w-[40%] w-full flex justify-center md:mt-4">
@@ -145,22 +145,6 @@ const Faq = () => {
             ))}
           </div>
         </div>
-      </div>
-      <div className="flex md:flex-row w-full flex-col justify-center md:items-start items-center md:gap-8 ld:gap-12 gap-4">
-        <CustomButton1
-          sx={{
-            width: "300px",
-          }}
-        >
-          Join Now (English) at ₹199
-        </CustomButton1>
-        <CustomButton2
-          sx={{
-            width: "300px",
-          }}
-        >
-          Join Now (Hindi) at ₹199
-        </CustomButton2>
       </div>
     </div>
   );
