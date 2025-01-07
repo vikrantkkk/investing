@@ -44,13 +44,19 @@ const Header = () => {
         </div>
 
         <div className="flex md:gap-6 items-center justify-center">
-          <a href="/" className="flex items-center">
+          <a
+            href="https://wa.me/918949800532"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center"
+          >
             <img
               src={whatsappLOgo}
               alt="WhatsApp"
               className="h-[24px] w-[24px]"
             />
           </a>
+
           <div className="md:block hidden">
             <CustomButton1 className="shadow-none">Sign Up</CustomButton1>
           </div>

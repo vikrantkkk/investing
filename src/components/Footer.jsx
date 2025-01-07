@@ -19,17 +19,26 @@ const Footer = () => {
           FOLLOW US ON :
         </div>
         <div className="flex gap-4 items-center justify-center">
-          <a href="/" className="flex  items-center">
+          <a
+            href="https://wa.me/918949800532"
+            target="_blank"
+            className="flex  items-center"
+          >
             <img
               src={whatsappLOgo}
               alt="MyBrand Logo"
               className="h-[46px] w-[46px]"
             />
           </a>
-          <a href="/" className="flex items-center">
+          <a
+            href="https://www.instagram.com/pmtrades/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center"
+          >
             <img
               src={instagram}
-              alt="MyBrandLogo"
+              alt="Instagram"
               className="h-[46px] w-[46px]"
             />
           </a>
