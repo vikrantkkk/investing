@@ -1,55 +1,40 @@
 import React from "react";
 import CustomButton1 from "../common/CustomButton1";
 import CustomButton2 from "../common/CustomButton2";
-import image1 from "../assets/svg/image1.svg";
-import image2 from "../assets/svg/image2.svg";
-import image3 from "../assets/svg/image3.svg";
-import image4 from "../assets/svg/image4.svg";
-import image5 from "../assets/svg/image5.svg";
-import image6 from "../assets/svg/image6.svg";
+import frame1 from "../assets/png/frame1.png";
+import frame2 from "../assets/png/frame2.png";
+import frame3 from "../assets/png/frame3.png";
+import frame4 from "../assets/png/frame4.png";
 import learn from "../assets/svg/learn.svg";
 
 const allImage = [
   {
-    icon: image1,
-    text1: "Enter Trades Before Big Moves Happen",
+    icon: frame1,
+    text1: "How to Spot Big Trades Before They Happen",
     text2:
-      "Institutional trading helps you spot market trends & breakouts before they become obvious to everyone else.",
+      "Identify where banks and hedge funds are entering the market, so you can follow and catch big market moves before they’re obvious to everyone else.",
   },
   {
-    icon: image2,
-    text1: "Avoid Retail Traps",
+    icon: frame2,
+    text1: "Turn Risk Management into Your Superpower",
     text2:
-      "Learn to stay ahead of retail traders who often buy when prices are high and sell when prices are low.",
+      "Protect your capital with simple, actionable risk management techniques that limit losses and maximize profits.",
   },
   {
-    icon: image3,
-    text1: "Trade Like the Big Players",
+    icon: frame3,
+    text1: "How to Trade Stocks for Higher Returns",
     text2:
-      "Understand the strategies used by banks, hedge funds, and institutions to stay profitable.",
+      "Find out why stocks are better than Nifty and Bank Nifty for trading with less manipulation, fewer fake-outs, and better returns.",
   },
   {
-    icon: image4,
-    text1: "Simple, Data-Driven Approach",
-    text2:
-      "No need for fancy indicators or complicated charts, just focus on price, time, and volume.",
-  },
-  {
-    icon: image5,
-    text1: "Maximize Your Gains with Risk Management",
-    text2:
-      "Learn how to protect your capital by using stop losses and proper risk-to-reward ratios.",
-  },
-  {
-    icon: image6,
-    text1: "Master Market Psychology",
-    text2:
-      "Understand how market sentiment affects price movements and how to use this knowledge to your advantage.",
+    icon: frame4,
+    text1: "Master the Order Block & Squeeze Strategies",
+    text2:"Proven strategies that simplify trading and deliver up to 85% accuracy. These methods are easy to follow and designed for both beginners & experienced traders.",
   },
 ];
 const LearnWorkShop = () => {
   return (
-    <div className="relative flex md:border-b-2 flex-col gap-8 w-screen  md:h-[165vh] ld:h-[132vh]  md:px-0 md:py-0 py-8 h-auto bg-[#F1F1F1]">
+    <div className="relative flex md:border-b-2 flex-col md:gap-12 gap-8 w-screen  md:px-0 px-4  pb-8 h-auto bg-[#F1F1F1]">
       <div className="md:flex hidden gap-6 p-4 bg-[#F9FAFB] justify-center items-center flex-row relative">
         Call. Offer Expires In Sign Up Now And Get 50% Discount
       </div>
@@ -65,11 +50,11 @@ const LearnWorkShop = () => {
         <div className="border-2 w-[200px] border-figmaGreen mx-auto mt-2" />
       </div>
       <div className="flex justify-center w-full items-center">
-        <div className="grid md:grid-cols-3 grid-cols-1 gap-8">
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-8">
           {allImage.map((item, index) => (
             <div
               key={index}
-              className={`cursor-pointer w-80 h-[400px] bg-white p-6 rounded-2xl flex flex-col items-center transition-all duration-300 ease-in-out ${
+              className={`cursor-pointer md:w-[500px] w-full bg-white p-6 rounded-2xl flex flex-col items-center transition-all duration-300 ease-in-out ${
                 index === 1
                   ? "shadow-[rgba(0,_0,_0,_0.09)_0px_2px_1px,_rgba(0,_0,_0,_0.09)_0px_4px_2px,_rgba(0,_0,_0,_0.09)_0px_8px_4px,_rgba(0,_0,_0,_0.09)_0px_16px_8px,_rgba(0,_0,_0,_0.09)_0px_32px_16px]"
                   : "shadow-md hover:shadow-[rgba(0,_0,_0,_0.09)_0px_2px_1px,_rgba(0,_0,_0,_0.09)_0px_4px_2px,_rgba(0,_0,_0,_0.09)_0px_8px_4px,_rgba(0,_0,_0,_0.09)_0px_16px_8px,_rgba(0,_0,_0,_0.09)_0px_32px_16px]"
@@ -78,7 +63,7 @@ const LearnWorkShop = () => {
               <img
                 src={item.icon}
                 alt={`icon-${index}`}
-                className="w-full h-[150px] object-cover mb-6 rounded-md"
+                className="w-full h-[250px] object-cover mb-6 rounded-md"
               />
 
               <div className="flex flex-col items-start gap-4">
@@ -97,14 +82,14 @@ const LearnWorkShop = () => {
       <div className="flex md:flex-row w-full flex-col justify-center md:items-start items-center md:gap-8 ld:gap-12 gap-4">
         <CustomButton1
           sx={{
-            width: "276px",
+            width: "300px",
           }}
         >
           Join Now (English) at ₹199
         </CustomButton1>
         <CustomButton2
           sx={{
-            width: "276px",
+            width: "300px",
           }}
         >
           Join Now (Hindi) at ₹199

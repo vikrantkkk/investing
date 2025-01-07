@@ -6,7 +6,7 @@ import mentor from "../assets/svg/mentor.svg";
 
 const Mentor = () => {
   return (
-    <div className="flex justify-center items-center md:border-b-2 gap-8  md:h-[90vh] ld:h-[75vh]  w-screen md:px-0 py-8 px-4 bg-[#F1F1F1]">
+    <div className="flex justify-center items-center md:border-b-2 gap-8 h-auto w-screen md:px-0 md:py-8 px-4 bg-[#F1F1F1]">
       <div className="bg-[#0E0F19]  flex md:flex-row flex-col md:h-[36rem] h-auto p-4 md:w-[75rem]  w-full rounded-2xl ">
         <div className="relative md:w-[50%] w-full flex">
           <div className="relative flex gap-20">

@@ -37,7 +37,7 @@ const allIcon = [
 
 const WorkShop = () => {
   return (
-    <div className="relative flex md:border-b-2 flex-col gap-8   md:h-[85vh] ld:h-[70vh] h-auto w-screen md:px-4 py-8 bg-[#F1F1F1]">
+    <div className="relative flex md:border-b-2 flex-col md:gap-12 gap-8  h-auto w-screen md:px-4 py-8 bg-[#F1F1F1]">
       <div className="w-full md:hidden flex  p-4 bg-[#F9FAFB] justify-center items-center flex-row">
         Sign Up Now And Get 50% Discount
       </div>
@@ -85,14 +85,14 @@ const WorkShop = () => {
       <div className="flex md:flex-row w-full flex-col justify-center md:items-start items-center md:gap-8 gap-4">
         <CustomButton1
           sx={{
-            width: "276px",
+            width: "300px",
           }}
         >
           Join Now (English) at ₹199
         </CustomButton1>
         <CustomButton2
           sx={{
-            width: "276px",
+            width: "300px",
           }}
         >
           Join Now (Hindi) at ₹199

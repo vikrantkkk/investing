@@ -27,7 +27,7 @@ const cardData = [
 
 const Contact = () => {
   return (
-    <div className="flex flex-col items-start justify-center md:gap-12 gap-4 px-4 py-8 md:px-36 md:h-[100vh] ld:h-[75vh] h-auto  bg-[#F1F1F1]">
+    <div className="flex flex-col items-start justify-center md:gap-12 gap-4 px-4 py-8 md:px-36  h-auto  bg-[#F1F1F1]">
 
       <div className="flex flex-col gap-2 md:my-0 my-4">
         <div className="text-figmaGreen font-semibold text-base">

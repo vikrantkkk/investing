@@ -9,6 +9,8 @@ import Mentor from "../components/Mentor";
 import Traders from "../components/Traders";
 import Faq from "../components/Faq";
 import Footer from "../components/Footer";
+import TimeTiking from "../components/TimeTiking";
+import GrabSeat from "../components/GrabSeat";
 
 const LandingPage = () => {
   return (
@@ -20,7 +22,9 @@ const LandingPage = () => {
       <Testimonials />
       <Mentor />
       <Traders />
+      <TimeTiking/>
       <Faq />
+      <GrabSeat/>
     </MainLayout>
   );
 };

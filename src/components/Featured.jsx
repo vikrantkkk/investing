@@ -49,10 +49,10 @@ const sliderSettings = {
   infinite: true,
   speed: 5000,
   slidesToShow: 5,
-  slidesToScroll: 1, 
+  slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 0, 
-  cssEase: "linear", 
+  autoplaySpeed: 0,
+  cssEase: "linear",
   responsive: [
     {
       breakpoint: 1590,
@@ -68,39 +68,35 @@ const sliderSettings = {
   ],
 };
 
-
 const Featured = () => {
   return (
-    <section className="md:h-[93vh] ld:h-[75vh] h-auto w-screen flex flex-col gap-12 md:px-0 py-0 px-4 bg-[#F1F1F1] md:border-b-2">
-      <div className="flex gap-6 w-screen p-2 bg-[#F9FAFB] justify-center items-center">
+    <div className="h-auto w-screen flex flex-col md:gap-12 gap-8  pb-8  bg-[#F1F1F1] md:border-b-2">
+      <div className="flex gap-6 w-screen p-4 bg-[#F9FAFB] justify-center items-center overflow-hidden">
         {cryptos.map((crypto, index) => (
           <div key={index} className="flex flex-row items-center mr-4">
             <img
               src={crypto.icon}
               alt={`${crypto.name} icon`}
-              className="w-10 h-10"
+              className="w-8 h-8"
             />
             <div className="ml-2 font-inter font-medium md:text-[16px] text-[14px] leading-4 md:leading-5">
               {crypto.name}
             </div>
-            <div className="ml-2 font-inter font-medium md:text-[16px] text-[14px] leading-4 md:leading-5">
-              {crypto.symbol}
-            </div>
-            <div className="ml-2 font-inter font-medium md:text-[16px] text-[14px] leading-4 md:leading-5">
+            <div className="ml-2 font-inter font-semibold md:text-[16px] text-[14px] leading-4 md:leading-5">
               {crypto.price}
             </div>
-            <div className="ml-2 font-inter font-medium md:text-[16px] text-[14px] leading-4 md:leading-5">
+            <div className="ml-2 font-inter font-normal md:text-[16px] text-[14px] leading-4 md:leading-5">
               {crypto.high24h}
             </div>
-            <div className="ml-2 font-inter font-medium md:text-[16px] text-[14px] leading-4 md:leading-5">
+            <div className="ml-2 font-inter font-normal md:text-[16px] text-[14px] leading-4 md:leading-5">
               {crypto.low24h}
             </div>
           </div>
         ))}
       </div>
 
-      <div className="flex flex-col w-full items-center md:px-0 px-2">
-        <div className="flex bg-white gap-8 p-8 flex-col justify-center items-center md:w-[80vw]  w-full rounded-md">
+      <div className="flex flex-col w-full items-center md:px-0 px-4">
+        <div className="flex bg-white gap-8 p-16 flex-col justify-center items-center md:w-[80vw]  w-full rounded-md">
           <div className="flex flex-col gap-1 items-center justify-center">
             <div className="font-poppins font-bold text-[32px] md:text-[40px] leading-[48px] md:leading-[60px] flex justify-center">
               Featured in
@@ -129,8 +125,8 @@ const Featured = () => {
           </div>
         </div>
       </div>
-  
-      <div className="md:flex gap-8 ld:gap-32 w-full md:items-center md:justify-center grid grid-cols-2">
+
+      <div className="md:flex md:pt-10 gap-8 ld:gap-32 md:px-0 px-4 w-full md:items-center md:justify-center grid grid-cols-2">
         {strategies.map((strategy, index) => (
           <div
             key={index}
@@ -150,20 +146,20 @@ const Featured = () => {
       <div className="flex md:flex-row w-full flex-col justify-center md:items-start items-center md:gap-8 gap-4">
         <CustomButton1
           sx={{
-            width: "276px",
+            width: "300px",
           }}
         >
           Join Now (English) at ₹199
         </CustomButton1>
         <CustomButton2
           sx={{
-            width: "276px",
+            width: "300px",
           }}
         >
           Join Now (Hindi) at ₹199
         </CustomButton2>
       </div>
-    </section>
+    </div>
   );
 };
 

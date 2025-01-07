@@ -6,13 +6,15 @@ import CustomButton1 from "../common/CustomButton1";
 import CustomButton2 from "../common/CustomButton2";
 import calendar from "../assets/svg/calendar.svg";
 import clock from "../assets/svg/clock.svg";
-import duration from "../assets/svg/duration.svg";
+import duration1 from "../assets/svg/duration.svg";
 import globe from "../assets/svg/globe.svg";
 import hero1 from "../assets/svg/hero1.svg";
 import hero2 from "../assets/svg/hero2.svg";
 import hero3 from "../assets/svg/hero3.svg";
 import correct from "../assets/svg/correct.svg";
 import { Box, Typography } from "@mui/material";
+import CustomButton3 from "../common/CustomButton3";
+import CustomButton4 from "../common/CustomButton4";
 
 const Hero = () => {
   return (
@@ -26,7 +28,7 @@ const Hero = () => {
         </div>
         <div className="absolute bottom-0 z-10">
           <img src={ceo} alt="CEO" className="md:h-[80vh]  h-[363px]" />
-      </div>
+        </div>
         <div className="md:h-[200px] h-[100px] shadow-2xl md:w-[300px] w-[173px] flex-wrap bg-white z-10 absolute md:bottom-10 bottom-4 md:left-44 ld:left-72 left-16 rounded-md">
           <div className="flex flex-col md:gap-2 gap-1 md:p-4 p-2">
             <div className="font-poppins font-semibold md:text-[20px] text-[11px] md:leading-8 leading-4 text-[#0E0F19]">
@@ -88,7 +90,7 @@ const Hero = () => {
           +13.20 (+4.65%)
         </div>
       </div>
-      <div className="md:flex-1 w-full md:h-auto h-[50vh]  flex flex-col md:gap-4 ld:gap-16 gap-2  justify-center md:items-start items-center">
+      <div className="md:flex-1 w-full md:h-auto h-[50vh]  flex flex-col md:gap-8 gap-2  justify-center md:items-start items-center">
         <div className="font-poppins p-2 font-normal text-figmaGreen rounded-[8px] w-[271px] bg-greenbackgrond">
           <span className="font-semibold text-[16px] leading-6">50000+</span>{" "}
           Traders Already Joined
@@ -118,79 +120,41 @@ const Hero = () => {
           Spot Big Market Moves Before They <br /> Happen with Institutional
           Trading
         </div>
-        <div className="flex md:flex-row flex-col md:gap-8 gap-4">
-          <CustomButton1
-            sx={{
-              width: "276px",
-            }}
-          >
-            Join Now (English) at ₹199S
-          </CustomButton1>
-          <CustomButton2
-            sx={{
-              width: "276px",
-            }}
-          >
-            Join Now (Hindi) at ₹199
-          </CustomButton2>
+        <div className="md:flex hidden flex-col md:gap-8 gap-4">
+          <CustomButton4 />
+          <CustomButton3 />
         </div>
-        <div className="gap-4 ld:gap-16 mt-6 md:flex hidden">
-          <div className="flex flex-col gap-4 ld:gap-8">
-            <div className="flex gap-4 items-center">
-              <img
-                src={calendar}
-                alt="calendar"
-                className="w-[32px] h-[32px]"
-              />
-              <div>
-                <div className="font-poppins text-[#0E0F19B2]/[0.7] font-normal text-[12px] leading-5">
-                  DATE
-                </div>
-                <div className="font-poppins text-[#0E0F19] font-semibold text-[16px] leading-6">
-                  15th December
-                </div>
-              </div>
-            </div>
-            <div className="flex gap-4 items-center">
-              <img
-                src={duration}
-                alt="duration"
-                className="w-[32px] h-[32px]"
-              />
-              <div>
-                <div className="font-poppins text-[#0E0F19B2]/[0.7] font-normal text-[12px] leading-5">
-                  DURATION
-                </div>
-                <div className="font-poppins text-[#0E0F19] font-semibold text-[16px] leading-6">
-                  2.5 hrs
-                </div>
-              </div>
-            </div>
+        <div className="flex md:hidden w-full flex-col justify-center md:items-start items-center md:gap-8 gap-4">
+        <CustomButton1
+          sx={{
+            width: "300px",
+          }}
+        >
+          Join Now (English) at ₹199
+        </CustomButton1>
+        <CustomButton2
+          sx={{
+            width: "300px",
+          }}
+        >
+          Join Now (Hindi) at ₹199
+        </CustomButton2>
+      </div>
+        <div className="font-poppins md:flex hidden justify-start items-center gap-4">
+          <div className="flex justify-start items-center  gap-4">
+            <img
+              src={duration1}
+              alt="MyBrand Logo"
+              className="h-[24px] w-[24px]"
+            />
+            <span className=" font-normal text-[14px] leading-5 text-[#0E0F19B2]/[0.7]">
+              DURATION
+            </span>{" "}
+            <span className="font-semibold text-[16px] leading-6">2.5 hrs</span>
           </div>
-
-          <div className="flex flex-col gap-4 ld:gap-8">
-            <div className="flex gap-4 items-center">
-              <img src={clock} alt="clock" className="w-[32px] h-[32px]" />
-              <div>
-                <div className="font-poppins text-[#0E0F19B2]/[0.7] font-normal text-[12px] leading-5">
-                  TIME
-                </div>
-                <div className="font-poppins text-[#0E0F19] font-semibold text-[16px] leading-6">
-                  7:30 pm - 9:00 pm
-                </div>
-              </div>
-            </div>
-            <div className="flex gap-4 items-center">
-              <img src={globe} alt="globe" className="w-[32px] h-[32px]" />
-              <div>
-                <div className="font-poppins text-[#0E0F19B2]/[0.7] font-normal text-[12px] leading-5">
-                  LANGUAGE
-                </div>
-                <div className="font-poppins text-[#0E0F19] font-semibold text-[16px] leading-6">
-                  English
-                </div>
-              </div>
-            </div>
+          <div className="font-poppins p-2 font-normal text-figmaGreen rounded-[8px] w-auto bg-greenbackgrond">
+            <span className="font-semibold text-[16px] leading-6">50000+</span>{" "}
+            Last Few Seats Left ! Grab your seat now
           </div>
         </div>
       </div>

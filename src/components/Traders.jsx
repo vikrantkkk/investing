@@ -33,7 +33,7 @@ const imageData = [
 ];
 const Traders = () => {
   return (
-    <div className="relative flex md:border-b-2 flex-col md:gap-12 gap-8  md:h-[100vh] ld:h-[85vh] h-auto w-screen md:px-0 md:py-8 px-4 bg-[#F1F1F1]">
+    <div className="relative flex md:border-b-2 flex-col md:gap-12 gap-8  h-auto w-screen md:px-0 py-8 px-4 bg-[#F1F1F1]">
       <div className="font-poppins text-center md:text-[40px] text-[32px] leading-[48px] md:leading-[60px] font-bold">
         Ready To Unlock Secrets Of
         <br />
@@ -61,14 +61,14 @@ const Traders = () => {
       <div className="flex md:flex-row w-full flex-col justify-center md:items-start items-center md:gap-8 ld:gap-12 gap-4">
         <CustomButton1
           sx={{
-            width: "276px",
+            width: "300px",
           }}
         >
           Join Now (English) at ₹199
         </CustomButton1>
         <CustomButton2
           sx={{
-            width: "276px",
+            width: "300px",
           }}
         >
           Join Now (Hindi) at ₹199
@@ -77,12 +77,12 @@ const Traders = () => {
       <img
         src={Rectangle9}
         alt={Rectangle9}
-        className="z-10 md:block hidden  absolute right-0"
+        className="z-10 md:block hidden  absolute right-0 h-[95%]"
       />
       <img
         src={Rectangle10}
         alt={Rectangle10}
-        className="z-10 md:block hidden absolute left-0 top-0"
+        className="z-10 md:block hidden  absolute left-0 top-0 h-[95%]"
       />
       <img
         src={Rectangle9}

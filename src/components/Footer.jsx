@@ -5,7 +5,7 @@ import instagram from "../assets/svg/instagram.svg";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col justify-center items-center md:h-[80vh] ld:h-[60vh] h-auto w-screen gap-8  pb-8 px-4 bg-[#F1F1F1]">
+    <footer className="flex flex-col justify-center items-center h-auto w-screen gap-8  pb-8 px-4 py-8 bg-[#F1F1F1]">
       <div>
         <a href="/" className="flex justify-center items-center">
           <img src={logo} alt="MyBrand Logo" className="h-[50px] w-[167px]" />
