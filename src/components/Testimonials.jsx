@@ -3,6 +3,7 @@ import Ellipse1 from "../assets/svg/Ellipse1.svg";
 import Ellipse2 from "../assets/svg/Ellipse2.svg";
 import Ellipse3 from "../assets/svg/Ellipse3.svg";
 import Ellipse4 from "../assets/svg/Ellipse4.svg";
+import rocket from "../assets/svg/rocket.svg";
 
 const cardData1 = [
   {
@@ -41,7 +42,7 @@ const cardData1 = [
 
 const Testimonials = () => {
   return (
-    <div className="flex flex-col items-center md:gap-12 gap-8 w-screen h-auto justify-center px-4 pt-8 md:pb-36 bg-[#F1F1F1]">
+    <div className="flex relative flex-col items-center md:gap-12 gap-8 w-screen h-auto justify-center px-4 pt-8 md:pb-36 bg-[#F1F1F1]">
       <div className="text-center">
         <h2 className="font-poppins text-[32px] md:text-[40px] font-bold leading-[48px] md:leading-[60px]">
           <span className="text-figmaGreen">Testimonials</span> From
@@ -80,6 +81,11 @@ const Testimonials = () => {
           </div>
         ))}
       </div>
+      <img
+        src={rocket}
+        alt="rocket"
+        className="md:w-[100px] w-[60px] absolute top-20 md:top-24 md:left-52 left-2"
+      />
     </div>
   );
 };

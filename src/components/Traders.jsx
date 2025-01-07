@@ -7,6 +7,7 @@ import Rectangle10 from "../assets/svg/Rectangle10.svg";
 import CustomButton1 from "../common/CustomButton1";
 import CustomButton2 from "../common/CustomButton2";
 import { height } from "@mui/system";
+import CustomButton from "../common/CustomButton";
 
 const imageData = [
   {
@@ -59,20 +60,7 @@ const Traders = () => {
         ))}
       </div>
       <div className="flex md:flex-row w-full flex-col justify-center md:items-start items-center md:gap-8 ld:gap-12 gap-4">
-        <CustomButton1
-          sx={{
-            width: "300px",
-          }}
-        >
-          Join Now (English) at ₹199
-        </CustomButton1>
-        <CustomButton2
-          sx={{
-            width: "300px",
-          }}
-        >
-          Join Now (Hindi) at ₹199
-        </CustomButton2>
+        <CustomButton />
       </div>
       <img
         src={Rectangle9}

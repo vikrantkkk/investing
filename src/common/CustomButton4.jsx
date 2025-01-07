@@ -2,7 +2,7 @@ import React from "react";
 
 const CustomButton4 = () => {
   return (
-    <div className="flex">
+    <div className="flex font-bold">
       {/* Left Button: Gradient Background with Box Shadow */}
       <button
         className="p-4 text-black rounded-l-md w-[300px] transition-all duration-300"
@@ -20,7 +20,7 @@ const CustomButton4 = () => {
             "linear-gradient(180deg, #58FF29 0%, #31DE00 50%, #26AD00 100%)") // Original gradient
         }
       >
-        Join Now (Hindi) at ₹199
+        Join Now (Hindi) at <span className="line-through">₹499</span> ₹199
       </button>
 
       {/* Right Button: Transparent with Gradient Border */}

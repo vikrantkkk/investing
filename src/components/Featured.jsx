@@ -15,8 +15,8 @@ import CustomButton2 from "../common/CustomButton2";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import CustomButton from "../common/CustomButton";
 
-// Corrected logos array with specific widths and heights
 const logos = [
   { icon: cnbc, name: "cnbc" },
   { icon: tedx, name: "tedx" },
@@ -25,6 +25,7 @@ const logos = [
   { icon: tedx, name: "tedx" },
   { icon: theprint, name: "theprint" },
 ];
+
 const strategies = [
   {
     icon: Frame1,
@@ -65,63 +66,90 @@ const sliderSettings = {
         cssEase: "linear",
       },
     },
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+      },
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
   ],
 };
 
 const Featured = () => {
   return (
-    <div className="h-auto w-screen flex flex-col md:gap-12 gap-8  pb-8  bg-[#F1F1F1] md:border-b-2">
-      <div className="flex gap-6 w-screen p-4 bg-[#F9FAFB] justify-center items-center overflow-hidden">
+    <div className="h-auto w-screen flex flex-col md:gap-12 gap-8 pb-8 bg-[#F1F1F1] md:border-b-2">
+      <Slider
+        {...sliderSettings}
+        className="w-full gap-2 p-4 text-[18px] leading-6 bg-[#F9FAFB] justify-center items-center relative"
+      >
         {cryptos.map((crypto, index) => (
-          <div key={index} className="flex flex-row items-center mr-4">
-            <img
-              src={crypto.icon}
-              alt={`${crypto.name} icon`}
-              className="w-8 h-8"
-            />
-            <div className="ml-2 font-inter font-medium md:text-[16px] text-[14px] leading-4 md:leading-5">
-              {crypto.name}
-            </div>
-            <div className="ml-2 font-inter font-semibold md:text-[16px] text-[14px] leading-4 md:leading-5">
-              {crypto.price}
-            </div>
-            <div className="ml-2 font-inter font-normal md:text-[16px] text-[14px] leading-4 md:leading-5">
-              {crypto.high24h}
-            </div>
-            <div className="ml-2 font-inter font-normal md:text-[16px] text-[14px] leading-4 md:leading-5">
-              {crypto.low24h}
+          <div key={index} className="flex flex-row items-center justify-start">
+            <div className="w-6 h-6 rounded-full flex justify-center items-center">
+              <img
+                className="rounded-full"
+                src={crypto.icon}
+                alt={`${crypto.name} icon`}
+              />
+              <span className="ml-2 font-inter font-medium md:text-[16px] text-[14px] leading-4 md:leading-5">
+                {crypto.name}
+              </span>
+              <span className="ml-2 font-inter font-semibold md:text-[16px] text-[14px] leading-4 md:leading-5">
+                {crypto.price}
+              </span>
+              <span
+                className={`ml-2 font-inter font-normal md:text-[16px] text-[14px] leading-4 md:leading-5 ${
+                  crypto.high24h >= 0 ? "text-green-500" : "text-red-500"
+                }`}
+              >
+                {crypto.high24h}
+              </span>
+              <span
+                className={`ml-2 font-inter font-normal md:text-[16px] text-[14px] leading-4 md:leading-5 ${
+                  crypto.low24h >= 0 ? "text-green-500" : "text-red-500"
+                }`}
+              >
+                ({crypto.low24h})%
+              </span>
             </div>
           </div>
         ))}
-      </div>
+      </Slider>
 
       <div className="flex flex-col w-full items-center md:px-0 px-4">
-        <div className="flex bg-white gap-8 p-16 flex-col justify-center items-center md:w-[80vw]  w-full rounded-md">
+        <div className="flex bg-white gap-8 p-16 flex-col justify-center items-center md:w-[80vw] w-full rounded-md">
           <div className="flex flex-col gap-1 items-center justify-center">
             <div className="font-poppins font-bold text-[32px] md:text-[40px] leading-[48px] md:leading-[60px] flex justify-center">
               Featured in
             </div>
             <div className="border-2 w-[200px] border-figmaGreen " />
           </div>
-          <div className="w-full md:flex hidden mt-4">
+          <div className="w-full mt-4">
             <Slider {...sliderSettings} className="w-full">
               {logos.map((logo, index) => (
-                <div key={index} className="">
+                <div
+                  key={index}
+                  className="flex justify-center items-center px-4"
+                >
                   <img
                     src={logo.icon}
                     alt={logo.name}
-                    className="flex justify-between gap-16 ld:gap-12 items-center"
+                    className="w-24 h-24 object-contain"
                   />
                 </div>
               ))}
             </Slider>
-          </div>
-          <div className="w-full md:hidden grid mt-4 gap-16 grid-cols-2">
-            {logos.map((logo, index) => (
-              <div key={index} className="flex justify-center items-center">
-                <img src={logo.icon} alt={logo.name} />
-              </div>
-            ))}
           </div>
         </div>
       </div>
@@ -130,12 +158,12 @@ const Featured = () => {
         {strategies.map((strategy, index) => (
           <div
             key={index}
-            className="flex justify-center  flex-col items-center gap-4"
+            className="flex justify-center flex-col items-center gap-4"
           >
             <img
               src={strategy.icon}
               alt="Strategy Icon"
-              className="md:w-[72px]  w-[48px]"
+              className="md:w-[72px] w-[48px] object-contain"
             />
             <div className="font-poppins h-20 text-center md:w-[263px] w-full font-medium text-[#0E0F19] md:text-[16px] text-[14px] leading-6">
               {strategy.text}
@@ -143,21 +171,9 @@ const Featured = () => {
           </div>
         ))}
       </div>
+
       <div className="flex md:flex-row w-full flex-col justify-center md:items-start items-center md:gap-8 gap-4">
-        <CustomButton1
-          sx={{
-            width: "300px",
-          }}
-        >
-          Join Now (English) at ₹199
-        </CustomButton1>
-        <CustomButton2
-          sx={{
-            width: "300px",
-          }}
-        >
-          Join Now (Hindi) at ₹199
-        </CustomButton2>
+        <CustomButton />
       </div>
     </div>
   );

@@ -1,11 +1,12 @@
 import React from "react";
-import one from "../assets/svg/01.svg";
-import two from "../assets/svg/02.svg";
-import three from "../assets/svg/03.svg";
-import four from "../assets/svg/04.svg";
+import one from "../assets/svg/1.svg";
+import two from "../assets/svg/2.svg";
+import three from "../assets/svg/3.svg";
+import four from "../assets/svg/4.svg";
 import rupaiya from "../assets/svg/rupaiya.svg";
 import CustomButton1 from "../common/CustomButton1";
 import CustomButton2 from "../common/CustomButton2";
+import CustomButton from "../common/CustomButton";
 
 // Array of objects with icon and text data
 const allIcon = [
@@ -49,9 +50,8 @@ const WorkShop = () => {
         <div className="border-2 w-[200px] border-figmaGreen mx-auto mt-2" />
       </div>
       <div className="font-poppins md:hidden block text-center md:text-[40px] text-[32px] leading-[48px] md:leading-[60px] font-bold ">
-        <span className="text-figmaGreen">4 Biggest Reasons</span><br /> For You to
-        Join the 
-        Workshop
+        <span className="text-figmaGreen">4 Biggest Reasons</span>
+        <br /> For You to Join the Workshop
         <div className="border-2 w-[200px] border-figmaGreen mx-auto mt-2" />
       </div>
       {/* Cards Section */}
@@ -59,7 +59,7 @@ const WorkShop = () => {
         {allIcon.map((item, index) => (
           <div
             key={index}
-            className={`md:w-64 ld:w-72 w-full cursor-pointer scale-90 h-[300px] bg-white p-6 rounded-2xl flex flex-col items-start transition-all duration-300 ease-in-out ${
+            className={`md:w-64 ld:w-72 w-full cursor-pointer scale-90 h-auto bg-white p-6 rounded-2xl flex flex-col items-start transition-all duration-300 ease-in-out ${
               index === 0
                 ? "shadow-[rgba(0,_0,_0,_0.09)_0px_2px_1px,_rgba(0,_0,_0,_0.09)_0px_4px_2px,_rgba(0,_0,_0,_0.09)_0px_8px_4px,_rgba(0,_0,_0,_0.09)_0px_16px_8px,_rgba(0,_0,_0,_0.09)_0px_32px_16px]"
                 : "shadow-md hover:shadow-[rgba(0,_0,_0,_0.09)_0px_2px_1px,_rgba(0,_0,_0,_0.09)_0px_4px_2px,_rgba(0,_0,_0,_0.09)_0px_8px_4px,_rgba(0,_0,_0,_0.09)_0px_16px_8px,_rgba(0,_0,_0,_0.09)_0px_32px_16px]"
@@ -83,22 +83,13 @@ const WorkShop = () => {
       </div>
       {/* button section */}
       <div className="flex md:flex-row w-full flex-col justify-center md:items-start items-center md:gap-8 gap-4">
-        <CustomButton1
-          sx={{
-            width: "300px",
-          }}
-        >
-          Join Now (English) at ₹199
-        </CustomButton1>
-        <CustomButton2
-          sx={{
-            width: "300px",
-          }}
-        >
-          Join Now (Hindi) at ₹199
-        </CustomButton2>
+        <CustomButton />
       </div>
-      <img src={rupaiya} alt="rupaiya" className="md:w-[100px] w-[60px] absolute md:top-10 top-52 md:right-20 right-2" />
+      <img
+        src={rupaiya}
+        alt="rupaiya"
+        className="md:w-[100px] w-[60px] absolute md:top-10 top-52 md:right-32 right-2"
+      />
     </div>
   );
 };

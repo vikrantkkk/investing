@@ -15,6 +15,7 @@ import correct from "../assets/svg/correct.svg";
 import { Box, Typography } from "@mui/material";
 import CustomButton3 from "../common/CustomButton3";
 import CustomButton4 from "../common/CustomButton4";
+import VerifiedIcon from "@mui/icons-material/Verified";
 
 const Hero = () => {
   return (
@@ -29,10 +30,16 @@ const Hero = () => {
         <div className="absolute bottom-0 z-10">
           <img src={ceo} alt="CEO" className="md:h-[80vh]  h-[363px]" />
         </div>
-        <div className="md:h-[200px] h-[100px] shadow-2xl md:w-[300px] w-[173px] flex-wrap bg-white z-10 absolute md:bottom-10 bottom-4 md:left-44 ld:left-72 left-16 rounded-md">
+        <div className="h-auto shadow-2xl md:w-[300px] w-[173px] flex-wrap bg-white z-10 absolute md:bottom-10 bottom-4 md:left-44 ld:left-72 left-16 rounded-md">
           <div className="flex flex-col md:gap-2 gap-1 md:p-4 p-2">
-            <div className="font-poppins font-semibold md:text-[20px] text-[11px] md:leading-8 leading-4 text-[#0E0F19]">
-              Parang Mehta
+            <div className="flex flex-col font-poppins font-semibold md:text-[20px] text-[11px] md:leading-8 leading-4 text-[#0E0F19]">
+              <div className="flex justify-start items-center gap-2">
+                <span>Parang Mehta</span>
+                <VerifiedIcon className="text-[#1E8BFF]" />
+              </div>
+              <span className=" font-poppins font-medium md:text-[14px] text-[8px] md:leading-6 leading-4 text-[#0E0F19B2]/[0.7]">
+                Founder & CEO of Stockwiz
+              </span>
             </div>
             <div className="flex flex-col md:gap-2">
               <div className="flex justify-start items-center  font-poppins font-normal md:text-[16px] text-[8px] md:leading-6 leading-4 text-[#0E0F19B2]/[0.7]">
@@ -44,7 +51,10 @@ const Hero = () => {
                     className="md:h-[24px] h-[12px] md:w-[24px] w-[12px]"
                   />
                 </span>{" "}
-                SEBI Registered Research Analyst INH000013925
+                <div>
+                  SEBI Registered Research Analyst{" "}
+                  <span className="font-bold">INH000013925</span>
+                </div>
               </div>
               <div className=" flex justify-start items-center gap-2 font-poppins font-normal md:text-[16px] text-[8px] md:leading-6 leading-4 text-[#0E0F19B2]/[0.7]">
                 <span>
@@ -67,6 +77,17 @@ const Hero = () => {
                   />
                 </span>{" "}
                 Trained 50,000+ People
+              </div>
+              <div className="flex justify-start items-center gap-2 font-poppins font-normal md:text-[16px] text-[8px] md:leading-6 leading-4 text-[#0E0F19B2]/[0.7]">
+                <span>
+                  {" "}
+                  <img
+                    src={correct}
+                    alt="correct"
+                    className="md:h-[24px] h-[12px] md:w-[24px] w-[12px]"
+                  />
+                </span>{" "}
+                Institutional Trading Specialist
               </div>
             </div>
           </div>
@@ -91,8 +112,8 @@ const Hero = () => {
         </div>
       </div>
       <div className="md:flex-1 w-full md:h-auto h-[50vh]  flex flex-col md:gap-8 gap-2  justify-center md:items-start items-center">
-        <div className="font-poppins p-2 font-normal text-figmaGreen rounded-[8px] w-[271px] bg-greenbackgrond">
-          <span className="font-semibold text-[16px] leading-6">50000+</span>{" "}
+        <div className="font-poppins p-2 font-normal text-figmaGreen rounded-[8px] w-auto px-4 bg-greenbackgrond">
+          <span className="font-semibold text-[16px] leading-6">100000+</span>{" "}
           Traders Already Joined
         </div>
 
@@ -125,37 +146,34 @@ const Hero = () => {
           <CustomButton3 />
         </div>
         <div className="flex md:hidden w-full flex-col justify-center md:items-start items-center md:gap-8 gap-4">
-        <CustomButton1
-          sx={{
-            width: "300px",
-          }}
-        >
-          Join Now (English) at ₹199
-        </CustomButton1>
-        <CustomButton2
-          sx={{
-            width: "300px",
-          }}
-        >
-          Join Now (Hindi) at ₹199
-        </CustomButton2>
-      </div>
-        <div className="font-poppins md:flex hidden justify-start items-center gap-4">
-          <div className="flex justify-start items-center  gap-4">
-            <img
-              src={duration1}
-              alt="MyBrand Logo"
-              className="h-[24px] w-[24px]"
-            />
-            <span className=" font-normal text-[14px] leading-5 text-[#0E0F19B2]/[0.7]">
-              DURATION
-            </span>{" "}
-            <span className="font-semibold text-[16px] leading-6">2.5 hrs</span>
-          </div>
-          <div className="font-poppins p-2 font-normal text-figmaGreen rounded-[8px] w-auto bg-greenbackgrond">
-            <span className="font-semibold text-[16px] leading-6">50000+</span>{" "}
-            Last Few Seats Left ! Grab your seat now
-          </div>
+          <CustomButton1
+            sx={{
+              width: "300px",
+            }}
+          >
+            Join Now (English) at ₹199
+          </CustomButton1>
+          <CustomButton2
+            sx={{
+              width: "300px",
+            }}
+          >
+            Join Now (Hindi) at ₹199
+          </CustomButton2>
+        </div>
+        <div className="flex gap-4 justify-center items-center text-figmaGreen bg-greenbackgrond rounded-[8px] w-auto px-4">
+          <img
+            src={duration1}
+            alt="MyBrand Logo"
+            className="h-[24px] w-[24px]"
+          />
+          <span className=" font-normal text-[14px] leading-5 text-[#0E0F19B2]/[0.7]">
+            DURATION
+          </span>{" "}
+          <span className="font-semibold text-[16px] leading-6">2.5 HOURS</span>
+          <span className="font-poppins p-2 font-normal ">
+            Last few seats left ! Grab your seat now
+          </span>
         </div>
       </div>
     </div>

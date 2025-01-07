@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import CustomButton1 from "../common/CustomButton1";
 import CustomButton2 from "../common/CustomButton2";
 import secrets from "../assets/video/secrets.mp4";
+import CustomButton from "../common/CustomButton";
 
 const TimeTiking = () => {
   // Initialize the countdown state with 5 minutes (300 seconds)
@@ -44,7 +45,7 @@ const TimeTiking = () => {
         {/* Title */}
         <div>
           <h1 className="font-poppins font-bold text-[40px] leading-[60px]">
-            Time Ticking
+            Hurry Up! Time is Ticking.
           </h1>
           <div className="border-2 w-[200px] border-figmaGreen mx-auto mt-2" />
         </div>
@@ -77,12 +78,7 @@ const TimeTiking = () => {
 
         {/* Buttons */}
         <div className="flex md:flex-row w-full flex-col justify-center md:items-start items-center md:gap-8 ld:gap-12 gap-4">
-          <CustomButton1 sx={{ width: "300px" }}>
-            Join Now (English) at ₹199
-          </CustomButton1>
-          <CustomButton2 sx={{ width: "300px" }}>
-            Join Now (Hindi) at ₹199
-          </CustomButton2>
+          <CustomButton />
         </div>
       </div>
     </div>

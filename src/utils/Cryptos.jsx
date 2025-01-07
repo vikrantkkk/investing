@@ -1,10 +1,34 @@
-import bitcoin from "../assets/svg/bitcoin.svg"
+import snp from "../assets/svg/snp.svg";
+import bitcoin from "../assets/svg/bitcoin.svg";
+import etherium from "../assets/svg/etherium.svg";
+import reliance from "../assets/svg/reliance.svg";
 export const cryptos = [
-  { icon: bitcoin, name: "Bitcoin", symbol: "BTC", price: 26500, high24h: 27000, low24h: 26000 },
-  { icon: bitcoin, name: "Ethereum", symbol: "ETH", price: 1800, high24h: 1850, low24h: 1750 },
-  { icon: bitcoin, name: "Litecoin", symbol: "LTC", price: 95, high24h: 100, low24h: 90 },
-  { icon: bitcoin, name: "Ripple", symbol: "XRP", price: 50, high24h: 55, low24h: 48 },
-  { icon: bitcoin, name: "Dogecoin", symbol: "DOGE", price: 8, high24h: 9, low24h: 7 },
-  { icon: bitcoin, name: "Cardano", symbol: "ADA", price: 0.35, high24h: 0.4, low24h: 0.3 },
-  { icon: bitcoin, name: "Solana", symbol: "SOL", price: 22, high24h: 25, low24h: 20 },
+  {
+    icon: snp,
+    name: "S&P",
+    price: 4759.1,
+    high24h: -6.0,
+    low24h: -0.13,
+  },
+  {
+    icon: bitcoin,
+    name: "Bitcoin",
+    price: 42732,
+    high24h: +474,
+    low24h: +1.12,
+  },
+  {
+    icon: etherium,
+    name: "Ethereum",
+    price: 2207.4,
+    high24h: +29.9,
+    low24h: +1.37,
+  },
+  {
+    icon: reliance,
+    name: "Reliance",
+    price: 2558.45,
+    high24h: +38.5,
+    low24h: +1.53,
+  },
 ];
