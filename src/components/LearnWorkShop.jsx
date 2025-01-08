@@ -36,30 +36,6 @@ const allImage = [
   },
 ];
 
-const sliderSettings = {
-  dots: false,
-  infinite: true,
-  speed: 20000,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 0,
-  cssEase: "linear",
-  responsive: [
-    {
-      breakpoint: 1590,
-      settings: {
-        slidesToShow: 1,
-        infinite: true,
-        autoplay: true,
-        speed: 20000,
-        autoplaySpeed: 0,
-        cssEase: "linear",
-      },
-    },
-  ],
-};
-
 const LearnWorkShop = () => {
   const [timeLeft, setTimeLeft] = useState(300);
 
@@ -82,14 +58,9 @@ const LearnWorkShop = () => {
 
   return (
     <div className="relative flex md:border-b-2 flex-col md:gap-12 gap-8 w-screen md:px-0 px-4 pb-8 h-auto bg-[#F1F1F1]">
-      <Slider
-        {...sliderSettings}
-        className="w-full gap-2 p-4 text-[18px] leading-6 bg-[#F9FAFB] justify-center items-center relative"
-      >
-        {allImage.map((_, index) => (
-          <div key={index} className="flex flex-col items-center">
-            {" "}
-            {/* Further reduced gap */}
+      <div className="w-full gap-2 p-4 text-[18px] leading-6 bg-[#F9FAFB] justify-center items-center relative">
+        <div class="relative flex overflow-x-hidden">
+          <div class="p-2 animate-marquee whitespace-nowrap">
             <span className="font-medium text-center">
               Call. Offer Expires In
             </span>
@@ -120,8 +91,40 @@ const LearnWorkShop = () => {
               Call. Offer Expires In
             </span>
           </div>
-        ))}
-      </Slider>
+
+          <div class="absolute top-0 p-2 animate-marquee2 whitespace-nowrap">
+            <span className="font-medium text-center">
+              Call. Offer Expires In
+            </span>
+            <span
+              className="px-4 py-1 rounded-md font-semibold text-transparent text-center"
+              style={{
+                background:
+                  "linear-gradient(94.98deg, rgba(255, 204, 105, 0.8) -44.59%, rgba(255, 34, 34, 0.8) 154.52%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              {formatTime(timeLeft)}
+            </span>
+            <span
+              className="font-semibold text-transparent text-center"
+              style={{
+                background:
+                  "linear-gradient(88.4deg, #1D870B -4.38%, #66D6AD 40.17%, #13B5E8 85.62%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              Limited Time Offer{" "}
+            </span>
+            <span className="font-medium text-center">
+              Sign Up Now And Get 50% Discount + Free E-Book + Free Consultation
+              Call. Offer Expires In
+            </span>
+          </div>
+        </div>
+      </div>
 
       <div className="md:block hidden font-poppins text-center text-[40px] leading-[60px] font-bold">
         What You Will <span className="text-figmaGreen">Learn</span> in the{" "}

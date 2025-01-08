@@ -25,7 +25,7 @@ const CustomButton4 = () => {
 
       {/* Right Button: Transparent with Gradient Border */}
       <button
-        className="flex items-center justify-center px-4 text-black bg-transparent rounded-r-md w-[300px] transition-all duration-300"
+        className="flex items-center justify-center px-4 text-black dark:text-white bg-transparent rounded-r-md w-[300px] transition-all duration-300"
         style={{
           border: "2px solid transparent", // 2px border for the right button
           borderImageSource:

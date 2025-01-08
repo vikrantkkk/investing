@@ -7,27 +7,20 @@ import RemoveCircleIcon from "@mui/icons-material/RemoveCircle";
 const faqData = [
   {
     id: 1,
-    question: "Who is this workshop for?",
-    answer:
-      "This workshop is for anyone who wants to level up their trading game, whether you’re a beginner looking for a solid foundation or an experienced trader struggling to achieve consistent results.",
+    question: " What will be the duration of the webinar?",
+    answer: "The duration of the webinar will be 120 minutes (2 hours).",
   },
   {
     id: 2,
-    question: "How do I start trading?",
+    question: "What will be the language of the webinar?",
     answer:
-      "To start trading, you need to open a account, learn the basics of stock markets, and begin with small investments.",
+      "The webinar will be delivered in simple English. Doubts can be asked in Hindi.",
   },
   {
     id: 3,
-    question: "What are the risks of trading?",
+    question: "Will we get the recordings of this webinar?",
     answer:
-      "Trading involves risks such as market volatility, loss of principal, and unforeseen economic factors.",
-  },
-  {
-    id: 4,
-    question: "Can I trade without experience?",
-    answer:
-      "Yes, but it is recommended to gain some basic knowledge or join educational programs before starting.",
+      "Yes, by attending the webinar, you will gain access to a replay option, allowing you to watch the content as many times as you wish.",
   },
 ];
 
@@ -104,26 +97,33 @@ const Faq = () => {
                 key={item.id}
                 className="w-full border-b border-gray-300 py-8 transition-all"
               >
-                {/* Question Section */}
-                <div className="flex items-center justify-between w-full">
-                  <div className="flex items-center gap-4 flex-grow">
-                    <span
-                      className="text-start font-bold text-[#0E0F19B2]/[0.7]"
-                      style={{
-                        fontSize: "calc(10px + 2vmin)",
-                        lineHeight: "1",
-                      }}
-                    >
-                      {index + 1 < 10 ? `0${index + 1}` : index + 1}
-                    </span>
+                {/* Question and Answer Container */}
+                <div className="flex w-full gap-4 items-start">
+                  {/* Number Section */}
+                  <div className="flex-shrink-0 text-[#0E0F19B2]/[0.7] font-bold text-[calc(10px+2vmin)] leading-none">
+                    {index + 1 < 10 ? `0${index + 1}` : index + 1}
+                  </div>
 
-                    <h3 className="font-poppins text-start font-bold text-[clamp(20px,2vw,24px)] leading-[1.2] text-[#0E0F19]">
+                  {/* Text Section */}
+                  <div className="flex flex-col flex-grow">
+                    {/* Question */}
+                    <h3 className="font-poppins text-left font-bold text-[clamp(20px,2vw,24px)] leading-[1.2] text-[#0E0F19]">
                       {item.question}
                     </h3>
+
+                    {/* Answer */}
+                    {activeIndex === index && (
+                      <p className="font-poppins text-justify font-medium text-[clamp(14px,1.5vw,16px)] leading-[1.6] text-[#0E0F19B2]/[0.7] mt-4">
+                        {item.answer}
+                      </p>
+                    )}
                   </div>
+
+                  {/* Toggle Button */}
                   <button
                     aria-expanded={activeIndex === index}
                     onClick={() => toggleFAQ(index)}
+                    className="flex-shrink-0"
                   >
                     {activeIndex === index ? (
                       <RemoveCircleIcon
@@ -134,13 +134,6 @@ const Faq = () => {
                     )}
                   </button>
                 </div>
-
-                {/* Answer Section */}
-                {activeIndex === index && (
-                  <p className="font-poppins text-start md:w-[90%] w-[80%] font-medium text-[clamp(14px,1.5vw,16px)] leading-[1.6] text-[#0E0F19B2]/[0.7] mt-4 md:ml-10 ml-8">
-                    {item.answer}
-                  </p>
-                )}
               </div>
             ))}
           </div>

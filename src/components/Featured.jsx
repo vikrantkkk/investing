@@ -60,6 +60,7 @@ const sliderSettings = {
       settings: {
         slidesToShow: 4,
         infinite: true,
+        speed: 5000,
         autoplay: true,
         speed: 0,
         autoplaySpeed: 0,
@@ -70,18 +71,21 @@ const sliderSettings = {
       breakpoint: 1024,
       settings: {
         slidesToShow: 3,
+        speed: 5000,
       },
     },
     {
       breakpoint: 768,
       settings: {
         slidesToShow: 2,
+        speed: 5000,
       },
     },
     {
       breakpoint: 480,
       settings: {
         slidesToShow: 1,
+        speed: 5000,
       },
     },
   ],
