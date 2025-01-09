@@ -21,7 +21,6 @@ import CustomButton from "../common/CustomButton";
 
 const Hero = () => {
   const { darkMode } = useDarkMode();
-  console.log("🚀 ~ Hero ~ darkMode:", darkMode);
   return (
     <>
       <div
