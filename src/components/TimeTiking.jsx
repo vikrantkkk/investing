@@ -28,7 +28,7 @@ const TimeTiking = () => {
   const seconds = time % 60;
 
   return (
-    <div className="relative flex items-center justify-center min-h-screen">
+    <div className="relative  items-center md:dark:flex hidden justify-center min-h-screen">
       {/* Video Background */}
       <video
         autoPlay

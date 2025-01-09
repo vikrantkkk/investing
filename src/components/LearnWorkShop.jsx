@@ -57,9 +57,9 @@ const LearnWorkShop = () => {
   };
 
   return (
-    <div className="relative flex md:border-b-2 flex-col md:gap-12 gap-8 w-screen md:px-0 px-4 pb-8 h-auto bg-[#F1F1F1]">
-      <div className="w-full gap-2 p-4 text-[18px] leading-6 bg-[#F9FAFB] justify-center items-center relative">
-        <div class="relative flex overflow-x-hidden">
+    <div className="relative flex md:border-b-2 flex-col gap-12  w-screen md:px-0 px-4 pb-8 h-auto dark:border-none dark:bg-darkBackGround bg-[#F1F1F1]">
+      <div className="w-full gap-2 dark:hidden p-4 text-[18px] leading-6 bg-[#F9FAFB] justify-center items-center relative">
+        <div class="relative  flex overflow-x-hidden">
           <div class="p-2 animate-marquee whitespace-nowrap">
             <span className="font-medium text-center">
               Call. Offer Expires In
@@ -126,13 +126,13 @@ const LearnWorkShop = () => {
         </div>
       </div>
 
-      <div className="md:block hidden font-poppins text-center text-[40px] leading-[60px] font-bold">
+      <div className="md:block dark:text-white hidden font-poppins text-center text-[40px] leading-[60px] font-bold">
         What You Will <span className="text-figmaGreen">Learn</span> in the{" "}
         <br />
         Workshop
         <div className="border-2 w-[200px] border-figmaGreen mx-auto mt-2" />
       </div>
-      <div className="md:mt-8 md:hidden block font-poppins text-center text-[32px] leading-[48px] font-bold">
+      <div className="md:mt-8 md:hidden block font-poppins text-center dark:text-white text-[32px] leading-[48px] font-bold">
         What You Will <span className="text-figmaGreen">Learn</span>
         <br /> in the Workshop
         <div className="border-2 w-[200px] border-figmaGreen mx-auto mt-2" />
@@ -142,7 +142,7 @@ const LearnWorkShop = () => {
           {allImage.map((item, index) => (
             <div
               key={index}
-              className={`cursor-pointer md:w-[500px] w-full bg-white p-6 rounded-2xl flex flex-col items-center transition-all duration-300 ease-in-out shadow-md hover:shadow-lg`}
+              className={`cursor-pointer md:w-[500px] w-full dark:bg-[#FFFFFF26]/[0.15] bg-white p-6 rounded-2xl flex flex-col items-center transition-all duration-300 ease-in-out shadow-md hover:shadow-lg`}
             >
               <img
                 src={item.icon}
@@ -150,10 +150,10 @@ const LearnWorkShop = () => {
                 className="w-full h-[250px] object-cover mb-6 rounded-md"
               />
               <div className="flex flex-col items-start gap-4">
-                <div className="font-poppins text-[20px] leading-8 text-start font-bold text-[#0E0F19]">
+                <div className="font-poppins dark:text-[#F1F1F1] text-[20px] leading-8 text-start font-bold text-[#0E0F19]">
                   {item.text1}
                 </div>
-                <div className="font-poppins text-[16px] leading-6 text-start font-medium text-[#0E0F19B2]/[0.7]">
+                <div className="font-poppins dark:text-[#F1F1F1]/[0.7] text-[16px] leading-6 text-start font-medium text-[#0E0F19B2]/[0.7]">
                   {item.text2}
                 </div>
               </div>

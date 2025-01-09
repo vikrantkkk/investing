@@ -13,10 +13,12 @@ import MenuIcon from "@mui/icons-material/Menu";
 import WebIcon from "@mui/icons-material/Web"; // Icon for Webinar
 import PhoneIcon from "@mui/icons-material/Phone"; // Icon for Contact Us
 import logo from "../assets/svg/home.svg"; // Import the logo
+import { useDarkMode } from "../hooks/DarkModeContext";
 
 export default function TemporaryDrawer() {
   const [open, setOpen] = React.useState(false);
   const location = useLocation(); // Access the current route
+  const {darkMode} = useDarkMode(); // Access the dark mode state
 
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
@@ -82,7 +84,7 @@ export default function TemporaryDrawer() {
   return (
     <div>
       <Button onClick={toggleDrawer(true)}>
-        <div className="text-black">
+        <div className="text-black dark:text-gray-400">
           <MenuIcon />
         </div>
       </Button>

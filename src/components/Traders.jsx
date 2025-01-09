@@ -34,8 +34,8 @@ const imageData = [
 ];
 const Traders = () => {
   return (
-    <div className="relative flex md:border-b-2 flex-col md:gap-12 gap-8  h-auto w-screen md:px-0 py-8 px-4 bg-[#F1F1F1]">
-      <div className="font-poppins text-center md:text-[40px] text-[32px] leading-[48px] md:leading-[60px] font-bold">
+    <div className="relative flex md:border-b-2 flex-col gap-12 dark:border-none  h-auto w-screen  md:px-0 py-8 px-4 dark:bg-darkBackGround bg-[#F1F1F1]">
+      <div className="font-poppins dark:text-white text-center md:text-[40px] text-[32px] leading-[48px] md:leading-[60px] font-bold">
         Ready To Unlock Secrets Of
         <br />
         <span className="text-figmaGreen">Successful Traders?</span>
@@ -65,22 +65,22 @@ const Traders = () => {
       <img
         src={Rectangle9}
         alt={Rectangle9}
-        className="z-10 md:block hidden  absolute right-0 h-[95%]"
+        className="z-10 md:block hidden dark:hidden absolute right-0 top-0 h-[95%]"
       />
       <img
         src={Rectangle10}
         alt={Rectangle10}
-        className="z-10 md:block hidden  absolute left-0 top-0 h-[95%]"
+        className="z-10 md:block hidden dark:hidden absolute left-0 top-0 h-[95%]"
       />
       <img
         src={Rectangle9}
         alt={Rectangle9}
-        className="absolute -right-10 top-52 h-[40%]"
+        className="absolute -right-10 dark:hidden top-52 h-[40%]"
       />
       <img
         src={Rectangle10}
         alt={Rectangle10}
-        className="absolute -left-10 top-52 h-[40%]"
+        className="absolute dark:hidden -left-10 top-52 h-[40%]"
       />
     </div>
   );

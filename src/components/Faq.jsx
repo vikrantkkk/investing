@@ -3,6 +3,7 @@ import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import CustomButton1 from "../common/CustomButton1";
 import CustomButton2 from "../common/CustomButton2";
 import RemoveCircleIcon from "@mui/icons-material/RemoveCircle";
+import { useDarkMode } from "../hooks/DarkModeContext";
 
 const faqData = [
   {
@@ -26,17 +27,18 @@ const faqData = [
 
 const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(null);
+  const { darkMode } = useDarkMode();
 
   const toggleFAQ = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
   return (
-    <div className="flex flex-col  h-auto w-screen gap-8 py-8 px-4 bg-[#F1F1F1]">
+    <div className="flex flex-col  h-auto w-screen gap-8 py-8 px-4 dark:bg-darkBackGround bg-[#F1F1F1]">
       <div className="flex md:flex-row flex-col">
         {/* Header Section */}
         <div className="md:w-[40%] w-full flex justify-center md:mt-4">
-          <div className="flex flex-col md:items-start items-center font-poppins md:text-start text-center md:text-[40px] text-[32px] leading-[45px] md:leading-[60px] font-bold">
+          <div className="flex dark:text-white flex-col md:items-start items-center font-poppins md:text-start text-center md:text-[40px] text-[32px] leading-[45px] md:leading-[60px] font-bold">
             Frequently Asked
             <br />
             Questions
@@ -100,20 +102,20 @@ const Faq = () => {
                 {/* Question and Answer Container */}
                 <div className="flex w-full gap-4 items-start">
                   {/* Number Section */}
-                  <div className="flex-shrink-0 text-[#0E0F19B2]/[0.7] font-bold text-[calc(10px+2vmin)] leading-none">
+                  <div className="flex-shrink-0 dark:text-[#FFFFFFB2]/[0.7] text-[#0E0F19B2]/[0.7] font-bold text-[calc(10px+2vmin)] leading-none">
                     {index + 1 < 10 ? `0${index + 1}` : index + 1}
                   </div>
 
                   {/* Text Section */}
                   <div className="flex flex-col flex-grow">
                     {/* Question */}
-                    <h3 className="font-poppins text-left font-bold text-[clamp(20px,2vw,24px)] leading-[1.2] text-[#0E0F19]">
+                    <h3 className="font-poppins dark:text-[#FFFFFF] text-left font-bold text-[clamp(20px,2vw,24px)] leading-[1.2] text-[#0E0F19]">
                       {item.question}
                     </h3>
 
                     {/* Answer */}
                     {activeIndex === index && (
-                      <p className="font-poppins text-justify font-medium text-[clamp(14px,1.5vw,16px)] leading-[1.6] text-[#0E0F19B2]/[0.7] mt-4">
+                      <p className="font-poppins dark:text-[#FFFFFFB2]/[0.7] text-justify font-medium text-[clamp(14px,1.5vw,16px)] leading-[1.6] text-[#0E0F19B2]/[0.7] mt-4">
                         {item.answer}
                       </p>
                     )}
@@ -127,10 +129,15 @@ const Faq = () => {
                   >
                     {activeIndex === index ? (
                       <RemoveCircleIcon
-                        style={{ color: "#26AD00", fontSize: "30px" }}
+                        style={{ color: darkMode ? "white" : "#26AD00",fontSize: "30px" }}
                       />
                     ) : (
-                      <AddCircleOutlineIcon style={{ fontSize: "30px" }} />
+                      <AddCircleOutlineIcon
+                        style={{
+                          fontSize: "30px",
+                          color: darkMode ? "gray" : "inherit",
+                        }}
+                      />
                     )}
                   </button>
                 </div>

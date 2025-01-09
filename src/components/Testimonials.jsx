@@ -42,20 +42,20 @@ const cardData1 = [
 
 const Testimonials = () => {
   return (
-    <div className="flex relative flex-col items-center md:gap-12 gap-8 w-screen h-auto justify-center px-4 pt-8 md:pb-36 bg-[#F1F1F1]">
+    <div className="flex relative flex-col items-center gap-12  w-screen h-auto justify-center px-4 pt-8 md:pb-36 dark:bg-darkBackGround bg-[#F1F1F1]">
       <div className="text-center">
-        <h2 className="font-poppins text-[32px] md:text-[40px] font-bold leading-[48px] md:leading-[60px]">
+        <h2 className="font-poppins text-[32px] md:text-[40px] dark:text-white font-bold leading-[48px] md:leading-[60px]">
           <span className="text-figmaGreen">Testimonials</span> From
           <br />
           Past Attendees
         </h2>
         <div className="border-2 border-figmaGreen w-[200px] mx-auto mt-2" />
       </div>
-      <div className="flex flex-wrap justify-center gap-12 mt-8">
+      <div className="flex flex-wrap justify-center md:gap-12 gap-8 mt-8">
         {cardData1.map((item, index) => (
           <div
             key={index}
-            className="bg-white p-6 rounded-2xl shadow-md transition-shadow duration-300 hover:shadow-lg md:w-[300px] w-full"
+            className="bg-white dark:bg-[#FFFFFF26]/[0.15] p-6 rounded-2xl shadow-md transition-shadow duration-300 hover:shadow-lg md:w-[300px] w-full"
           >
             <div className="flex items-center gap-4">
               <img
@@ -64,18 +64,18 @@ const Testimonials = () => {
                 alt={`${item.name}-icon`}
               />
               <div>
-                <h3 className="font-poppins font-semibold text-[18px]">
+                <h3 className="font-poppins dark:text-[#F1F1F1] font-semibold text-[18px]">
                   {item.name}
                 </h3>
-                <p className="font-poppins text-[14px] text-gray-600">
+                <p className="font-poppins text-[14px] dark:text-[#F1F1F1]/[0.7] text-gray-600">
                   {item.designation}
                 </p>
               </div>
             </div>
-            <p className="font-poppins text-[16px] font-semibold mt-4">
+            <p className="font-poppins text-[16px] dark:text-[#F1F1F1] font-semibold mt-4">
               {item.text1}
             </p>
-            <p className="font-poppins text-[14px] text-gray-600 mt-2">
+            <p className="font-poppins text-[14px] dark:text-[#F1F1F1]/[0.7] text-gray-600 mt-2">
               {item.text2}
             </p>
           </div>
@@ -84,7 +84,7 @@ const Testimonials = () => {
       <img
         src={rocket}
         alt="rocket"
-        className="md:w-[100px] w-[60px] absolute top-20 md:top-24 md:left-52 left-2"
+        className="md:w-[100px] w-[60px] absolute md:top-24 top-32 md:left-52 left-2"
       />
     </div>
   );

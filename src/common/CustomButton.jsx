@@ -2,10 +2,10 @@ import React from "react";
 
 const CustomButton = () => {
   return (
-    <div className="flex font-bold">
+    <div className="flex md:flex-row flex-col gap-4 font-bold">
       {/* Left Button 1: Gradient Background with Box Shadow */}
       <button
-        className="p-4 text-black rounded-l-md w-[300px] transition-all duration-300"
+        className="p-4 text-black rounded-md w-[300px] transition-all duration-300"
         style={{
           background: "linear-gradient(180deg, #58FF29, #31DE00, #26AD00 100%)", // Gradient for Left Button 1
           boxShadow:
@@ -25,7 +25,7 @@ const CustomButton = () => {
 
       {/* Left Button 2: Gradient Background with Box Shadow */}
       <button
-        className="p-4 text-white rounded-l-md w-[300px] transition-all duration-300 ml-4" // Added margin-left for gap
+        className="p-4 text-white rounded-md w-[300px] transition-all duration-300" // Added margin-left for gap
         style={{
           background: "linear-gradient(180deg, #007AFF, #1064BF 100%)", // Gradient for Left Button 2 (Different Color)
           boxShadow:

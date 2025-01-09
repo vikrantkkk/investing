@@ -27,16 +27,16 @@ const cardData = [
 
 const Contact = () => {
   return (
-    <div className="flex flex-col items-start justify-center md:gap-12 gap-4 px-4 py-8 md:px-36  h-auto  bg-[#F1F1F1]">
+    <div className="flex flex-col items-start justify-center md:gap-12 gap-4 px-4 py-8 md:px-36  h-auto dark:bg-darkBackGround bg-[#F1F1F1]">
 
       <div className="flex flex-col gap-2 md:my-0 my-4">
         <div className="text-figmaGreen font-semibold text-base">
           Contact us
         </div>
-        <div className="font-poppins text-start font-semibold md:text-[48px] text-[29px] leading-[45px] md:leading-[70px] text-[#101828]">
+        <div className="font-poppins dark:text-white text-start font-semibold md:text-[48px] text-[29px] leading-[45px] md:leading-[70px] text-[#101828]">
           We’d love to hear from you
         </div>
-        <div className="font-poppins text-start font-normal md:text-[24px] text-[20px] leading-8 md:leading-9 text-[#0E0F19B2]/[0.7] ">
+        <div className="font-poppins dark:text-[#FFFFFFCC]/[0.6] text-start font-normal md:text-[24px] text-[20px] leading-8 md:leading-9 text-[#0E0F19B2]/[0.7]">
           Our team is always here to chat.
         </div>
       </div>
@@ -46,7 +46,7 @@ const Contact = () => {
         {cardData.map((card, index) => (
           <div
             key={index}
-            className="flex flex-col items-start w-full md:w-[380px] ld:w-[500px] gap-4 p-4 bg-white rounded-md shadow-md"
+            className="flex flex-col items-start w-full md:w-[380px] ld:w-[500px] gap-4 p-4 dark:bg-[#FFFFFF26]/[0.15] bg-white rounded-md shadow-md"
           >
 
             <div className="flex h-[50px] rounded-lg bg-figmaGreen w-[50px] justify-center items-center mb-4">
@@ -58,10 +58,10 @@ const Contact = () => {
             </div>
    
             <div className="flex flex-col gap-2">
-              <div className="font-poppins font-medium text-md text-[#101828]">
+              <div className="font-poppins dark:text-white font-medium text-md text-[#101828]">
                 {card.title}
               </div>
-              <div className="font-light text-sm text-[#475467]">
+              <div className="font-light text-sm dark:text-[#F1F1F1]/[0.7] text-[#475467] dark:">
                 {card.description}
               </div>
               <div className="text-figmaGreen font-semibold text-sm">
@@ -72,9 +72,9 @@ const Contact = () => {
         ))}
       </div>
 
-      <div className="flex flex-col items-start h-auto w-full gap-4 p-4 bg-white rounded-md shadow-md">
+      <div className="flex flex-col items-start h-auto w-full gap-4 p-4 dark:bg-[#FFFFFF26]/[0.15] bg-white rounded-md shadow-md">
         <div className="flex flex-col gap-2">
-          <div className="font-poppins font-medium text-md text-[#101828]">
+          <div className="font-poppins dark:text-white font-medium text-md text-[#101828]">
             Registered Address
           </div>
           {/* <div className="font-light text-sm text-[#475467]">
