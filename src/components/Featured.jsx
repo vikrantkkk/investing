@@ -99,7 +99,7 @@ const Featured = () => {
   ];
 
   return (
-    <div className="h-auto w-screen flex flex-col md:gap-12 gap-8 pb-8 bg-[#F1F1F1] dark:bg-darkBackGround dark:border-none md:border-b-2">
+    <div className="h-auto w-screen flex flex-col gap-12 pb-8 bg-[#F1F1F1] dark:bg-darkBackGround dark:border-none md:border-b-2">
       <Slider
         {...sliderSettings}
         className="w-full gap-2 p-4 dark:hidden text-[18px] leading-6 bg-[#F9FAFB] justify-center items-center relative"
@@ -186,7 +186,7 @@ const Featured = () => {
         </div>
       </div>
 
-      <div className="md:flex md:pt-10 gap-8 ld:gap-32 md:px-0 px-4 w-full md:items-center md:justify-center grid grid-cols-2">
+      <div className="md:flex md:pt-10 dark:pt-0 gap-8 ld:gap-32 md:px-0 px-4 w-full md:items-center md:justify-center grid grid-cols-2">
         {strategies.map((strategy, index) => (
           <div
             key={index}
