@@ -13,7 +13,7 @@ const GrabSeat = () => {
       <div className="md:hidden flex md:flex-row w-full flex-col justify-center md:items-start items-center md:gap-8 gap-4">
         <CustomButtonForMobile />
       </div>
-      <div className="font-poppins p-2 font-normal text-figmaGreen rounded-[8px] w-auto bg-greenbackgrond">
+      <div className="md:block hidden font-poppins p-2 font-normal text-figmaGreen rounded-[8px] w-auto bg-greenbackgrond">
         Last Few Seats Left ! Grab your seat now
       </div>
     </div>
