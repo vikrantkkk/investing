@@ -4,6 +4,8 @@ import Ellipse2 from "../assets/svg/Ellipse2.svg";
 import Ellipse3 from "../assets/svg/Ellipse3.svg";
 import Ellipse4 from "../assets/svg/Ellipse4.svg";
 import rocket from "../assets/svg/rocket.svg";
+import rocketdark from "../assets/svg/rocketdark.svg";
+import { useDarkMode } from "../hooks/DarkModeContext";
 
 const cardData1 = [
   {
@@ -41,8 +43,9 @@ const cardData1 = [
 ];
 
 const Testimonials = () => {
+  const {darkMode} = useDarkMode();
   return (
-    <div className="flex relative flex-col items-center gap-12  w-screen h-auto justify-center px-4 pt-8 md:pb-36 dark:bg-darkBackGround bg-[#F1F1F1]">
+    <div className="flex relative flex-col items-center gap-12  w-screen h-auto justify-center px-4 pt-8 md:pb-40 pb-8 dark:bg-darkBackGround bg-[#F1F1F1]">
       <div className="text-center">
         <h2 className="font-poppins text-[32px] md:text-[40px] dark:text-white font-bold leading-[48px] md:leading-[60px]">
           <span className="text-figmaGreen">Testimonials</span> From
@@ -82,9 +85,9 @@ const Testimonials = () => {
         ))}
       </div>
       <img
-        src={rocket}
+        src={darkMode? rocketdark : rocket}
         alt="rocket"
-        className="md:w-[100px] w-[60px] absolute md:top-24 top-32 md:left-52 left-2"
+        className="md:w-[100px] w-[60px] absolute md:top-20 top-32 md:left-72 left-4"
       />
     </div>
   );

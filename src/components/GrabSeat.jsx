@@ -5,7 +5,7 @@ import CustomButtonForMobile from "../common/CustomButtonForMobile";
 
 const GrabSeat = () => {
   return (
-    <div className="flex flex-col dark:border-none border-b-2 gap-8 md:gap-12 justify-center dark:bg-darkBackGround bg-[#F1F1F1] items-center md:py-8">
+    <div className="flex flex-col dark:border-none md:border-b-2 gap-8 md:gap-12 justify-center dark:bg-darkBackGround bg-[#F1F1F1] items-center md:py-8">
       <div className="md:flex hidden flex-col md:gap-8 gap-4">
         <CustomButton4 />
         <CustomButton3 />

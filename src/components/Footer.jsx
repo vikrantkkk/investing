@@ -8,7 +8,7 @@ import { useDarkMode } from "../hooks/DarkModeContext";
 const Footer = () => {
   const { darkMode } = useDarkMode();
   return (
-    <footer className="flex flex-col justify-center items-center h-auto w-screen gap-8  pb-8 px-4 py-8 dark:bg-darkBackGround bg-[#F1F1F1]">
+    <footer className="flex flex-col justify-center items-center h-auto w-screen gap-8  pb-8 px-4 py-16 dark:bg-[#0B0C13] bg-[#F1F1F1]">
       <div>
         <a href="/" className="flex justify-center items-center">
           <img

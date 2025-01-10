@@ -125,7 +125,7 @@ const Hero = () => {
             +13.20 (+4.65%)
           </div>
         </div>
-        <div className="md:flex-1 w-full md:h-auto h-[50vh]  flex flex-col md:gap-8 gap-3  justify-center md:items-start items-center">
+        <div className="md:flex-1 w-full md:h-auto h-[50vh]  flex flex-col md:gap-8 gap-2  justify-center md:items-start items-center">
           <div className="font-poppins p-2 font-normal text-figmaGreen rounded-[8px] w-auto px-4 bg-greenbackgrond">
             <span className="font-semibold text-[16px] leading-6">100000+</span>{" "}
             Traders Already Joined
@@ -185,13 +185,13 @@ const Hero = () => {
         </div>
       </div>
       <div
-        className={`h-auto w-screen bg-darkBackGround md:dark:flex hidden p-20 relative  items-center justify-center`}
+        className={`h-auto w-screen bg-darkBackGround md:dark:flex hidden pt-20 px-20 relative  items-center justify-center`}
       >
         {/* Gradient background */}
         <div className="absolute top-0 right-0 left-0 h-[70%] z-0 bg-gradient-to-bl from-figmaGreen via-transparent to-transparent opacity-20"></div>
 
         <div className="relative flex justify-center w-full items-center overflow-hidden bg-[#FFFFFF17]/[0.09] rounded-3xl p-10">
-          <div className="flex-1 flex flex-col md:gap-8 gap-2 justify-center md:items-start items-center pl-20">
+          <div className="flex-1 flex flex-col md:gap-10 gap-2 justify-center md:items-start items-center pl-20">
             <div className="font-poppins p-2 font-normal text-figmaGreen rounded-[8px] w-auto px-4 bg-greenbackgrond">
               <span className="font-semibold text-[16px] leading-6">
                 100000+
@@ -262,34 +262,34 @@ const Hero = () => {
 
           {/* CEO Images */}
           <div className="w-[50%] flex justify-center items-center">
-            <div className="absolute z-10 bottom-72 right-10">
-              <img src={circleLogo} alt="CEO" className="w-[70%] opacity-30" />
+            <div className="absolute z-10 bottom-72 right-16">
+              <img src={circleLogo} alt="CEO" className="w-[80%] opacity-30" />
             </div>
             <div className="absolute bottom-0 z-10">
               <img src={ceo} alt="CEO" className="h-[70vh]" />
             </div>
-            <div className="absolute top-32 right-[42rem]  z-10">
+            <div className="absolute top-32 right-[43rem]  z-10">
               <img
                 src={hero1}
                 alt="MyBrand Logo"
-                className="h-[40px] w-[40px]"
+                className="h-[60px] w-[60px]"
               />
             </div>
-            <div className="absolute top-20 right-[18rem]  z-10">
+            <div className="absolute top-20 right-[16rem]  z-10">
               <img
                 src={hero2}
                 alt="MyBrand Logo"
-                className="h-[50px] w-[50px]"
+                className="h-[60px] w-[60px]"
               />
             </div>
-            <div className="absolute top-60 right-[18rem]  z-10">
+            <div className="absolute top-60 right-[15rem]  z-10">
               <img
                 src={hero3}
                 alt="MyBrand Logo"
-                className="h-[35px] w-[35px]"
+                className="h-[60px] w-[60px]"
               />
             </div>
-            <div className="h-auto shadow-2xl border-2  dark:border-[#FFFFFF]/[0.1] .. md:w-[300px] w-[173px] flex-wrap bg-white dark:bg-darkBackGround z-10 absolute  bottom-4  right-[28rem] rounded-md">
+            <div className="h-auto shadow-2xl border-2  dark:border-[#FFFFFF]/[0.1] .. md:w-[300px] w-[173px] flex-wrap bg-white dark:bg-darkBackGround z-10 absolute  bottom-8  right-[28rem] rounded-md">
               <div className="flex flex-col md:gap-2 gap-1 md:p-4 p-2">
                 <div className="flex flex-col font-poppins font-semibold md:text-[20px] text-[11px] md:leading-8 leading-4 text-[#0E0F19]">
                   <div className="flex justify-start items-center gap-2">

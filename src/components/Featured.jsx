@@ -103,20 +103,20 @@ const Featured = () => {
     <div className="h-auto w-screen flex flex-col gap-12 pb-8 bg-[#F1F1F1] dark:bg-darkBackGround dark:border-none md:border-b-2">
       <Slider
         {...sliderSettings}
-        className="w-full gap-2 p-4 dark:hidden text-[18px] leading-6 bg-[#F9FAFB] justify-center items-center relative"
+        className="w-full gap-2 p-4  text-[18px] leading-6 dark:bg-darkBackGround bg-[#F9FAFB] justify-center items-center relative"
       >
         {cryptos.map((crypto, index) => (
           <div key={index} className="flex flex-row items-center justify-start">
-            <div className="w-6 h-6 rounded-full flex justify-center items-center">
+            <div className="w-6 h-6 rounded-full flex justify-center items-center ">
               <img
                 className="rounded-full"
                 src={crypto.icon}
                 alt={`${crypto.name} icon`}
               />
-              <span className="ml-2 font-inter font-medium md:text-[16px] text-[14px] leading-4 md:leading-5">
+              <span className="ml-2 font-inter font-medium dark:text-white md:text-[16px] text-[14px] leading-4 md:leading-5">
                 {crypto.name}
               </span>
-              <span className="ml-2 font-inter font-semibold md:text-[16px] text-[14px] leading-4 md:leading-5">
+              <span className="ml-2 font-inter font-semibold dark:text-white  md:text-[16px] text-[14px] leading-4 md:leading-5">
                 {crypto.price}
               </span>
               <span
@@ -187,7 +187,7 @@ const Featured = () => {
         </div>
       </div>
 
-      <div className="md:flex md:pt-10 dark:pt-0 gap-8 ld:gap-32 md:px-0 px-4 w-full md:items-center md:justify-center grid grid-cols-2">
+      <div className="md:flex md:pt-10 md:pb-0 pb-6 dark:pt-0 gap-8 ld:gap-32 md:px-0 px-4 w-full md:items-center md:justify-center grid grid-cols-2">
         {strategies.map((strategy, index) => (
           <div
             key={index}

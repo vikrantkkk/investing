@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import one from "../assets/svg/1.svg";
 import two from "../assets/svg/2.svg";
 import three from "../assets/svg/3.svg";
 import four from "../assets/svg/4.svg";
 import rupaiya from "../assets/svg/rupaiya.svg";
+import rupaiyadark from "../assets/svg/rupaiyadark.svg";
 import CustomButton1 from "../common/CustomButton1";
 import CustomButton2 from "../common/CustomButton2";
 import CustomButton from "../common/CustomButton";
 import CustomButtonForMobile from "../common/CustomButtonForMobile";
+import { useDarkMode } from "../hooks/DarkModeContext";
 
 // Array of objects with icon and text data
 const allIcon = [
@@ -38,8 +40,95 @@ const allIcon = [
 ];
 
 const WorkShop = () => {
+  const [timeLeft, setTimeLeft] = useState(300);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft((prev) => (prev > 0 ? prev - 1 : 300));
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const formatTime = (seconds) => {
+    const minutes = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${String(minutes).padStart(2, "0")} : ${String(secs).padStart(
+      2,
+      "0"
+    )}`;
+  };
+
+  const { darkMode } = useDarkMode();
   return (
-    <div className="relative flex md:border-b-2 dark:border-none flex-col md:gap-12 gap-8  h-auto w-screen md:px-4 py-8 dark:bg-darkBackGround bg-[#F1F1F1]">
+    <div className="relative flex md:border-b-2 dark:border-none flex-col gap-12 h-auto w-screen md:px-4 py-8 dark:bg-darkBackGround bg-[#F1F1F1]">
+      <div className="w-full md:hidden block gap-2  p-4 text-[18px] leading-6 bg-[#F9FAFB] dark:bg-darkBackGround justify-center items-center relative">
+        <div class="relative  flex overflow-x-hidden">
+          <div class="p-2 animate-marquee whitespace-nowrap">
+            <span className="font-medium text-center dark:text-white">
+              Call. Offer Expires In
+            </span>
+            <span
+              className="px-4 py-1 rounded-md font-semibold text-transparent text-center"
+              style={{
+                background:
+                  "linear-gradient(94.98deg, rgba(255, 204, 105, 0.8) -44.59%, rgba(255, 34, 34, 0.8) 154.52%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              {formatTime(timeLeft)}
+            </span>
+            <span
+              className="font-semibold text-transparent text-center"
+              style={{
+                background:
+                  "linear-gradient(88.4deg, #1D870B -4.38%, #66D6AD 40.17%, #13B5E8 85.62%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              Limited Time Offer{" "}
+            </span>
+            <span className="font-medium text-center dark:text-white">
+              Sign Up Now And Get 50% Discount + Free E-Book + Free Consultation
+              Call. Offer Expires In
+            </span>
+          </div>
+
+          <div class="absolute top-0 p-2 animate-marquee2 whitespace-nowrap">
+            <span className="font-medium text-center dark:text-white">
+              Call. Offer Expires In
+            </span>
+            <span
+              className="px-4 py-1 rounded-md font-semibold text-transparent text-center"
+              style={{
+                background:
+                  "linear-gradient(94.98deg, rgba(255, 204, 105, 0.8) -44.59%, rgba(255, 34, 34, 0.8) 154.52%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              {formatTime(timeLeft)}
+            </span>
+            <span
+              className="font-semibold text-transparent text-center"
+              style={{
+                background:
+                  "linear-gradient(88.4deg, #1D870B -4.38%, #66D6AD 40.17%, #13B5E8 85.62%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              Limited Time Offer{" "}
+            </span>
+            <span className="font-medium text-center dark:text-white">
+              Sign Up Now And Get 50% Discount + Free E-Book + Free Consultation
+              Call. Offer Expires In
+            </span>
+          </div>
+        </div>
+      </div>
       {/* Heading Section */}
       <div className="font-poppins md:block hidden text-center text-[40px] leading-[60px] font-bold ">
         <span className="text-figmaGreen">4 Biggest Reasons</span>
@@ -92,9 +181,9 @@ const WorkShop = () => {
         <CustomButtonForMobile />
       </div>
       <img
-        src={rupaiya}
+        src={darkMode ? rupaiyadark : rupaiya}
         alt="rupaiya"
-        className="md:w-[100px] w-[60px] absolute md:top-10 top-36 md:right-32 right-2"
+        className="md:w-[100px] w-[60px] absolute md:top-10 top-60 md:right-32 right-4"
       />
     </div>
   );

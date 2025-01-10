@@ -57,11 +57,11 @@ const LearnWorkShop = () => {
   };
 
   return (
-    <div className="relative flex md:border-b-2 flex-col gap-12  w-screen  pb-8 h-auto dark:border-none dark:bg-darkBackGround bg-[#F1F1F1]">
-      <div className="w-full gap-2 dark:hidden p-4 text-[18px] leading-6 bg-[#F9FAFB] justify-center items-center relative">
+    <div className="relative flex md:border-b-2 flex-col gap-12  w-screen  pb-8 md:pt-0 pt-8 h-auto dark:border-none dark:bg-darkBackGround bg-[#F1F1F1]">
+      <div className="w-full gap-2 md:block hidden p-4 text-[18px] leading-6 bg-[#F9FAFB] dark:bg-darkBackGround justify-center items-center relative">
         <div class="relative  flex overflow-x-hidden">
           <div class="p-2 animate-marquee whitespace-nowrap">
-            <span className="font-medium text-center">
+            <span className="font-medium text-center dark:text-white">
               Call. Offer Expires In
             </span>
             <span
@@ -86,14 +86,14 @@ const LearnWorkShop = () => {
             >
               Limited Time Offer{" "}
             </span>
-            <span className="font-medium text-center">
+            <span className="font-medium text-center dark:text-white">
               Sign Up Now And Get 50% Discount + Free E-Book + Free Consultation
               Call. Offer Expires In
             </span>
           </div>
 
           <div class="absolute top-0 p-2 animate-marquee2 whitespace-nowrap">
-            <span className="font-medium text-center">
+            <span className="font-medium text-center dark:text-white">
               Call. Offer Expires In
             </span>
             <span
@@ -118,7 +118,7 @@ const LearnWorkShop = () => {
             >
               Limited Time Offer{" "}
             </span>
-            <span className="font-medium text-center">
+            <span className="font-medium text-center dark:text-white">
               Sign Up Now And Get 50% Discount + Free E-Book + Free Consultation
               Call. Offer Expires In
             </span>
@@ -167,7 +167,7 @@ const LearnWorkShop = () => {
       <img
         src={learn}
         alt="learn"
-        className="md:w-[100px] w-[60px] absolute top-52 dark:top-20 md:dark:top-4 md:top-24 md:left-32 left-2"
+        className="md:w-[100px] w-[60px] md:dark:hidden absolute top-28  md:dark:top-36 md:top-24 md:left-32 left-4"
       />
     </div>
   );
