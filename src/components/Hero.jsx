@@ -26,7 +26,7 @@ const Hero = () => {
       <div
         id="hero"
         // className="flex md:flex-row  flex-col-reverse md:h-[100vh] h-auto md:px-0 px-2 w-screen  bg-[#F1F1F1]"
-        className={`flex md:flex-row flex-col-reverse md:h-[100vh] h-auto md:dark:hidden md:px-0 px-2 w-screen dark:bg-darkBackGround bg-[#F1F1F1]`}
+        className={`flex md:flex-row dark:md:hidden flex-col-reverse md:h-[100vh] h-auto md:px-0 px-2 w-screen dark:bg-darkBackGround bg-[#F1F1F1]`}
       >
         <div className="md:w-[50vw] w-full md:h-auto h-[50vh] relative flex  justify-center items-center">
           <div className="absolute md:block hidden bottom-44 ld:bottom-80  left-36 md:left-44 z-10">
@@ -35,7 +35,7 @@ const Hero = () => {
           <div className="absolute bottom-0 z-10">
             <img src={ceo} alt="CEO" className="md:h-[80vh]  h-[363px]" />
           </div>
-          <div className="h-auto shadow-2xl md:w-[350px] w-[200px] flex-wrap bg-white dark:bg-[#0E0F19] z-10 absolute md:bottom-10 bottom-4 md:left-44 ld:left-72 left-10 rounded-md">
+          <div className="h-auto shadow-2xl md:w-[350px] w-[200px] flex-wrap  bg-white border-2 dark:border-[#FFFFFF]/[0.1] .. dark:bg-[#0E0F19] z-10 absolute md:bottom-10 bottom-4 md:left-44 ld:left-72 left-10 rounded-md">
             <div className="flex flex-col md:gap-2 gap-1 md:p-4 p-2">
               <div className="flex flex-col font-poppins font-semibold md:text-[20px] text-[11px] md:leading-8 leading-4 dark:text-[#FFFFFFB2] text-[#0E0F19]">
                 <div className="flex justify-start items-center gap-2">
@@ -94,7 +94,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="font-poppins text-center font-semibold md:text-[16px] text-[8px] md:leading-6 leading-3 text-figmaGreen absolute md:right-10 ld:right-28 right-0 md:top-36 ld:top-64 top-24 shadow-md rounded-md flex p-2 items-center justify-center md:h-10 h-8 md:w-52 w-[120px] md:gap-4 gap-2 dark:bg-darkBackGround dark:border bg-white z-10">
+          <div className="font-poppins text-center dark:border-[#FFFFFF]/[0.1] .. font-semibold md:text-[16px] text-[8px] md:leading-6 leading-3 text-figmaGreen absolute md:right-10 ld:right-28 right-0 md:top-36 ld:top-64 top-24 shadow-md rounded-md flex p-2 items-center justify-center md:h-10 h-8 md:w-52 w-[120px] md:gap-4 gap-2 dark:bg-darkBackGround dark:border bg-white z-10">
             <span>
               <img
                 src={hero1}
@@ -104,7 +104,7 @@ const Hero = () => {
             </span>
             +13.20 (+4.65%)
           </div>
-          <div className="font-poppins text-center font-semibold md:text-[16px] text-[8px] md:leading-6 leading-3 text-figmaGreen absolute md:left-24 ld:left-44 left-4  md:top-20 ld:top-24 top-4 shadow-md rounded-md flex p-2 items-center justify-center md:h-10 h-8 md:w-52 w-[120px] md:gap-4 gap-2 dark:bg-darkBackGround dark:border  bg-white z-10">
+          <div className="font-poppins text-center dark:border-[#FFFFFF]/[0.1] .. font-semibold md:text-[16px] text-[8px] md:leading-6 leading-3 text-figmaGreen absolute md:left-24 ld:left-44 left-4  md:top-20 ld:top-24 top-4 shadow-md rounded-md flex p-2 items-center justify-center md:h-10 h-8 md:w-52 w-[120px] md:gap-4 gap-2 dark:bg-darkBackGround dark:border  bg-white z-10">
             <span>
               <img
                 src={hero2}
@@ -114,7 +114,7 @@ const Hero = () => {
             </span>{" "}
             +29.25 (+1.85%)
           </div>
-          <div className="font-poppins text-center font-semibold md:text-[16px] text-[8px] md:leading-6 leading-3 text-figmaGreen absolute md:left-16 ld:left-24 left-0 md:top-[280px] ld:top-[400px] top-40 shadow-md rounded-md flex p-2 items-center justify-center md:h-10 h-8 md:w-52 w-[120px] md:gap-4 gap-2 dark:bg-darkBackGround dark:border bg-white z-10">
+          <div className="font-poppins text-center dark:border-[#FFFFFF]/[0.1] .. font-semibold md:text-[16px] text-[8px] md:leading-6 leading-3 text-figmaGreen absolute md:left-16 ld:left-24 left-0 md:top-[280px] ld:top-[400px] top-40 shadow-md rounded-md flex p-2 items-center justify-center md:h-10 h-8 md:w-52 w-[120px] md:gap-4 gap-2 dark:bg-darkBackGround dark:border bg-white z-10">
             <span>
               <img
                 src={hero3}
@@ -185,9 +185,7 @@ const Hero = () => {
         </div>
       </div>
       <div
-        className={`h-auto w-screen bg-darkBackGround md:dark:block hidden p-20 relative ${
-          darkMode ? "block" : "hidden"
-        } md:flex items-center justify-center`}
+        className={`h-auto w-screen bg-darkBackGround md:dark:flex hidden p-20 relative  items-center justify-center`}
       >
         {/* Gradient background */}
         <div className="absolute top-0 right-0 left-0 h-[70%] z-0 bg-gradient-to-bl from-figmaGreen via-transparent to-transparent opacity-20"></div>
@@ -291,7 +289,7 @@ const Hero = () => {
                 className="h-[35px] w-[35px]"
               />
             </div>
-            <div className="h-auto shadow-2xl md:w-[300px] w-[173px] flex-wrap bg-white dark:bg-darkBackGround z-10 absolute  bottom-4  right-[28rem] rounded-md">
+            <div className="h-auto shadow-2xl border-2  dark:border-[#FFFFFF]/[0.1] .. md:w-[300px] w-[173px] flex-wrap bg-white dark:bg-darkBackGround z-10 absolute  bottom-4  right-[28rem] rounded-md">
               <div className="flex flex-col md:gap-2 gap-1 md:p-4 p-2">
                 <div className="flex flex-col font-poppins font-semibold md:text-[20px] text-[11px] md:leading-8 leading-4 text-[#0E0F19]">
                   <div className="flex justify-start items-center gap-2">

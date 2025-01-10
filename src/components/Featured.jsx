@@ -99,7 +99,7 @@ const Featured = () => {
   ];
 
   return (
-    <div className="h-auto w-screen flex flex-col gap-12 pb-8 bg-[#F1F1F1] dark:bg-darkBackGround dark:border-none md:border-b-2">
+    <div className="h-auto w-screen flex flex-col md:gap-12 gap-8 pb-8 bg-[#F1F1F1] dark:bg-darkBackGround dark:border-none md:border-b-2">
       <Slider
         {...sliderSettings}
         className="w-full gap-2 p-4 dark:hidden text-[18px] leading-6 bg-[#F9FAFB] justify-center items-center relative"
@@ -169,7 +169,7 @@ const Featured = () => {
             </div>
             <div className="border-2 w-[200px] border-figmaGreen " />
           </div>
-          <div className="w-full grid mt-4  grid-cols-2 gap-4">
+          <div className="w-full grid mt-4  grid-cols-2">
               {logos.map((logo, index) => (
                 <div
                   key={index}

@@ -46,7 +46,7 @@ const Contact = () => {
         {cardData.map((card, index) => (
           <div
             key={index}
-            className="flex flex-col items-start w-full md:w-[380px] ld:w-[500px] gap-4 p-4 dark:bg-[#FFFFFF26]/[0.15] bg-white rounded-md shadow-md"
+            className="flex flex-col items-start w-full md:w-[380px] ld:w-[500px] gap-4 p-4 border-2  dark:border-[#FFFFFF]/[0.1] .. dark:bg-[#FFFFFF26]/[0.15] bg-white rounded-md shadow-md"
           >
 
             <div className="flex h-[50px] rounded-lg bg-figmaGreen w-[50px] justify-center items-center mb-4">
@@ -72,7 +72,7 @@ const Contact = () => {
         ))}
       </div>
 
-      <div className="flex flex-col items-start h-auto w-full gap-4 p-4 dark:bg-[#FFFFFF26]/[0.15] bg-white rounded-md shadow-md">
+      <div className="flex  flex-col items-start h-auto w-full gap-4 p-4 border-2  dark:border-[#FFFFFF]/[0.1] .. dark:bg-[#FFFFFF26]/[0.15] bg-white rounded-md shadow-md">
         <div className="flex flex-col gap-2">
           <div className="font-poppins dark:text-white font-medium text-md text-[#101828]">
             Registered Address

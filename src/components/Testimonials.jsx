@@ -55,7 +55,7 @@ const Testimonials = () => {
         {cardData1.map((item, index) => (
           <div
             key={index}
-            className="bg-white dark:bg-[#FFFFFF26]/[0.15] p-6 rounded-2xl shadow-md transition-shadow duration-300 hover:shadow-lg md:w-[300px] w-full"
+            className="bg-white border-2   dark:border-[#FFFFFF]/[0.1] .. dark:bg-[#FFFFFF26]/[0.15] p-6 rounded-2xl shadow-md transition-shadow duration-300 hover:shadow-lg md:w-[300px] w-full"
           >
             <div className="flex items-center gap-4">
               <img

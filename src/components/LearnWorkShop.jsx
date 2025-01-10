@@ -142,7 +142,7 @@ const LearnWorkShop = () => {
           {allImage.map((item, index) => (
             <div
               key={index}
-              className={`cursor-pointer md:w-[500px] w-full dark:bg-[#FFFFFF26]/[0.15] bg-white p-6 rounded-2xl flex flex-col items-center transition-all duration-300 ease-in-out shadow-md hover:shadow-lg`}
+              className={`cursor-pointer md:w-[500px] w-full border-2   dark:border-[#FFFFFF]/[0.1] .. dark:bg-[#FFFFFF26]/[0.15] bg-white p-6 rounded-2xl flex flex-col items-center transition-all duration-300 ease-in-out shadow-md hover:shadow-lg`}
             >
               <img
                 src={item.icon}

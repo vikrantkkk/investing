@@ -8,7 +8,7 @@ import arrow from "../assets/svg/arrow.svg";
 const Mentor = () => {
   return (
     <div className="flex justify-center items-center md:border-b-2 gap-8 h-auto w-screen dark:border-none md:px-0 md:py-8 px-4 dark:bg-darkBackGround bg-[#F1F1F1]">
-      <div className="bg-[#0E0F19]  flex md:flex-row flex-col md:h-[36rem] h-auto p-4 md:w-[75rem] md:mt-0 mt-20 dark:border md:border-none w-full rounded-2xl ">
+      <div className="bg-[#0E0F19] border-2 dark:border-[#FFFFFF]/[0.1] ..  flex md:flex-row flex-col md:h-[36rem] h-auto p-4 md:w-[75rem] md:mt-0 mt-20 dark:border md:border-none w-full rounded-2xl ">
         <div className="relative md:w-[50%] w-full flex">
           <div className="relative flex gap-20">
             <img
