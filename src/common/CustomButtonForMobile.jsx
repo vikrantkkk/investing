@@ -28,7 +28,7 @@ const CustomButtonForMobile = () => {
         </button>
       </div>
 
-      <div className="flex justify-center items-center flex-col border-2 border-[#007AFF] p-4 rounded-md">
+      <div className="flex justify-center items-center gap-2 flex-col border-2 border-[#007AFF] p-4 rounded-md">
         <div className="dark:text-white">15th January 2025 | 9:00 PM</div>
         <button
           className="p-4 text-white rounded-md w-[300px] transition-all duration-300"
