@@ -39,9 +39,6 @@ const allIcon = [
 const WorkShop = () => {
   return (
     <div className="relative flex md:border-b-2 dark:border-none flex-col md:gap-12 gap-8  h-auto w-screen md:px-4 py-8 dark:bg-darkBackGround bg-[#F1F1F1]">
-      <div className="w-full md:hidden flex dark:hidden p-4 bg-[#F9FAFB] justify-center items-center flex-row">
-        Sign Up Now And Get 50% Discount
-      </div>
       {/* Heading Section */}
       <div className="font-poppins md:block hidden text-center text-[40px] leading-[60px] font-bold ">
         <span className="text-figmaGreen">4 Biggest Reasons</span>
@@ -62,7 +59,7 @@ const WorkShop = () => {
       {/* Cards Section */}
       <div className="flex w-full md:gap-8  ld:gap-20  flex-wrap justify-center">
         {allIcon.map((item, index) => (
-            <div
+          <div
             key={index}
             className={`md:w-64 ld:w-72 w-full cursor-pointer scale-90 h-auto border-2  dark:border-[#FFFFFF]/[0.1] .. dark:bg-[#FFFFFF26]/[0.15] bg-white p-6 rounded-2xl flex flex-col items-start transition-all duration-300 ease-in-out ${
               index === 0
