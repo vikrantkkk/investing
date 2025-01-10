@@ -60,7 +60,7 @@ const Traders = () => {
           />
         ))}
       </div>
-      <div className="flex md:flex-row w-full flex-col justify-center md:items-start items-center md:gap-8 ld:gap-12 gap-4">
+      <div className="md:flex hidden md:flex-row w-full flex-col justify-center md:items-start items-center md:gap-8 ld:gap-12 gap-4">
         <CustomButton />
       </div>
       <img
@@ -76,12 +76,12 @@ const Traders = () => {
       <img
         src={Rectangle9}
         alt={Rectangle9}
-        className="absolute -right-10 dark:hidden top-52 h-[40%]"
+        className="absolute -right-10 dark:hidden top-52 h-[50%]"
       />
       <img
         src={Rectangle10}
         alt={Rectangle10}
-        className="absolute dark:hidden -left-10 top-52 h-[40%]"
+        className="absolute dark:hidden -left-10 top-52 h-[50%]"
       />
     </div>
   );

@@ -28,7 +28,7 @@ const TimeTiking = () => {
   const seconds = time % 60;
 
   return (
-    <div className="relative  items-center md:dark:flex hidden justify-center min-h-screen">
+    <div className="relative  items-center flex  justify-center min-h-screen">
       {/* Video Background */}
       <video
         autoPlay
@@ -41,10 +41,10 @@ const TimeTiking = () => {
       </video>
 
       {/* Content Overlay */}
-      <div className="flex flex-col gap-12 justify-center items-center w-1/2 text-white p-8 bg-black/50 rounded-lg">
+      <div className="flex flex-col gap-12 justify-center items-center md:w-1/2 w-full text-white p-8 bg-black/50 md:rounded-lg">
         {/* Title */}
         <div>
-          <h1 className="font-poppins font-bold text-[40px] leading-[60px]">
+          <h1 className="font-poppins font-bold text-[40px] leading-[60px] text-center">
             Hurry Up! Time is Ticking.
           </h1>
           <div className="border-2 w-[200px] border-figmaGreen mx-auto mt-2" />
