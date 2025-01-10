@@ -57,7 +57,7 @@ const LearnWorkShop = () => {
   };
 
   return (
-    <div className="relative flex md:border-b-2 flex-col gap-12  w-screen md:px-0 px-4 pb-8 h-auto dark:border-none dark:bg-darkBackGround bg-[#F1F1F1]">
+    <div className="relative flex md:border-b-2 flex-col gap-12  w-screen  pb-8 h-auto dark:border-none dark:bg-darkBackGround bg-[#F1F1F1]">
       <div className="w-full gap-2 dark:hidden p-4 text-[18px] leading-6 bg-[#F9FAFB] justify-center items-center relative">
         <div class="relative  flex overflow-x-hidden">
           <div class="p-2 animate-marquee whitespace-nowrap">
@@ -137,7 +137,7 @@ const LearnWorkShop = () => {
         <br /> in the Workshop
         <div className="border-2 w-[200px] border-figmaGreen mx-auto mt-2" />
       </div>
-      <div className="flex justify-center w-full items-center">
+      <div className="flex justify-center w-full items-center px-4">
         <div className="grid md:grid-cols-2 grid-cols-1 gap-8">
           {allImage.map((item, index) => (
             <div
@@ -167,7 +167,7 @@ const LearnWorkShop = () => {
       <img
         src={learn}
         alt="learn"
-        className="md:w-[100px] w-[60px] absolute top-20 md:top-24 md:left-32 left-2"
+        className="md:w-[100px] w-[60px] absolute top-52 md:top-24 md:left-32 left-2"
       />
     </div>
   );
