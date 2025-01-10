@@ -4,7 +4,7 @@ const CustomButtonForMobile = () => {
   return (
     <div className="flex md:flex-row flex-col gap-4 font-bold">
       <div className="flex flex-col gap-2 items-center justify-center border-2 border-[#58FF29] p-4 rounded-md">
-        <div>15th January 2025 | 9:00 PM</div>
+        <div className="dark:text-white">15th January 2025 | 9:00 PM</div>
         <button
           className="p-4 text-black rounded-md w-[300px] transition-all duration-300"
           style={{
@@ -29,7 +29,7 @@ const CustomButtonForMobile = () => {
       </div>
 
       <div className="flex justify-center items-center flex-col border-2 border-[#007AFF] p-4 rounded-md">
-        <div>15th January 2025 | 9:00 PM</div>
+        <div className="dark:text-white">15th January 2025 | 9:00 PM</div>
         <button
           className="p-4 text-white rounded-md w-[300px] transition-all duration-300"
           style={{
