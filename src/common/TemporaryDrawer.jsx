@@ -20,7 +20,6 @@ export default function TemporaryDrawer() {
   const [open, setOpen] = React.useState(false);
   const location = useLocation(); 
   const { darkMode } = useDarkMode(); 
-  console.log("🚀 ~ TemporaryDrawer ~ darkMode:", darkMode)
  
 
   const toggleDrawer = (newOpen) => () => {
