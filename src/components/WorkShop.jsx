@@ -1,4 +1,8 @@
 import React, { useEffect, useState } from "react";
+import onedark from "../assets/svg/1dark.svg";
+import twodark from "../assets/svg/2dark.svg";
+import threedark from "../assets/svg/3dark.svg";
+import fourdark from "../assets/svg/4dark.svg";
 import one from "../assets/svg/1.svg";
 import two from "../assets/svg/2.svg";
 import three from "../assets/svg/3.svg";
@@ -12,32 +16,6 @@ import CustomButtonForMobile from "../common/CustomButtonForMobile";
 import { useDarkMode } from "../hooks/DarkModeContext";
 
 // Array of objects with icon and text data
-const allIcon = [
-  {
-    icon: one,
-    text1: "Enter Trades Before Big Moves Happen",
-    text2:
-      "Institutional trading helps you spot market trends & breakouts before they become obvious to everyone else.",
-  },
-  {
-    icon: two,
-    text1: "Avoid Retail Traps",
-    text2:
-      "Learn to stay ahead of retail traders who often buy when prices are high and sell when prices are low.",
-  },
-  {
-    icon: three,
-    text1: "Trade Like the Big Players",
-    text2:
-      "Understand the strategies used by banks, hedge funds, and institutions to stay profitable.",
-  },
-  {
-    icon: four,
-    text1: "Simple, Data-Driven Approach",
-    text2:
-      "No need for fancy indicators or complicated charts, just focus on price, time, and volume.",
-  },
-];
 
 const WorkShop = () => {
   const [timeLeft, setTimeLeft] = useState(300);
@@ -60,9 +38,36 @@ const WorkShop = () => {
   };
 
   const { darkMode } = useDarkMode();
+
+  const allIcon = [
+    {
+      icon: darkMode ? onedark : one,
+      text1: "Enter Trades Before Big Moves Happen",
+      text2:
+        "Institutional trading helps you spot market trends & breakouts before they become obvious to everyone else.",
+    },
+    {
+      icon: darkMode ? twodark : two,
+      text1: "Avoid Retail Traps",
+      text2:
+        "Learn to stay ahead of retail traders who often buy when prices are high and sell when prices are low.",
+    },
+    {
+      icon: darkMode ? threedark : three,
+      text1: "Trade Like the Big Players",
+      text2:
+        "Understand the strategies used by banks, hedge funds, and institutions to stay profitable.",
+    },
+    {
+      icon: darkMode ? fourdark : four,
+      text1: "Simple, Data-Driven Approach",
+      text2:
+        "No need for fancy indicators or complicated charts, just focus on price, time, and volume.",
+    },
+  ];
   return (
     <div className="relative flex md:border-b-2 dark:border-none flex-col gap-12 h-auto w-screen md:px-4 py-8 dark:bg-darkBackGround bg-[#F1F1F1]">
-      <div className="w-full md:hidden block gap-2  p-4 text-[18px] leading-6 bg-[#F9FAFB] dark:bg-darkBackGround justify-center items-center relative">
+      <div className="w-full md:hidden block gap-2  p-4 dark:p-0 dark:px-4 text-[18px] leading-6 bg-[#F9FAFB] dark:bg-darkBackGround justify-center items-center relative">
         <div class="relative  flex overflow-x-hidden">
           <div class="p-2 animate-marquee whitespace-nowrap">
             <span className="font-medium text-center dark:text-white">
@@ -183,7 +188,7 @@ const WorkShop = () => {
       <img
         src={darkMode ? rupaiyadark : rupaiya}
         alt="rupaiya"
-        className="md:w-[100px] w-[60px] absolute md:top-10 top-60 md:right-32 right-4"
+        className="md:w-[100px] w-[60px] absolute md:top-10 top-64 md:right-32 right-4"
       />
     </div>
   );

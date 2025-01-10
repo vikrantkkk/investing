@@ -167,7 +167,7 @@ const LearnWorkShop = () => {
       <img
         src={learn}
         alt="learn"
-        className="md:w-[100px] w-[60px] md:dark:hidden absolute top-28  md:dark:top-36 md:top-24 md:left-32 left-4"
+        className="md:w-[100px] w-[60px] md:dark:hidden absolute top-28 dark:hidden  md:dark:top-36 md:top-24 md:left-32 left-4"
       />
     </div>
   );

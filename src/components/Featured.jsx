@@ -139,7 +139,7 @@ const Featured = () => {
       </Slider>
 
       <div className="flex flex-col w-full items-center md:px-0 px-4">
-        <div className="md:flex hidden bg-white  dark:bg-darkBackGround gap-8 p-16 flex-col justify-center items-center md:w-[80vw] w-full rounded-md">
+        <div className="md:flex hidden bg-white  dark:bg-darkBackGround gap-8 p-16 dark:p-0 dark:py-8 flex-col justify-center items-center md:w-[80vw] w-full rounded-md">
           <div className="flex flex-col gap-1 items-center justify-center">
             <div className="font-poppins font-bold text-[32px] md:text-[40px] leading-[48px] md:leading-[60px] flex justify-center dark:text-white">
               Featured in
@@ -163,7 +163,7 @@ const Featured = () => {
             </Slider>
           </div>
         </div>
-        <div className="md:hidden block bg-white    dark:bg-darkBackGround gap-8 md:p-16 p-4 flex-col justify-center items-center md:w-[80vw] w-full rounded-md">
+        <div className="md:hidden block bg-white    dark:bg-darkBackGround gap-8 md:p-16 p-4 dark:p-0 flex-col justify-center items-center md:w-[80vw] w-full rounded-md">
           <div className="flex flex-col gap-1 items-center justify-center">
             <div className="font-poppins font-bold text-[32px] md:text-[40px] leading-[48px] md:leading-[60px] flex justify-center dark:text-white">
               Featured in
