@@ -72,7 +72,7 @@ const TimeTiking = () => {
         </div>
 
         {/* Banner Text */}
-        <div className="font-poppins p-2 font-normal text-white rounded-[8px] w-auto bg-[#A928284D]/[0.3]">
+        <div className="font-poppins p-2 font-normal md:text-[16px] text-[14px] text-white rounded-[8px] w-auto bg-[#A928284D]/[0.3]">
           Last Few Seats Left! Grab your seat now
         </div>
 
