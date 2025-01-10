@@ -19,6 +19,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CustomButton from "../common/CustomButton";
 import { useDarkMode } from "../hooks/DarkModeContext";
+import CustomButtonForMobile from "../common/CustomButtonForMobile";
 
 const strategies = [
   {
@@ -204,9 +205,13 @@ const Featured = () => {
         ))}
       </div>
 
-      <div className="w-full flex items-center justify-center">
+      <div className="w-full  md:flex hidden items-center justify-center">
         <CustomButton />
       </div>
+      <div className="w-full md:hidden flex items-center justify-center">
+        <CustomButtonForMobile />
+      </div>
+      
     </div>
   );
 };

@@ -8,6 +8,7 @@ import CustomButton1 from "../common/CustomButton1";
 import CustomButton2 from "../common/CustomButton2";
 import { height } from "@mui/system";
 import CustomButton from "../common/CustomButton";
+import CustomButtonForMobile from "../common/CustomButtonForMobile";
 
 const imageData = [
   {

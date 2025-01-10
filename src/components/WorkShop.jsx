@@ -7,6 +7,7 @@ import rupaiya from "../assets/svg/rupaiya.svg";
 import CustomButton1 from "../common/CustomButton1";
 import CustomButton2 from "../common/CustomButton2";
 import CustomButton from "../common/CustomButton";
+import CustomButtonForMobile from "../common/CustomButtonForMobile";
 
 // Array of objects with icon and text data
 const allIcon = [
@@ -84,8 +85,11 @@ const WorkShop = () => {
         ))}
       </div>
       {/* button section */}
-      <div className="flex md:flex-row w-full flex-col justify-center md:items-start items-center md:gap-8 gap-4">
+      <div className="md:flex hidden md:flex-row w-full flex-col justify-center md:items-start items-center md:gap-8 gap-4">
         <CustomButton />
+      </div>
+      <div className="md:hidden flex md:flex-row w-full flex-col justify-center md:items-start items-center md:gap-8 gap-4">
+        <CustomButtonForMobile />
       </div>
       <img
         src={rupaiya}
