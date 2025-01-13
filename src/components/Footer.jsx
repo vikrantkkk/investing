@@ -65,6 +65,16 @@ const Footer = () => {
           stocks. Trading stocks involves significant risks, and past
           performance is not indicative of future results.*
         </div>
+        <div className="mt-2 text-center dark:text-[#FFFFFFCC]/[0.8] font-inter font-medium text-[#000000CC]/[0.8] text-[16px] leading-5">
+          Disclosure
+        </div>
+        <div className="text-center font-light text-[14px] leading-6 dark:text-[#FFFFFFCC]/[0.6] text-[#00000099]/[0.6]">
+          Investing in securities markets is subject to market risks. Read all
+          related documents carefully before investing. Registration granted by
+          SEBI, membership of BASL (for Research Analysts), and certifications
+          from NISM do not guarantee the performance of the intermediary or
+          assure returns to investors.
+        </div>
       </div>
       <div className="border-b-4 dark:hidden md:w-[90%] w-full md:gap-0 gap-4 text-[#00000033]/[0.2]" />
       <div className="flex w-[80%] gap-4 items-center justify-center flex-col">
