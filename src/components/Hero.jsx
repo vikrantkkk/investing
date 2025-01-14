@@ -266,7 +266,7 @@ const Hero = () => {
               <img src={circleLogo} alt="CEO" className="w-[80%] opacity-30" />
             </div>
             <div className="absolute bottom-0 z-10">
-              <img src={ceo} alt="CEO" className="h-[70vh]" />
+              <img src={ceo} alt="CEO" className="h-[70%]" />
             </div>
             <div className="absolute top-32 right-[43rem]  z-10">
               <img
