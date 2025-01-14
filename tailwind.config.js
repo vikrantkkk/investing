@@ -6,7 +6,13 @@ export default {
     extend: {
       animation: {
         marquee: 'marquee 25s linear infinite',
+        marquee1: 'marquee2 25s linear infinite',
         marquee2: 'marquee2 25s linear infinite',
+        marquee3: 'marquee2 25s linear infinite',
+        marquee4: 'marquee2 25s linear infinite',
+        marquee5: 'marquee2 25s linear infinite',
+        marquee6: 'marquee2 25s linear infinite',
+        marquee7: 'marquee2 25s linear infinite',
       },
       keyframes: {
         marquee: {

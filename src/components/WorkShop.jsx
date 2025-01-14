@@ -97,7 +97,6 @@ const WorkShop = () => {
             </span>
             <span className="font-medium text-center dark:text-white">
               Sign Up Now And Get 50% Discount + Free E-Book + Free Consultation
-              Call. Offer Expires In
             </span>
           </div>
 
@@ -129,7 +128,6 @@ const WorkShop = () => {
             </span>
             <span className="font-medium text-center dark:text-white">
               Sign Up Now And Get 50% Discount + Free E-Book + Free Consultation
-              Call. Offer Expires In
             </span>
           </div>
         </div>
