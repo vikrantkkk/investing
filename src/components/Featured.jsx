@@ -101,43 +101,22 @@ const Featured = () => {
 
   return (
     <div className="h-auto w-screen flex flex-col gap-12 pb-8 bg-[#F1F1F1] dark:bg-darkBackGround dark:border-none md:border-b-2">
-      <Slider
-        {...sliderSettings}
-        className="w-full gap-2 p-4  text-[18px] leading-6 dark:bg-darkBackGround bg-[#F9FAFB] justify-center items-center relative"
-      >
-        {cryptos.map((crypto, index) => (
-          <div key={index} className="flex flex-row items-center justify-start">
-            <div className="w-6 h-6 rounded-full flex justify-center items-center ">
-              <img
-                className="rounded-full"
-                src={crypto.icon}
-                alt={`${crypto.name} icon`}
-              />
-              <span className="ml-2 font-inter font-medium dark:text-white md:text-[16px] text-[14px] leading-4 md:leading-5">
-                {crypto.name}
-              </span>
-              <span className="ml-2 font-inter font-semibold dark:text-white  md:text-[16px] text-[14px] leading-4 md:leading-5">
-                {crypto.price}
-              </span>
-              <span
-                className={`ml-2 font-inter font-normal md:text-[16px] text-[14px] leading-4 md:leading-5 ${
-                  crypto.high24h >= 0 ? "text-green-500" : "text-red-500"
-                }`}
-              >
-                {crypto.high24h}
-              </span>
-              <span
-                className={`ml-2 font-inter font-normal md:text-[16px] text-[14px] leading-4 md:leading-5 ${
-                  crypto.low24h >= 0 ? "text-green-500" : "text-red-500"
-                }`}
-              >
-                ({crypto.low24h})%
-              </span>
-            </div>
-          </div>
-        ))}
-      </Slider>
-
+      <iframe
+        src={
+          darkMode
+            ? "https://www.tradingview-widget.com/embed-widget/ticker-tape/?locale=en#%7B%22symbols%22%3A%5B%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BSE%3ARELIANCE%22%7D%2C%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BSE%3AHDFCBANK%22%7D%2C%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BSE%3ATATAMOTORS%22%7D%2C%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BSE%3ABHARTIARTL%22%7D%2C%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BSE%3AZOMATO%22%7D%2C%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BSE%3AICICIBANK%22%7D%2C%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BSE%3ADLF%22%7D%2C%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BSE%3AINFY%22%7D%2C%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BSE%3AJINDALSTEL%22%7D%5D%2C%22showSymbolLogo%22%3Atrue%2C%22isTransparent%22%3Atrue%2C%22displayMode%22%3A%22adaptive%22%2C%22colorTheme%22%3A%22dark%22%2C%22width%22%3A%22100%25%22%2C%22height%22%3A44%2C%22utm_source%22%3A%22www.stockwiz.in%22%2C%22utm_medium%22%3A%22widget%22%2C%22utm_campaign%22%3A%22ticker-tape%22%2C%22page-uri%22%3A%22www.stockwiz.in%2F%22%7D"
+            : "https://www.tradingview-widget.com/embed-widget/ticker-tape/?locale=en#%7B%22symbols%22%3A%5B%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BSE%3ARELIANCE%22%7D%2C%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BSE%3AHDFCBANK%22%7D%2C%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BSE%3ATATAMOTORS%22%7D%2C%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BSE%3ABHARTIARTL%22%7D%2C%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BSE%3AZOMATO%22%7D%2C%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BSE%3AICICIBANK%22%7D%2C%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BSE%3ADLF%22%7D%2C%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BSE%3AINFY%22%7D%2C%7B%22description%22%3A%22%22%2C%22proName%22%3A%22BSE%3AJINDALSTEL%22%7D%5D%2C%22showSymbolLogo%22%3Atrue%2C%22isTransparent%22%3Atrue%2C%22displayMode%22%3A%22adaptive%22%2C%22colorTheme%22%3A%22light%22%2C%22width%22%3A%22100%25%22%2C%22height%22%3A44%2C%22utm_source%22%3A%22www.stockwiz.in%22%2C%22utm_medium%22%3A%22widget%22%2C%22utm_campaign%22%3A%22ticker-tape%22%2C%22page-uri%22%3A%22www.stockwiz.in%2F%22%7D"
+        }
+        style={{
+          width: "100%",
+          height: "50px",
+          border: "none",
+          overflow: "hidden",
+        }}
+        scrolling="no"
+        allowtransparency="true"
+        frameBorder="0"
+      ></iframe>
       <div className="flex flex-col w-full items-center md:px-0 px-4">
         <div className="md:flex hidden bg-white  dark:bg-darkBackGround gap-8 p-16 dark:p-0 dark:py-8 flex-col justify-center items-center md:w-[80vw] w-full rounded-md">
           <div className="flex flex-col gap-1 items-center justify-center">
@@ -171,18 +150,18 @@ const Featured = () => {
             <div className="border-2 w-[200px] border-figmaGreen " />
           </div>
           <div className="w-full grid mt-4  grid-cols-2">
-              {logos.map((logo, index) => (
-                <div
-                  key={index}
-                  className="flex justify-center items-center px-4"
-                >
-                  <img
-                    src={logo.icon}
-                    alt={logo.name}
-                    className="w-24 h-24 object-contain"
-                  />
-                </div>
-              ))}
+            {logos.map((logo, index) => (
+              <div
+                key={index}
+                className="flex justify-center items-center px-4"
+              >
+                <img
+                  src={logo.icon}
+                  alt={logo.name}
+                  className="w-24 h-24 object-contain"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -211,7 +190,6 @@ const Featured = () => {
       <div className="w-full md:hidden flex items-center justify-center">
         <CustomButtonForMobile />
       </div>
-      
     </div>
   );
 };

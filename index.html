@@ -2,9 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/src/assets/png/darkmodelogo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stockwiz</title>
+    <link
+      id="favicon"
+      rel="icon"
+      type="image/png"
+      href="/src/assets/png/logo.png"
+    />
     <!-- SF Pro Text Font -->
     <link
       rel="stylesheet"
@@ -20,6 +25,29 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <script>
+      // Function to update the favicon based on the `dark` class
+      function updateFavicon() {
+        const favicon = document.getElementById('favicon');
+        const isDarkMode = document.documentElement.classList.contains('dark');
+        // Reverse the condition
+        favicon.href = isDarkMode
+          ? '/src/assets/png/logo.png'
+          : '/src/assets/png/darkmodelogo.png';
+      }
+
+      // Listen for changes to the `dark` class
+      const observer = new MutationObserver(updateFavicon);
+      observer.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ['class'],
+      });
+
+      // Set initial favicon
+      document.addEventListener('DOMContentLoaded', () => {
+        updateFavicon();
+      });
+    </script>
   </head>
   <body>
     <div id="root"></div>

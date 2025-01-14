@@ -51,7 +51,7 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      <div className="flex items-center justify-center flex-col md:w-[80%] md:gap-0 gap-4 w-full">
+      <div className="flex items-center justify-center flex-col md:w-[80%] gap-4 w-full">
         <div className="text-center dark:text-[#FFFFFFCC]/[0.8] font-inter font-medium text-[#000000CC]/[0.8] text-[16px] leading-5">
           Disclaimer
         </div>
@@ -65,7 +65,7 @@ const Footer = () => {
           stocks. Trading stocks involves significant risks, and past
           performance is not indicative of future results.*
         </div>
-        <div className="mt-2 text-center dark:text-[#FFFFFFCC]/[0.8] font-inter font-medium text-[#000000CC]/[0.8] text-[16px] leading-5">
+        <div className="text-center dark:text-[#FFFFFFCC]/[0.8] font-inter font-medium text-[#000000CC]/[0.8] text-[16px] leading-5">
           Disclosure
         </div>
         <div className="text-center font-light text-[14px] leading-6 dark:text-[#FFFFFFCC]/[0.6] text-[#00000099]/[0.6]">
