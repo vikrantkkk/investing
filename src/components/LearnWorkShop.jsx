@@ -88,7 +88,6 @@ const LearnWorkShop = () => {
             </span>
             <span className="font-medium text-center dark:text-white">
               Sign Up Now And Get 50% Discount + Free E-Book + Free Consultation
-              Call. Offer Expires In
             </span>
           </div>
 
@@ -120,7 +119,6 @@ const LearnWorkShop = () => {
             </span>
             <span className="font-medium text-center dark:text-white">
               Sign Up Now And Get 50% Discount + Free E-Book + Free Consultation
-              Call. Offer Expires In
             </span>
           </div>
         </div>
@@ -142,12 +140,12 @@ const LearnWorkShop = () => {
           {allImage.map((item, index) => (
             <div
               key={index}
-              className={`cursor-pointer md:w-[500px] w-full border-2   dark:border-[#FFFFFF]/[0.1] .. dark:bg-[#FFFFFF26]/[0.15] bg-white p-6 rounded-2xl flex flex-col items-center transition-all duration-300 ease-in-out shadow-md hover:shadow-lg`}
+              className={`cursor-pointer md:w-[544px] w-full border-2   dark:border-[#FFFFFF]/[0.1] .. dark:bg-[#FFFFFF26]/[0.15] bg-white p-6 rounded-2xl flex flex-col items-center transition-all duration-300 ease-in-out shadow-md hover:shadow-lg`}
             >
               <img
                 src={item.icon}
                 alt={`icon-${index}`}
-                className="w-full h-[250px] object-cover mb-6 rounded-md"
+                className="w-[496px]  object-center mb-6 rounded-md"
               />
               <div className="flex flex-col items-start gap-4">
                 <div className="font-poppins dark:text-[#F1F1F1] text-[20px] leading-8 text-start font-bold text-[#0E0F19]">

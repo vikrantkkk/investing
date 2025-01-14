@@ -87,7 +87,7 @@ const Traders = () => {
       <img
         src={polldark}
         alt={polldark}
-        className="absolute dark:block hidden left-20 top-30"
+        className="absolute dark:block hidden top-20 w-[120px] left-0"
       />
     </div>
   );
