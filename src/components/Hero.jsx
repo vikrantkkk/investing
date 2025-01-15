@@ -94,13 +94,13 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div className="absolute md:top-20 top-10 md:right-[15rem] right-[17rem] z-10">
+          <div className="absolute md:top-20 top-10 md:right-[15rem] right-[16rem] z-10">
             <img src={TCS} alt="MyBrand Logo" className="md:h-[60px] h-[40px] md:w-[60px] w-[40px]" />
           </div>
-          <div className="absolute top-20 md:left-[17rem] left-[19rem] z-10">
+          <div className="absolute top-20 md:left-[17rem] left-[18rem] z-10">
             <img src={hero2} alt="MyBrand Logo" className="md:h-[60px] h-[40px] md:w-[60px] w-[40px]" />
           </div>
-          <div className="absolute md:top-96 md:left-[11rem] left-[3rem]  z-10">
+          <div className="absolute md:top-96 top-40 md:left-[11rem] left-[2rem]  z-10">
             <img src={hero1} alt="MyBrand Logo" className="md:h-[60px] h-[40px] md:w-[60px] w-[40px]" />
           </div>
         </div>

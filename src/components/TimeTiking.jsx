@@ -5,44 +5,38 @@ import secrets from "../assets/video/secrets.mp4";
 import CustomButton from "../common/CustomButton";
 
 const TimeTiking = () => {
-  // Initialize the countdown state with 5 minutes (300 seconds)
   const [time, setTime] = useState(300);
 
   useEffect(() => {
-    // If the time is zero, reset it back to 5 minutes (300 seconds)
     if (time === 0) {
       setTime(300);
     }
 
-    // Set up a timer that decreases the time every second
     const timer = setInterval(() => {
       setTime((prevTime) => prevTime - 1);
     }, 1000);
 
-    // Clear the timer when the component unmounts
     return () => clearInterval(timer);
   }, [time]);
 
-  // Calculate minutes and seconds from the time in seconds
   const minutes = Math.floor(time / 60);
   const seconds = time % 60;
 
   return (
     <div className="relative  items-center flex  justify-center md:min-h-screen h-auto">
-      {/* Video Background */}
       <video
         autoPlay
         loop
         muted
+        controls={false}
         className="absolute top-0 left-0 w-full h-full object-cover -z-10"
       >
         <source src={secrets} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
-      {/* Content Overlay */}
       <div className="flex flex-col gap-12 justify-center items-center md:w-1/2 w-full text-white p-8  md:bg-black/50 bg-black/70  md:rounded-lg">
-        {/* Title */}
+ 
         <div>
           <h1 className="font-poppins font-bold text-[40px] leading-[60px] text-center">
             Hurry Up! Time is Ticking.
@@ -50,7 +44,6 @@ const TimeTiking = () => {
           <div className="border-2 w-[200px] border-figmaGreen mx-auto mt-2" />
         </div>
 
-        {/* Watch Display */}
         <div className="flex gap-20 justify-center items-center">
           <div className="flex flex-col items-center">
             <div className="text-white font-extrabold text-[80px] md:text-[120px]">
@@ -71,12 +64,10 @@ const TimeTiking = () => {
           </div>
         </div>
 
-        {/* Banner Text */}
         <div className="font-poppins p-2 font-normal md:text-[16px] text-[14px] text-white rounded-[8px] w-auto bg-[#A928284D]/[0.3]">
           Last Few Seats Left! Grab your seat now
         </div>
 
-        {/* Buttons */}
         <div className="flex md:flex-row w-full flex-col justify-center md:items-start items-center md:gap-8 ld:gap-12 gap-4">
           <CustomButton />
         </div>
