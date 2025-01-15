@@ -4,11 +4,22 @@ import whatsappLOgo from "../assets/svg/whatsapp.svg";
 import instagram from "../assets/svg/instagram.svg";
 import darklogo from "../assets/svg/darklogo.svg";
 import { useDarkMode } from "../hooks/DarkModeContext";
+import { useLocation } from "react-router-dom";
 
 const Footer = () => {
   const { darkMode } = useDarkMode();
+  const location = useLocation();
+
+  // Check if the current route is the contact page
+  const isContactPage = location.pathname === "/contact";
+
   return (
-    <footer className="flex flex-col justify-center items-center h-auto w-screen gap-8  pb-8 px-4 py-16 dark:bg-[#0B0C13] bg-[#F1F1F1]">
+    // <footer className="flex flex-col justify-center items-center h-auto w-screen gap-8  pb-8 px-4 py-16 dark:bg-[#0B0C13] bg-[#F1F1F1]">
+    <footer
+    className={`flex flex-col justify-center items-center h-auto w-screen gap-8 pb-8 px-4 ${
+      isContactPage ? "py-8" : "py-16"
+    } dark:bg-[#0B0C13] bg-[#F1F1F1]`}
+  >
       <div>
         <a href="/" className="flex justify-center items-center">
           <img

@@ -1,8 +1,12 @@
 import React from "react";
 import buttonicon1 from "../assets/svg/buttonicon1.svg";
 const CustomButton3 = () => {
+  const handleClick = () => {
+    window.open("https://parang.exlyapp.com/5b107409-6b3f-48df-9b09-e5fd0004a99f?init_booking=true&enable_discount=true ","_blank")
+  };
+
   return (
-    <div className="flex font-bold">
+    <div className="flex font-bold" onClick={handleClick}>
       {/* Left Button: Gradient Background with Box Shadow */}
       <button
         className="p-4 text-white rounded-l-md w-[300px] transition-all duration-300"
@@ -48,7 +52,7 @@ const CustomButton3 = () => {
             <span className="text-[#0E0F19B2]/[0.7] dark:text-[#FFFFFFB2]/[0.7] font-normal text-[12px] leading-6">
               DATE & Time
             </span>
-            <span> 15th January 2025 | 9:00 PM</span>
+            <span>19th January 2025 | 06:00 PM</span>
           </div>
         </div>
       </button>

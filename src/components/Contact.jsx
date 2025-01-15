@@ -10,18 +10,21 @@ const cardData = [
     title: "Chat to Sales",
     description: "Speak to our friendly team.",
     email: "help@stockwiz.in",
+    link: "mailto:help@stockwiz.in",
   },
   {
     image: chatnew,
     title: "Chat to Support",
     description: "We’re here to help.",
     whatsapp: "+91 8949800532",
+    link: "https://api.whatsapp.com/send/?phone=918949800532&text&type=phone_number&app_absent=0",
   },
   {
     image: phone,
     title: "Call us",
     description: "Mon-Fri from 8am to 5pm.",
-    phone: "+91 9829837880 ",
+    phone: "+91 9829837880",
+    link: "tel:+919829837880",
   },
 ];
 
@@ -42,9 +45,12 @@ const Contact = () => {
       {/* Cards Section */}
       <div className="flex flex-col md:flex-row flex-wrap justify-between w-full md:gap-8 gap-4">
         {cardData.map((card, index) => (
-          <div
+          <a
             key={index}
-            className="flex flex-col items-start w-full md:w-[380px] ld:w-[500px] gap-4 p-4 border-2 dark:border-[#FFFFFF]/[0.1] dark:bg-[#FFFFFF26]/[0.15] bg-white rounded-md shadow-md"
+            href={card.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-start w-full md:w-[380px] ld:w-[500px] gap-4 p-4 border-2 dark:border-[#FFFFFF]/[0.1] dark:bg-[#FFFFFF26]/[0.15] bg-white rounded-md shadow-md cursor-pointer"
           >
             <div className="flex h-[50px] rounded-lg bg-figmaGreen w-[50px] justify-center items-center mb-4">
               <img
@@ -61,41 +67,23 @@ const Contact = () => {
               <div className="font-light text-sm dark:text-[#F1F1F1]/[0.7] text-[#475467]">
                 {card.description}
               </div>
-              {/* Conditionally Render Email */}
               {card.email && (
                 <div className="text-figmaGreen font-semibold text-sm">
-                  <a
-                    href={`mailto:${card.email}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {card.email}
-                  </a>
+                  {card.email}
                 </div>
               )}
-              {/* Conditionally Render WhatsApp */}
               {card.whatsapp && (
                 <div className="text-figmaGreen font-semibold text-sm">
-                  <a
-                    href={`https://api.whatsapp.com/send/?phone=918949800532&text&type=phone_number&app_absent=0
-`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                   {card.whatsapp}
-                  </a>
+                  {card.whatsapp}
                 </div>
               )}
-              {/* Conditionally Render Phone */}
               {card.phone && (
                 <div className="text-figmaGreen font-semibold text-sm">
-                  <a href={`tel:${card.phone}`} target="_blank" rel="noopener noreferrer">
-                    Call: {card.phone}
-                  </a>
+                  Call: {card.phone}
                 </div>
               )}
             </div>
-          </div>
+          </a>
         ))}
       </div>
 

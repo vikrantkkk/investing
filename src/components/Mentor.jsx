@@ -33,7 +33,7 @@ const Mentor = () => {
                 className="md:h-[40px] h-32 md:w-[40px] w-[32px]"
               />
               <div className="flex flex-col md:gap-1 gap-0">
-                <span>SEBI-registered research analyst</span>
+                <span>SEBI-Registered Research Analyst</span>
                 <span>INH000013925</span>
               </div>
             </div>
@@ -58,7 +58,7 @@ const Mentor = () => {
               decade to mastering the art and science of professional trading.
             </div>
             <div className="font-poppins md:text-start text-center font-normal md:text-[16px] text-[14px]  leading-7 text-[#F1F1F1B2]/[0.7]">
-              Having trained more than 100000+ traders, Parang has a proven
+              Having trained more than 1,00,000+ traders, Parang has a proven
               track record of transforming retail traders into confident
               professionals. His mission is simple yet powerful: to educate,
               train, fund, and help traders achieve consistent success in the

@@ -41,7 +41,7 @@ const TimeTiking = () => {
       </video>
 
       {/* Content Overlay */}
-      <div className="flex flex-col gap-12 justify-center items-center md:w-1/2 w-full text-white p-8  bg-black/50 md:rounded-lg">
+      <div className="flex flex-col gap-12 justify-center items-center md:w-1/2 w-full text-white p-8  md:bg-black/50 bg-black/70  md:rounded-lg">
         {/* Title */}
         <div>
           <h1 className="font-poppins font-bold text-[40px] leading-[60px] text-center">

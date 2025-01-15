@@ -4,6 +4,7 @@ import CustomButton1 from "../common/CustomButton1";
 import CustomButton2 from "../common/CustomButton2";
 import RemoveCircleIcon from "@mui/icons-material/RemoveCircle";
 import { useDarkMode } from "../hooks/DarkModeContext";
+import { useLocation } from "react-router-dom";
 
 const faqData = [
   {
@@ -28,13 +29,22 @@ const faqData = [
 const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(null);
   const { darkMode } = useDarkMode();
+  const location = useLocation();
+
+  // Check if the current route is the contact page
+  const isContactPage = location.pathname === "/contact";
 
   const toggleFAQ = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
   return (
-    <div className="flex flex-col  h-auto w-screen gap-8 md:py-8 py-16 px-4 dark:bg-darkBackGround bg-[#F1F1F1]">
+    // <div className="flex flex-col  h-auto w-screen gap-8 md:py-8 py-16 px-4 dark:bg-darkBackGround bg-[#F1F1F1]">
+    <div
+    className={`flex flex-col h-auto w-screen gap-8 px-4 dark:bg-darkBackGround bg-[#F1F1F1] ${
+      isContactPage ? "md:py-8 py-8" : "md:py-8 py-16"
+    }`}
+  >
       <div className="flex md:flex-row flex-col">
         <div className="md:w-[40%] w-full flex justify-center md:mt-4">
           <div className="flex dark:text-white flex-col md:items-start items-center font-poppins md:text-start text-center md:text-[40px] text-[32px] leading-[45px] md:leading-[60px] font-bold">

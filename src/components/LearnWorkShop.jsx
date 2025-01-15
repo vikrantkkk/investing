@@ -55,13 +55,22 @@ const LearnWorkShop = () => {
       "0"
     )}`;
   };
-
+  const marqueeClasses = [
+    "animate-marquee",
+    "animate-marquee1",
+    "animate-marquee2",
+    "animate-marquee3",
+    "animate-marquee4",
+    "animate-marquee5",
+    "animate-marquee6",
+    "animate-marquee7",
+  ];
   return (
     <div className="relative flex md:border-b-2 flex-col gap-12  w-screen  pb-8 md:pt-0 pt-8 h-auto dark:border-none dark:bg-darkBackGround bg-[#F1F1F1]">
       <div className="w-full gap-2 md:block hidden p-4 text-[18px] leading-6 bg-[#F9FAFB] dark:bg-darkBackGround justify-center items-center relative">
-        <div class="relative  flex overflow-x-hidden">
-          <div class="p-2 animate-marquee whitespace-nowrap">
-            <span className="font-medium text-center dark:text-white">
+        <div class="relative  flex overflow-x-hidden overflow-y-hidden">
+          <div class=" animate-marquee whitespace-nowrap">
+            <span className="font-medium text-center ml-1 dark:text-white">
               Call. Offer Expires In
             </span>
             <span
@@ -91,8 +100,38 @@ const LearnWorkShop = () => {
             </span>
           </div>
 
-          <div class="absolute top-0 p-2 animate-marquee2 whitespace-nowrap">
+          <div class="absolute top-0 animate-marquee2 whitespace-nowrap">
+            <span className="font-medium ml-1 text-center dark:text-white">
+              Call. Offer Expires In
+            </span>
+            <span
+              className="px-4 py-1 rounded-md font-semibold text-transparent text-center"
+              style={{
+                background:
+                  "linear-gradient(94.98deg, rgba(255, 204, 105, 0.8) -44.59%, rgba(255, 34, 34, 0.8) 154.52%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              {formatTime(timeLeft)}
+            </span>
+            <span
+              className="font-semibold text-transparent text-center"
+              style={{
+                background:
+                  "linear-gradient(88.4deg, #1D870B -4.38%, #66D6AD 40.17%, #13B5E8 85.62%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              Limited Time Offer{" "}
+            </span>
             <span className="font-medium text-center dark:text-white">
+              Sign Up Now And Get 50% Discount + Free E-Book + Free Consultation
+            </span>
+          </div>
+          <div class=" top-0  animate-marquee3 whitespace-nowrap">
+            <span className="font-medium ml-1 text-center dark:text-white">
               Call. Offer Expires In
             </span>
             <span

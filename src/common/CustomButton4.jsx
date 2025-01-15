@@ -2,8 +2,13 @@ import React from "react";
 import buttonicon2 from "../assets/svg/buttonicon2.svg";
 
 const CustomButton4 = () => {
+
+  const handleClick = () => {
+    window.open("https://parang.exlyapp.com/01b9a72c-8df9-4a85-9859-4bb67fd61cb4?init_booking=true&enable_discount=true","_blank")
+  };
+
   return (
-    <div className="flex font-bold">
+    <div className="flex font-bold" onClick={handleClick}>
       {/* Left Button: Gradient Background with Box Shadow */}
       <button
         className="p-4 text-black rounded-l-md w-[300px] transition-all duration-300"
@@ -23,7 +28,7 @@ const CustomButton4 = () => {
               "linear-gradient(180deg, #58FF29 0%, #31DE00 50%, #26AD00 100%)") // Original gradient
         }
       >
-        Join Now (Hindi) at <span className="line-through">₹499</span> ₹199
+        Join Now (English) at <span className="line-through">₹499</span> ₹199
       </button>
 
       {/* Right Button: Transparent with Gradient Border */}
@@ -46,8 +51,10 @@ const CustomButton4 = () => {
             />
           </span>
           <div className="flex flex-col justify-center items-start">
-            <span className="text-[#0E0F19B2]/[0.7] dark:text-[#FFFFFFB2]/[0.7] font-normal text-[12px] leading-6">DATE & Time</span>
-            <span> 15th January 2025 | 9:00 PM</span>
+            <span className="text-[#0E0F19B2]/[0.7] dark:text-[#FFFFFFB2]/[0.7] font-normal text-[12px] leading-6">
+              DATE & Time
+            </span>
+            <span>19th January 2025 | 12:00 PM</span>
           </div>
         </div>
       </button>
