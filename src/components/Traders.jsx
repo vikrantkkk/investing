@@ -22,20 +22,7 @@ const imageData = [
     height: "200px",
     width: "200px",
   },
-  {
-    id: 1,
-    src: imageblur1,
-    alt: "Image Blur 1",
-    height: "200px",
-    width: "200px",
-  },
-  {
-    id: 1,
-    src: imageblur1,
-    alt: "Image Blur 1",
-    height: "200px",
-    width: "200px",
-  },
+
   {
     id: 2,
     src: imageblur2,
@@ -44,9 +31,23 @@ const imageData = [
     width: "242px",
   },
   {
+    id: 1,
+    src: imageblur1,
+    alt: "Image Blur 1",
+    height: "200px",
+    width: "200px",
+  },
+  {
     id: 3,
     src: imagemiddle,
     alt: "Image Middle",
+    height: "200px",
+    width: "200px",
+  },
+  {
+    id: 1,
+    src: imageblur1,
+    alt: "Image Blur 1",
     height: "200px",
     width: "200px",
   },
