@@ -142,17 +142,17 @@ const Traders = () => {
       <img
         src={Rectangle10}
         alt={Rectangle10}
-        className="z-10 md:block hidden dark:hidden absolute left-0 top-0 h-[95%]"
+        className="z-10 md:block hidden dark:hidden  absolute left-0 top-0 h-[95%]"
       />
       <img
         src={Rectangle9}
         alt={Rectangle9}
-        className="absolute -right-10 dark:hidden top-52 h-[45%]"
+        className="absolute -right-10 dark:hidden md:block hidden top-52 h-[45%]"
       />
       <img
         src={Rectangle10}
         alt={Rectangle10}
-        className="absolute dark:hidden -left-10 top-52 h-[45%]"
+        className="absolute dark:hidden -left-10 md:block hidden top-56 h-[45%]"
       />
       <img
         src={polldark}
