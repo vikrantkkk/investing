@@ -18,9 +18,13 @@ import { useDarkMode } from "../hooks/DarkModeContext";
 
 export default function TemporaryDrawer() {
   const [open, setOpen] = React.useState(false);
-  const location = useLocation(); 
+  const location = useLocation();
   const { darkMode } = useDarkMode(); 
- 
+
+  // Scroll to the top whenever the route changes
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);

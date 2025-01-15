@@ -9,7 +9,7 @@ import clock from "../assets/svg/clock.svg";
 import duration1 from "../assets/svg/duration.svg";
 import globe from "../assets/svg/globe.svg";
 import hero1 from "../assets/svg/hero1.svg";
-import TCS from "../assets/png/TCS.png"
+import TCS from "../assets/png/TCS.png";
 import hero2 from "../assets/svg/hero2.svg";
 import hero3 from "../assets/svg/hero3.svg";
 import correct from "../assets/svg/correct.svg";
@@ -30,8 +30,8 @@ const Hero = () => {
         className={`flex md:flex-row dark:md:hidden flex-col-reverse md:h-[100vh] h-auto md:px-0 px-2 w-screen dark:bg-darkBackGround bg-[#F1F1F1]`}
       >
         <div className="md:w-[50vw] w-full md:h-auto h-[50vh] relative flex  justify-center items-center">
-          <div className="absolute md:block hidden bottom-44 ld:bottom-80  left-36 md:left-44 z-10">
-            <img src={circleLogo} alt="CEO" className="w-[95%] md:w-full" />
+          <div className="absolute  bottom-44 ld:bottom-80 md:top-0 top-0 md:left-44 left-10 dark:hidden z-10">
+            <img src={circleLogo} alt="CEO" className="md:w-full w-[90%]" />
           </div>
           <div className="absolute bottom-0 z-10">
             <img src={ceo} alt="CEO" className="md:h-[80vh]  h-[363px]" />
@@ -94,45 +94,14 @@ const Hero = () => {
               </div>
             </div>
           </div>
-
-          <div className="font-poppins text-center dark:border-[#FFFFFF]/[0.1] .. font-semibold md:text-[16px] text-[8px] md:leading-6 leading-3 text-figmaGreen absolute md:right-10 ld:right-28 right-0 md:top-36 ld:top-64 top-24 shadow-md rounded-md flex p-2 items-center justify-center md:h-10 h-8 md:w-56 w-[140px] md:gap-4 gap-2 dark:bg-darkBackGround dark:border bg-white z-10">
-            <span>
-              <img
-                src={TCS}
-                alt="MyBrand Logo"
-                className="h-[24px] w-[24px]  rounded-full"
-              />
-            </span>
-            <div className="flex justify-center items-center md:gap-2 gap-1">
-              <span className="text-black dark:text-white leading-none">₹4,230.55</span>{" "}
-              <span className="md:text-[9px] text-[6px] leading-none text-[#FF0000]">-2.55(-0.06%)</span>
-            </div>
+          <div className="absolute md:top-20 top-10 md:right-[15rem] right-[17rem] z-10">
+            <img src={TCS} alt="MyBrand Logo" className="md:h-[60px] h-[40px] md:w-[60px] w-[40px]" />
           </div>
-          <div className="font-poppins text-center dark:border-[#FFFFFF]/[0.1] .. font-semibold md:text-[16px] text-[8px] md:leading-6 leading-3 text-figmaGreen absolute md:left-24 ld:left-44 left-4  md:top-20 ld:top-24 top-4 shadow-md rounded-md flex p-2 items-center justify-center md:h-10 h-8 md:w-56 w-[140px] md:gap-4 gap-2 dark:bg-darkBackGround dark:border  bg-white z-10">
-            <span>
-              <img
-                src={hero2}
-                alt="MyBrand Logo"
-                className="h-[24px] w-[24px]  rounded-full"
-              />
-            </span>{" "}
-            <div className="flex justify-center items-center md:gap-2 gap-1">
-              <span className="text-black dark:text-white leading-none">₹1,248.05</span>{" "}
-              <span className="md:text-[9px] text-[6px] leading-none">+9.30(+0.78%)</span>
-            </div>
+          <div className="absolute top-20 md:left-[17rem] left-[19rem] z-10">
+            <img src={hero2} alt="MyBrand Logo" className="md:h-[60px] h-[40px] md:w-[60px] w-[40px]" />
           </div>
-          <div className="font-poppins text-center dark:border-[#FFFFFF]/[0.1] .. font-semibold md:text-[16px] text-[8px] md:leading-6 leading-3 text-figmaGreen absolute md:left-16 ld:left-24 left-0 md:top-[280px] ld:top-[400px] top-40 shadow-md rounded-md flex p-2 items-center justify-center md:h-10 h-8 md:w-56 w-[140px] md:gap-4 gap-2 dark:bg-darkBackGround dark:border bg-white z-10">
-            <span>
-              <img
-                src={hero3}
-                alt="MyBrand Logo"
-                className="h-[24px] w-[24px]  rounded-full"
-              />
-            </span>{" "}
-            <div className="flex justify-center items-center md:gap-2 gap-1">
-              <span className="text-black dark:text-white leading-none">₹2,396.35</span>{" "}
-              <span className="md:text-[9px] text-[6px] leading-none">+15.85(+0.67%)</span>
-            </div>
+          <div className="absolute md:top-96 md:left-[11rem] left-[3rem]  z-10">
+            <img src={hero1} alt="MyBrand Logo" className="md:h-[60px] h-[40px] md:w-[60px] w-[40px]" />
           </div>
         </div>
         <div className="md:flex-1 w-full md:h-auto h-[50vh]  flex flex-col md:gap-8 gap-2  justify-center md:items-start items-center">

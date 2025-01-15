@@ -32,7 +32,7 @@ const Mentor = () => {
                 alt="MyBrand Logo"
                 className="md:h-[40px] h-32 md:w-[40px] w-[32px]"
               />
-              <div className="flex flex-col md:gap-1 gap-0">
+              <div className="flex flex-col md:gap-1 gap-0 md:font-normal font-medium">
                 <span>SEBI-Registered Research Analyst</span>
                 <span>INH000013925</span>
               </div>

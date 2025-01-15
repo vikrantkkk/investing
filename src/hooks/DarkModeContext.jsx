@@ -10,10 +10,10 @@ export const DarkModeProvider = ({ children }) => {
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
+      localStorage.setItem("theme", "light");
     } else {
       document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "dark");
+      localStorage.setItem("theme", "light");
     }
   }, [darkMode]);
 
