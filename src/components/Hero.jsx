@@ -27,17 +27,17 @@ const Hero = () => {
       <div
         id="hero"
         // className="flex md:flex-row  flex-col-reverse md:h-[100vh] h-auto md:px-0 px-2 w-screen  bg-[#F1F1F1]"
-        className={`flex md:flex-row dark:md:hidden flex-col-reverse md:h-[100vh] h-auto md:px-0 px-2 w-screen dark:bg-darkBackGround bg-[#F1F1F1]`}
+        className={`flex md:flex-row dark:md:hidden flex-col-reverse md:h-[100vh] h-auto md:px-0 px-2 w-screen md:pt-28 sd:pt-32 mmd:pt-20  dark:bg-darkBackGround bg-[#F1F1F1]`}
       >
         <div className="md:w-[50vw] w-full md:h-auto h-[50vh] relative flex  justify-center items-center">
-          <div className="absolute  bottom-44 ld:bottom-80 md:top-0 top-0 md:left-44 left-10 dark:hidden z-10">
-            <img src={circleLogo} alt="CEO" className="md:w-full w-[90%]" />
+          <div className="absolute  bottom-44 ld:bottom-80  sd:top-10 mmd:top-0  md:left-44 sd:left-14 mmd:left-0 left-10 dark:hidden z-10">
+            <img src={circleLogo} alt="CEO" className="md:w-full sd:w-[80%] mmd:w-full" />
           </div>
           <div className="absolute bottom-0 z-10">
-            <img src={ceo} alt="CEO" className="md:h-[80vh]  h-[363px]" />
+            <img src={ceo} alt="CEO" className="md:h-[80%] mmd:h-[40vh] sd:h-[38vh] h-[50vh]" />
           </div>
-          <div className="h-auto shadow-2xl md:w-[350px] w-[200px] flex-wrap  bg-white border-2 dark:border-[#FFFFFF]/[0.1] .. dark:bg-[#0E0F19] z-10 absolute md:bottom-10 bottom-4 md:left-44 ld:left-72 left-10 rounded-md">
-            <div className="flex flex-col md:gap-2 gap-1 md:p-4 p-2">
+          <div className="h-auto shadow-2xl md:w-[350px] mmd:w-[200px] sd:w-[180px] flex-wrap  bg-white border-2 dark:border-[#FFFFFF]/[0.1] .. dark:bg-[#0E0F19] z-10 absolute md:bottom-10 bottom-4 md:left-44 ld:left-72 left-10 rounded-md">
+            <div className="flex flex-col md:gap-2 gap-1 md:p-4 mmd:p-2 sd:p-1">
               <div className="flex flex-col font-poppins font-semibold md:text-[20px] text-[11px] md:leading-8 leading-4 dark:text-[#FFFFFFB2] text-[#0E0F19]">
                 <div className="flex justify-start items-center gap-2">
                   <span>Parang Mehta</span>
@@ -48,9 +48,9 @@ const Hero = () => {
                 </span>
               </div>
 
-              <div className="flex flex-col md:gap-2 gap-1">
+              <div className="flex flex-col md:gap-2 mmd:gap-1 gap-0">
                 {/* SEBI Registered Research Analyst */}
-                <div className="flex items-center gap-2 font-poppins font-normal md:text-[16px] text-[10px] md:leading-6 leading-4 dark:text-[#FFFFFFB2]/[0.7] text-[#0E0F19B2]/[0.7]">
+                <div className="flex items-center gap-2 font-poppins font-normal md:text-[16px] mmd:text-[10px] sd:text-[8px] md:leading-6 leading-4 dark:text-[#FFFFFFB2]/[0.7] text-[#0E0F19B2]/[0.7]">
                   <img
                     src={correct}
                     alt="correct"
@@ -58,12 +58,12 @@ const Hero = () => {
                   />
                   <div>
                     SEBI Registered Research Analyst{" "}
-                    <span className="font-bold">INH000013925</span>
+                    <span className="font-bold mmd:text-[10px] sd:text-[8px]">INH000013925</span>
                   </div>
                 </div>
 
                 {/* 10+ Years Trading Experience */}
-                <div className="flex items-center gap-2 font-poppins font-normal md:text-[16px] text-[10px] md:leading-6 leading-4 dark:text-[#FFFFFFB2]/[0.7] text-[#0E0F19B2]/[0.7]">
+                <div className="flex items-center gap-2 font-poppins font-normal md:text-[16px] mmd:text-[10px] sd:text-[8px] md:leading-6 leading-4 dark:text-[#FFFFFFB2]/[0.7] text-[#0E0F19B2]/[0.7]">
                   <img
                     src={correct}
                     alt="correct"
@@ -73,7 +73,7 @@ const Hero = () => {
                 </div>
 
                 {/* Trained 1,00,000+ People */}
-                <div className="flex items-center gap-2 font-poppins font-normal md:text-[16px] text-[10px] md:leading-6 leading-4 dark:text-[#FFFFFFB2]/[0.7] text-[#0E0F19B2]/[0.7]">
+                <div className="flex items-center gap-2 font-poppins font-normal md:text-[16px] mmd:text-[10px] sd:text-[8px] md:leading-6 leading-4 dark:text-[#FFFFFFB2]/[0.7] text-[#0E0F19B2]/[0.7]">
                   <img
                     src={correct}
                     alt="correct"
@@ -83,7 +83,7 @@ const Hero = () => {
                 </div>
 
                 {/* Institutional Trading Specialist */}
-                <div className="flex items-center gap-2 font-poppins font-normal md:text-[16px] text-[10px] md:leading-6 leading-4 dark:text-[#FFFFFFB2]/[0.7] text-[#0E0F19B2]/[0.7]">
+                <div className="flex items-center gap-2 font-poppins font-normal md:text-[16px] mmd:text-[10px] sd:text-[8px] md:leading-6 leading-4 dark:text-[#FFFFFFB2]/[0.7] text-[#0E0F19B2]/[0.7]">
                   <img
                     src={correct}
                     alt="correct"
@@ -94,14 +94,14 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div className="absolute md:top-20 top-10 md:right-[15rem] right-[16rem] z-10">
-            <img src={TCS} alt="MyBrand Logo" className="md:h-[60px] h-[40px] md:w-[60px] w-[40px]" />
+          <div className="absolute md:top-20 mmd:top-10 sd:top-12 md:right-[16rem] right-[16rem] z-10">
+            <img src={TCS} alt="MyBrand Logo" className="md:h-[60px] mmd:h-[40px] md:w-[60px] mmd:w-[40px] sd:w-[30px] sd:h-[30px]" />
           </div>
-          <div className="absolute top-20 md:left-[17rem] left-[18rem] z-10">
-            <img src={hero2} alt="MyBrand Logo" className="md:h-[60px] h-[40px] md:w-[60px] w-[40px]" />
+          <div className="absolute top-20 md:left-[19rem] mmd:left-[18rem] sd:left-[16rem] z-10">
+            <img src={hero2} alt="MyBrand Logo" className="md:h-[60px] mmd:h-[40px] md:w-[60px] mmd:w-[40px] sd:w-[30px] sd:h-[30px]" />
           </div>
-          <div className="absolute md:top-96 top-40 md:left-[11rem] left-[2rem]  z-10">
-            <img src={hero1} alt="MyBrand Logo" className="md:h-[60px] h-[40px] md:w-[60px] w-[40px]" />
+          <div className="absolute md:top-96 mmd:top-40 sd:top-32 md:left-[11rem] sd:left-[2.2rem] z-10">
+            <img src={hero1} alt="MyBrand Logo" className="md:h-[60px] mmd:h-[40px] md:w-[60px] mmd:w-[40px] sd:w-[30px] sd:h-[30px]" />
           </div>
         </div>
         <div className="md:flex-1 w-full md:h-auto h-[50vh]  flex flex-col md:gap-8 gap-2  justify-center md:items-start items-center">
@@ -120,7 +120,7 @@ const Hero = () => {
             With
             <br /> a Proven System
           </div>
-          <div className="font-poppins dark:text-white text-center md:hidden block md:text-[48px] text-[29px] md:leading-[70px] leading-10 font-bold">
+          <div className="font-poppins dark:text-white text-center md:hidden block md:text-[48px]  text-[29px] md:leading-[70px] leading-10 font-bold">
             Crack the Code to Trade
             <br /> in the{" "}
             <span className="text-figmaGreen">
@@ -166,7 +166,7 @@ const Hero = () => {
         </div>
       </div>
       <div
-        className={`h-auto w-screen bg-darkBackGround md:dark:flex hidden pt-20 px-20 relative  items-center justify-center`}
+        className={`h-auto w-screen bg-darkBackGround md:dark:flex hidden md:pt-32 px-20 relative  items-center justify-center`}
       >
         {/* Gradient background */}
         <div className="absolute top-0 right-0 left-0 h-[70%] z-0 bg-gradient-to-bl from-figmaGreen via-transparent to-transparent opacity-20"></div>

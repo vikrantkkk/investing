@@ -7,8 +7,10 @@ const MainLayout = ({ children }) => {
   return (
     <>
       <div className="overflow-x-hidden">
-        <Header />
-        <main className="pt-20">{children}</main>
+        <div>
+          <Header />
+        </div>
+        <main className="">{children}</main>
         <Footer />
       </div>
     </>

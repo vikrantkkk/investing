@@ -16,7 +16,7 @@ const faqData = [
     id: 2,
     question: "What will be the language of the webinar?",
     answer:
-      "The webinar will be delivered in simple English. Doubts can be asked in Hindi.",
+      "The webinar will be delivered in both Hindi and English. You can choose your preferred language, and doubts can be asked in either language.",
   },
   {
     id: 3,
