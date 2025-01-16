@@ -29,7 +29,7 @@ const Hero = () => {
         // className="flex md:flex-row  flex-col-reverse md:h-[100vh] h-auto md:px-0 px-2 w-screen  bg-[#F1F1F1]"
         className={`flex md:flex-row dark:md:hidden flex-col-reverse md:h-[100vh] h-auto xs:pt-32 pt-20  md:px-0 px-2 w-screen dark:bg-darkBackGround bg-[#F1F1F1]`}
       >
-        <div className="md:w-[50vw] w-full md:h-auto h-[50vh] relative flex  justify-center items-center">
+        <div className="md:w-[50vw] w-full md:h-auto h-[50vh] xs:mt-10 relative flex  justify-center items-center">
           <div className="absolute  bottom-44 ld:bottom-80 xs:top-10 top-0 md:left-44 left-0 dark:hidden z-10">
             <img src={circleLogo} alt="CEO" className="xs:w-[80%] w-full" />
           </div>
