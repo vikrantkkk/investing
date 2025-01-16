@@ -93,8 +93,12 @@ const sliderSettings = {
     {
       breakpoint: 480,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 1,
+        infinite: true,
         speed: 10000,
+        autoplay: true,
+        autoplaySpeed: 0,
+        cssEase: "linear",
       },
     },
   ],
@@ -127,7 +131,6 @@ const Traders = () => {
               key={image.id}
               src={image.src}
               alt={image.alt}
-              className="h-40"
             />
           ))}
         </Slider>

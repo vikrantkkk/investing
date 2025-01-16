@@ -8,7 +8,7 @@ const MainLayout = ({ children }) => {
     <>
       <div className="overflow-x-hidden">
         <Header />
-        <main className="pt-20">{children}</main>
+        <main>{children}</main>
         <Footer />
       </div>
     </>

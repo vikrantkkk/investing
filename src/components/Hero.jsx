@@ -27,14 +27,14 @@ const Hero = () => {
       <div
         id="hero"
         // className="flex md:flex-row  flex-col-reverse md:h-[100vh] h-auto md:px-0 px-2 w-screen  bg-[#F1F1F1]"
-        className={`flex md:flex-row dark:md:hidden flex-col-reverse md:h-[100vh] h-auto md:px-0 px-2 w-screen dark:bg-darkBackGround bg-[#F1F1F1]`}
+        className={`flex md:flex-row dark:md:hidden flex-col-reverse md:h-[100vh] h-auto  md:pt-20 pt-32 md:px-0 px-2 w-screen dark:bg-darkBackGround bg-[#F1F1F1]`}
       >
-        <div className="md:w-[50vw] w-full md:h-auto h-[50vh] relative flex  justify-center items-center">
-          <div className="absolute  bottom-44 ld:bottom-80 md:top-0 top-0 md:left-44 left-10 dark:hidden z-10">
+        <div className="md:w-[50vw] md:mt-0 mt-20 w-full md:h-auto h-[50vh] relative flex  justify-center items-center">
+          <div className="absolute  bottom-44 ld:bottom-80 md:top-0 top-10 md:left-44 left-10 dark:hidden z-10">
             <img src={circleLogo} alt="CEO" className="md:w-full w-[90%]" />
           </div>
           <div className="absolute bottom-0 z-10">
-            <img src={ceo} alt="CEO" className="md:h-[80vh]  h-[363px]" />
+            <img src={ceo} alt="CEO" className="md:h-[80%]  h-[363px] " />
           </div>
           <div className="h-auto shadow-2xl md:w-[350px] w-[200px] flex-wrap  bg-white border-2 dark:border-[#FFFFFF]/[0.1] .. dark:bg-[#0E0F19] z-10 absolute md:bottom-10 bottom-4 md:left-44 ld:left-72 left-10 rounded-md">
             <div className="flex flex-col md:gap-2 gap-1 md:p-4 p-2">
@@ -132,7 +132,7 @@ const Hero = () => {
             Spot Big Market Moves Before They Happen
             <br /> with Institutional Trading
           </div>
-          <div className="font-poppins text-center md:hidden block md:text-[24px] text-[20px] font-light md:leading-9 dark:text-[#F1F1F1B2]/[0.7] leading-8 text-[#0E0F19B2]/[0.7]">
+          <div className="font-poppins text-center md:hidden block md:text-[24px] text-[18px] font-light md:leading-9 dark:text-[#F1F1F1B2]/[0.7] leading-8 text-[#0E0F19B2]/[0.7]">
             Spot Big Market Moves Before They <br /> Happen with Institutional
             Trading
           </div>
@@ -166,7 +166,7 @@ const Hero = () => {
         </div>
       </div>
       <div
-        className={`h-auto w-screen bg-darkBackGround md:dark:flex hidden pt-20 px-20 relative  items-center justify-center`}
+        className={`h-auto w-screen bg-darkBackGround md:dark:flex hidden pt-32 px-20 relative  items-center justify-center`}
       >
         {/* Gradient background */}
         <div className="absolute top-0 right-0 left-0 h-[70%] z-0 bg-gradient-to-bl from-figmaGreen via-transparent to-transparent opacity-20"></div>
