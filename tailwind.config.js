@@ -1,33 +1,33 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  darkMode: 'class',
+  darkMode: "class",
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       animation: {
-        marquee: 'marquee 25s linear infinite',
-        marquee1: 'marquee2 25s linear infinite',
-        marquee2: 'marquee2 25s linear infinite',
-        marquee3: 'marquee2 25s linear infinite',
-        marquee4: 'marquee2 25s linear infinite',
-        marquee5: 'marquee2 25s linear infinite',
-        marquee6: 'marquee2 25s linear infinite',
-        marquee7: 'marquee2 25s linear infinite',
+        marquee: "marquee 25s linear infinite",
+        marquee1: "marquee2 25s linear infinite",
+        marquee2: "marquee2 25s linear infinite",
+        marquee3: "marquee2 25s linear infinite",
+        marquee4: "marquee2 25s linear infinite",
+        marquee5: "marquee2 25s linear infinite",
+        marquee6: "marquee2 25s linear infinite",
+        marquee7: "marquee2 25s linear infinite",
       },
       keyframes: {
         marquee: {
-          '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-100%)' },
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-100%)" },
         },
         marquee2: {
-          '0%': { transform: 'translateX(100%)' },
-          '100%': { transform: 'translateX(0%)' },
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(0%)" },
         },
       },
       screens: {
-        "ld": "1920px",
-        "xld": "2560px",
-        xs: "375px",
+        ld: "1920px",
+        xld: "2560px",
+        xs: { max: "375px" },
       },
       fontFamily: {
         // Primary font is SF Pro Text
@@ -49,7 +49,7 @@ export default {
           "green-gradient":
             "linear-gradient(180deg, #58FF29 0%, #31DE00 50%, #26AD00 100%)",
         },
-        darkBackGround:"#0E0F19"
+        darkBackGround: "#0E0F19",
       },
     },
   },
