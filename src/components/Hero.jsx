@@ -36,7 +36,7 @@ const Hero = () => {
           <div className="absolute bottom-0 z-10">
             <img src={ceo} alt="CEO" className="md:h-[80%] xs:h-[300px]  h-[363px] " />
           </div>
-          <div className="h-auto shadow-2xl md:w-[350px] w-[200px] flex-wrap  bg-white border-2 dark:border-[#FFFFFF]/[0.1] .. dark:bg-[#0E0F19] z-10 absolute md:bottom-10 bottom-4 md:left-44 ld:left-72 left-10 rounded-md">
+          <div className="h-auto shadow-2xl md:w-[350px] w-[200px] flex-wrap  bg-white border-2 dark:border-[#FFFFFF]/[0.1] .. dark:bg-[#0E0F19] z-10 absolute md:bottom-10 bottom-4 md:left-44 ld:left-72 xs:left-28 left-10 rounded-md">
             <div className="flex flex-col md:gap-2 gap-1 md:p-4 p-2">
               <div className="flex flex-col font-poppins font-semibold md:text-[20px] text-[11px] md:leading-8 leading-4 dark:text-[#FFFFFFB2] text-[#0E0F19]">
                 <div className="flex justify-start items-center gap-2">
