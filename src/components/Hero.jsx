@@ -29,14 +29,14 @@ const Hero = () => {
         // className="flex md:flex-row  flex-col-reverse md:h-[100vh] h-auto md:px-0 px-2 w-screen  bg-[#F1F1F1]"
         className={`flex md:flex-row dark:md:hidden flex-col-reverse md:h-[100vh] h-auto xs:pt-32 pt-20  md:px-0 px-2 w-screen dark:bg-darkBackGround bg-[#F1F1F1]`}
       >
-        <div className="md:w-[50vw] w-full md:h-auto h-[50vh] xs:mt-10 relative flex  justify-center items-center">
-          <div className="absolute  bottom-44 ld:bottom-80 xs:top-10 top-0 md:left-44 left-0 dark:hidden z-10">
-            <img src={circleLogo} alt="CEO" className="xs:w-[80%] w-full" />
+        <div className="md:w-[50vw] w-full md:h-auto h-[50vh] xs:mt-32 relative flex  justify-center items-center">
+          <div className="absolute  bottom-44 ld:bottom-80  top-0 md:left-44  left-0 dark:hidden z-10">
+            <img src={circleLogo} alt="CEO" className="w-full" />
           </div>
           <div className="absolute bottom-0 z-10">
-            <img src={ceo} alt="CEO" className="md:h-[80%] xs:h-[300px]  h-[363px] " />
+            <img src={ceo} alt="CEO" className="md:h-[80%] h-[363px] " />
           </div>
-          <div className="h-auto shadow-2xl md:w-[350px] w-[200px] flex-wrap  bg-white border-2 dark:border-[#FFFFFF]/[0.1] .. dark:bg-[#0E0F19] z-10 absolute md:bottom-10 bottom-4 md:left-44 ld:left-72 xs:left-28 left-10 rounded-md">
+          <div className="h-auto shadow-2xl md:w-[350px] w-[200px] flex-wrap  bg-white border-2 dark:border-[#FFFFFF]/[0.1] .. dark:bg-[#0E0F19] z-10 absolute md:bottom-10 bottom-4 md:left-44 ld:left-72  left-10 rounded-md">
             <div className="flex flex-col md:gap-2 gap-1 md:p-4 p-2">
               <div className="flex flex-col font-poppins font-semibold md:text-[20px] text-[11px] md:leading-8 leading-4 dark:text-[#FFFFFFB2] text-[#0E0F19]">
                 <div className="flex justify-start items-center gap-2">
@@ -94,13 +94,13 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div className="absolute md:top-20 top-10 md:right-[15rem] right-[16rem] z-10">
+          <div className="absolute md:top-20 xs:-top-10 top-10 md:right-[15rem] right-[16rem] z-10">
             <img src={TCS} alt="MyBrand Logo" className="md:h-[60px] h-[40px] md:w-[60px] w-[40px]" />
           </div>
           <div className="absolute top-20 md:left-[17rem] left-[18rem] z-10">
             <img src={hero2} alt="MyBrand Logo" className="md:h-[60px] h-[40px] md:w-[60px] w-[40px]" />
           </div>
-          <div className="absolute md:top-96 top-40 md:left-[11rem] left-[2rem]  z-10">
+          <div className="absolute md:top-96 xs:top-20 top-40 md:left-[11rem] xs:left-[1rem] left-[2rem]  z-10">
             <img src={hero1} alt="MyBrand Logo" className="md:h-[60px] h-[40px] md:w-[60px] w-[40px]" />
           </div>
         </div>
