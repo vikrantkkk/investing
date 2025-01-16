@@ -10,6 +10,7 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 import WebIcon from "@mui/icons-material/Web"; 
 import PhoneIcon from "@mui/icons-material/Phone";
 import logo from "../assets/svg/home.svg";
@@ -21,7 +22,6 @@ export default function TemporaryDrawer() {
   const location = useLocation();
   const { darkMode } = useDarkMode(); 
 
-  // Scroll to the top whenever the route changes
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
@@ -94,7 +94,7 @@ export default function TemporaryDrawer() {
     <div className="">
       <Button onClick={toggleDrawer(true)}>
         <div className={`text-black ${darkMode ? 'text-gray-400' : 'text-black'}`}>
-          <MenuIcon />
+          {open ? <CloseIcon /> : <MenuIcon />}
         </div>
       </Button>
       <Drawer open={open} onClose={toggleDrawer(false)}>

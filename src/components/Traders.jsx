@@ -1,6 +1,8 @@
 import React from "react";
 import imageblur1 from "../assets/svg/imageblur1.svg";
 import imageblur2 from "../assets/svg/imageblur2.svg";
+import imageblur3 from "../assets/jpg/shourya.jpg";
+import imageblur4 from "../assets/jpg/virat.jpg";
 import imagemiddle from "../assets/svg/imagemiddle.svg";
 import Rectangle9 from "../assets/svg/Rectangle9.svg";
 import Rectangle10 from "../assets/svg/Rectangle10.svg";
@@ -31,23 +33,23 @@ const imageData = [
     width: "242px",
   },
   {
-    id: 1,
-    src: imageblur1,
-    alt: "Image Blur 1",
+    id: 3,
+    src: imageblur3,
+    alt: "Image Blur 3",
     height: "200px",
     width: "200px",
   },
   {
-    id: 3,
+    id: 5,
     src: imagemiddle,
     alt: "Image Middle",
     height: "200px",
     width: "200px",
   },
   {
-    id: 1,
-    src: imageblur1,
-    alt: "Image Blur 1",
+    id: 4,
+    src: imageblur4,
+    alt: "Image Blur 4",
     height: "200px",
     width: "200px",
   },
@@ -162,7 +164,7 @@ const Traders = () => {
       <img
         src={polldark}
         alt={polldark}
-        className="absolute dark:block hidden top-20 w-[120px] left-0"
+        className="absolute dark:block hidden md:top-10 top-20 w-[120px] md:left-32"
       />
     </div>
   );

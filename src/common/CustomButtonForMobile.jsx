@@ -20,7 +20,7 @@ const CustomButtonForMobile = () => {
         onClick={handleClickEnglish}
       
       >
-        <div className="dark:text-white">19th January 2025 | 06:00 PM</div>
+        <div className="dark:text-white">19th January 2025 | 12:00 PM</div>
         <button
           className="p-4 text-black rounded-md w-[300px] transition-all duration-300"
           style={{
@@ -45,7 +45,7 @@ const CustomButtonForMobile = () => {
         className="flex justify-center items-center gap-2 flex-col border-2 border-[#007AFF] p-4 rounded-md"
         onClick={handleClickHindi}
       >
-        <div className="dark:text-white">19th January 2025 | 12:00 PM</div>
+        <div className="dark:text-white">19th January 2025 | 06:00 PM</div>
         <button
           className="p-4 text-white rounded-md w-[300px] transition-all duration-300"
           style={{

@@ -52,7 +52,7 @@ const Header = () => {
           </Link>
         </div>
 
-        <div className="flex md:gap-6 gap-2 items-center justify-center">
+        <div className="flex md:gap-6 items-center justify-center">
           {/* <button
             onClick={() => setDarkMode(!darkMode)}
             className={`ml-4 p-2 rounded ${
