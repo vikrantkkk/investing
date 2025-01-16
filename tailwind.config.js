@@ -27,6 +27,7 @@ export default {
       screens: {
         "ld": "1920px",
         "xld": "2560px",
+        xs: "375px",
       },
       fontFamily: {
         // Primary font is SF Pro Text
