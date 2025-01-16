@@ -5,9 +5,6 @@ import ContactPage from "./pages/ContactPage";
 import { initFacebookPixel } from "../facebookPixel";
 
 const App = () => {
-  useEffect(() => {
-    initFacebookPixel('2057538738023264');
-  }, []);
   return (
     <Router>
       <Routes>

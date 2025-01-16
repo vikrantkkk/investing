@@ -94,7 +94,7 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div className="absolute md:top-20 xs:-top-10 top-10 md:right-[15rem] right-[16rem] z-10">
+          <div className="absolute md:top-20 xs:-top-10 top-4 md:right-[15rem] right-[16rem] z-10">
             <img src={TCS} alt="MyBrand Logo" className="md:h-[60px] h-[40px] md:w-[60px] w-[40px]" />
           </div>
           <div className="absolute top-20 md:left-[17rem] left-[18rem] z-10">
