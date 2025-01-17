@@ -19,24 +19,27 @@ const imageData = [
 
 const sliderSettings = {
   dots: false,
-  arrows: false,
   infinite: true,
-  speed: 10000, // Adjust speed for smoother scroll
-  swipe: true, // Enable manual swipe
+  speed: 10000,
+  swipe: true, // Ensure swipe is enabled
+  touchMove: true, // Ensures smooth drag-to-scroll
   slidesToShow: 5,
   slidesToScroll: 1,
   autoplay: true, // Enable autoplay
-  autoplaySpeed: 0, // Adjust autoplay speed
-  cssEase: "linear", // Smoother transition
+  autoplaySpeed: 0, // Set autoplay interval
+  cssEase: "linear",
   pauseOnHover: false,
-  swipeToSlide: true, // Allow user to swipe to specific slides
+  swipeToSlide: true,
   responsive: [
     {
       breakpoint: 1024,
       settings: {
         slidesToShow: 3,
         slidesToScroll: 1,
-        swipe: true, // Enable swipe on desktop too
+        swipe: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        touchMove: true, // Enable touch scrolling for smaller screens
       },
     },
     {
@@ -44,27 +47,27 @@ const sliderSettings = {
       settings: {
         slidesToShow: 2,
         slidesToScroll: 1,
-        arrows: false,
-        swipe: true, // Enable swipe on mobile
-        autoplay: true, // Auto-play for mobile
-        autoplaySpeed: 0, // Auto-play speed
+        swipe: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        touchMove: true,
       },
     },
     {
       breakpoint: 480,
       settings: {
         slidesToShow: 1,
-        speed: 100000,
-        slidesToScroll: 5,
-        arrows: false,
-        swipe: true, // Enable swipe for smaller mobile devices
-        autoplay: true, // Auto-play for small mobile devices
-        autoplaySpeed: 0, // Adjust autoplay speed
+        slidesToScroll: 1,
+        swipe: true,
+        autoplay: true,
+        autoplaySpeed: 0,
         pauseOnHover: false,
+        touchMove: true,
       },
     },
   ],
 };
+
 
 const Traders = () => {
   return (
