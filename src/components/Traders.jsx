@@ -1,178 +1,112 @@
 import React from "react";
-import imageblur1 from "../assets/svg/imageblur1.svg";
-import imageblur2 from "../assets/svg/imageblur2.svg";
-import imagemiddle from "../assets/svg/imagemiddle.svg";
-import Rectangle9 from "../assets/svg/Rectangle9.svg";
-import Rectangle10 from "../assets/svg/Rectangle10.svg";
-import polldark from "../assets/svg/polldark.svg";
-import CustomButton1 from "../common/CustomButton1";
-import CustomButton2 from "../common/CustomButton2";
-import { height } from "@mui/system";
-import CustomButton from "../common/CustomButton";
-import CustomButtonForMobile from "../common/CustomButtonForMobile";
+import kislaysingh from "../assets/jpg/kislaysingh.jpg";
+import manish from "../assets/jpg/manish.jpg";
+import mnn from "../assets/jpg/mnn.jpg";
+import shourya from "../assets/jpg/shourya.jpg";
+import virat from "../assets/jpg/virat.jpg";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import CustomButton from "../common/CustomButton";
 
 const imageData = [
-  {
-    id: 1,
-    src: imageblur1,
-    alt: "Image Blur 1",
-    height: "200px",
-    width: "200px",
-  },
-
-  {
-    id: 2,
-    src: imageblur2,
-    alt: "Image Blur 2",
-    height: "242px",
-    width: "242px",
-  },
-  {
-    id: 3,
-    src: imagemiddle,
-    alt: "Image Middle",
-    height: "200px",
-    width: "200px",
-  },
-  {
-    id: 4,
-    src: imageblur1,
-    alt: "Image Blur 1",
-    height: "200px",
-    width: "200px",
-  },
- 
-  {
-    id: 5,
-    src: imageblur2,
-    alt: "Image Blur 2",
-    height: "200px",
-    width: "200px",
-  },
-  {
-    id: 6,
-    src: imagemiddle,
-    alt: "Image Middle",
-    height: "200px",
-    width: "200px",
-  },
+  { id: 1, src: kislaysingh, alt: "kislaysingh" },
+  { id: 2, src: manish, alt: "manish Blur 2" },
+  { id: 3, src: mnn, alt: "mnn Middle" },
+  { id: 4, src: shourya, alt: "shourya Blur 1" },
+  { id: 5, src: virat, alt: "virat Blur 2" },
 ];
 
 const sliderSettings = {
   dots: false,
   arrows: false,
   infinite: true,
-  speed: 10000,
-  slidesToShow: 4,
+  speed: 10000, // Adjust speed for smoother scroll
+  swipe: true, // Enable manual swipe
+  slidesToShow: 5,
   slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 0,
-  cssEase: "linear",
+  autoplay: true, // Enable autoplay
+  autoplaySpeed: 3000, // Adjust autoplay speed
+  cssEase: "linear", // Smoother transition
+  pauseOnHover: false,
+  swipeToSlide: true, // Allow user to swipe to specific slides
   responsive: [
-    {
-      breakpoint: 1590,
-      settings: {
-        slidesToShow: 4,
-        infinite: true,
-        speed: 10000,
-        autoplay: true,
-        speed: 0,
-        autoplaySpeed: 0,
-        cssEase: "linear",
-      },
-    },
     {
       breakpoint: 1024,
       settings: {
         slidesToShow: 3,
-        speed: 10000,
+        slidesToScroll: 1,
+        swipe: true, // Enable swipe on desktop too
       },
     },
     {
       breakpoint: 768,
       settings: {
         slidesToShow: 2,
-        speed: 10000,
+        slidesToScroll: 1,
+        arrows: false,
+        swipe: true, // Enable swipe on mobile
+        autoplay: true, // Auto-play for mobile
+        autoplaySpeed: 3000, // Auto-play speed
       },
     },
     {
       breakpoint: 480,
       settings: {
         slidesToShow: 1,
-        infinite: true,
-        speed: 10000,
-        autoplay: true,
-        autoplaySpeed: 0,
-        cssEase: "linear",
+        slidesToScroll: 1,
+        arrows: false,
+        swipe: true, // Enable swipe for smaller mobile devices
+        autoplay: true, // Auto-play for small mobile devices
+        autoplaySpeed: 3000, // Adjust autoplay speed
       },
     },
   ],
 };
+
 const Traders = () => {
   return (
-    <div className="relative flex md:border-b-2 flex-col gap-12 dark:border-none  h-auto w-screen  md:px-0 md:py-8 py-16  px-4 dark:bg-darkBackGround bg-[#F1F1F1]">
-      <div className="font-poppins dark:text-white text-center md:text-[40px] text-[32px] leading-[48px] md:leading-[60px] font-bold">
+    <div className="relative flex flex-col gap-12 bg-[#F1F1F1] dark:bg-darkBackGround px-4 py-16 md:px-0 md:py-8">
+      <div className="font-poppins dark:text-white text-center text-[32px] md:text-[40px] leading-[48px] md:leading-[60px] font-bold">
         Ready To Unlock Secrets Of
         <br />
         <span className="text-figmaGreen">Successful Traders?</span>
         <div className="border-2 w-[200px] border-figmaGreen mx-auto mt-2" />
       </div>
-      <div className="md:flex hidden justify-center items-center md:gap-4 ld:gap-44">
-        <Slider {...sliderSettings} className="w-full">
-          {imageData.map((image) => (
-            <img
+
+      {/* Slider Container */}
+      <div className="overflow-hidden">
+        <Slider {...sliderSettings}>
+          {[...imageData, ...imageData].map((image) => (
+            <div
               key={image.id}
-              src={image.src}
-              alt={image.alt}
-              className="h-96"
-            />
+              style={{
+                padding: "5px",
+                textAlign: "center",
+                width: "350px",
+              }}
+            >
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="rounded-lg shadow-lg"
+                style={{
+                  width: "350px",
+                  height: "auto",
+                  objectFit: "cover",
+                  border: "none",
+                }}
+              />
+            </div>
           ))}
         </Slider>
       </div>
-      <div className="md:hidden flex justify-center items-center gap-4">
-        <Slider {...sliderSettings} className="w-full">
-          {imageData.map((image) => (
-            <img
-              key={image.id}
-              src={image.src}
-              alt={image.alt}
-              className="h-72"
-            />
-          ))}
-        </Slider>
-      </div>
-      <div className="flex md:flex-row w-full flex-col justify-center md:items-start items-center md:gap-8 ld:gap-12 gap-4">
+
+      <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8">
         <CustomButton />
       </div>
-      <img
-        src={Rectangle9}
-        alt={Rectangle9}
-        className="z-10 md:block hidden dark:hidden absolute right-0 top-0 h-[95%]"
-      />
-      <img
-        src={Rectangle10}
-        alt={Rectangle10}
-        className="z-10 md:block hidden dark:hidden  absolute left-0 top-0 h-[95%]"
-      />
-      <img
-        src={Rectangle9}
-        alt={Rectangle9}
-        className="absolute -right-10 dark:hidden md:block hidden top-52 h-[45%]"
-      />
-      <img
-        src={Rectangle10}
-        alt={Rectangle10}
-        className="absolute dark:hidden -left-10 md:block hidden top-56 h-[45%]"
-      />
-      <img
-        src={polldark}
-        alt={polldark}
-        className="absolute dark:block hidden md:top-10 top-20 w-[120px] md:left-32"
-      />
     </div>
   );
 };
+
 export default Traders;
