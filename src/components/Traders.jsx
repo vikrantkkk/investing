@@ -8,6 +8,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CustomButton from "../common/CustomButton";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 const imageData = [
   { id: 1, src: kislaysingh, alt: "kislaysingh" },
@@ -17,55 +19,29 @@ const imageData = [
   { id: 5, src: virat, alt: "virat Blur 2" },
 ];
 
-// Slider settings for both autoplay and swipe
-const sliderSettings = {
-  dots: false,
-  arrows: false,
-  infinite: true,
-  speed: 10000, // Adjust speed for smoother scroll
-  slidesToShow: 5,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 10000, // Auto-play speed (milliseconds)
-  cssEase: "linear",
-  pauseOnHover: false,
-  swipeToSlide: true,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        arrows: false,
-        swipe: true, // Enable swipe for mobile
-        autoplay: true, // Auto-play for mobile as well
-        autoplaySpeed: 3000, // Auto-play speed
-      },
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        swipe: true, // Enable swipe for small mobile devices
-        autoplay: true, // Auto-play for smaller mobile devices
-        autoplaySpeed: 0, // Auto-play speed
-      },
-    },
-  ],
-};
-
 const Traders = () => {
+  const sliderRef = React.useRef(null);
+
+  const goToNext = () => {
+    sliderRef.current.slickNext();
+  };
+
+  const goToPrev = () => {
+    sliderRef.current.slickPrev();
+  };
+
+  const sliderSettingsMobile = {
+    dots: false,
+    arrows: false, // Disable default arrows for mobile slider
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    swipe: true,
+  };
+
   return (
     <div className="relative flex flex-col gap-12 bg-[#F1F1F1] dark:bg-darkBackGround px-4 py-16 md:px-0 md:py-8">
+      {/* Header Section */}
       <div className="font-poppins dark:text-white text-center text-[32px] md:text-[40px] leading-[48px] md:leading-[60px] font-bold">
         Ready To Unlock Secrets Of
         <br />
@@ -73,11 +49,11 @@ const Traders = () => {
         <div className="border-2 w-[200px] border-figmaGreen mx-auto mt-2" />
       </div>
 
-      {/* Marquee Container */}
-      <div className="flex animate-marquee5 space-x-8">
-        {[...imageData, ...imageData].map((image,index) => (
+      {/* Desktop View: Marquee Effect */}
+      <div className="md:flex hidden animate-marquee md:space-x-8 space-x-4">
+        {[...imageData, ...imageData].map((image, index) => (
           <div
-          key={`${image.id}-${index}`}
+            key={`${image.id}-${index}`}  // Corrected key syntax
             style={{
               padding: "5px",
               textAlign: "center",
@@ -100,6 +76,50 @@ const Traders = () => {
         ))}
       </div>
 
+      {/* Mobile View: Slider */}
+      <div className="block md:hidden">
+        <Slider ref={sliderRef} {...sliderSettingsMobile}>
+          {imageData.map((image, index) => (
+            <div
+              key={`${image.id}-${index}`}
+              style={{
+                padding: "5px",
+                textAlign: "center",
+              }}
+            >
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="rounded-lg shadow-lg"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  objectFit: "cover",
+                  border: "none",
+                }}
+              />
+            </div>
+          ))}
+        </Slider>
+
+        {/* Custom Arrows Below the Slider */}
+        <div className="flex justify-center items-center mt-4">
+          <div
+            onClick={goToPrev}
+            className="bg-gray-300 rounded-full p-2 shadow-lg hover:bg-gray-400 cursor-pointer flex justify-center items-center mx-2"
+          >
+            <ArrowBackIcon fontSize="large" style={{ color: "#26AD00" }} />
+          </div>
+          <div
+            onClick={goToNext}
+            className="bg-gray-300 rounded-full p-2 shadow-lg hover:bg-gray-400 cursor-pointer flex justify-center items-center mx-2"
+          >
+            <ArrowForwardIcon fontSize="large" style={{ color: "#26AD00" }} />
+          </div>
+        </div>
+      </div>
+
+      {/* Custom Button Section */}
       <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8">
         <CustomButton />
       </div>
