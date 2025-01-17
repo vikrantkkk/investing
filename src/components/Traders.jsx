@@ -83,14 +83,13 @@ const Traders = () => {
             <div
               key={`${image.id}-${index}`}
               style={{
-                padding: "5px",
                 textAlign: "center",
               }}
             >
               <img
                 src={image.src}
                 alt={image.alt}
-                className="rounded-lg shadow-lg"
+                className="rounded-lg"
                 style={{
                   width: "100%",
                   height: "auto",
