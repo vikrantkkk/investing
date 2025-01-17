@@ -26,7 +26,7 @@ const sliderSettings = {
   slidesToShow: 5,
   slidesToScroll: 1,
   autoplay: true, // Enable autoplay
-  autoplaySpeed: 3000, // Adjust autoplay speed
+  autoplaySpeed: 0, // Adjust autoplay speed
   cssEase: "linear", // Smoother transition
   pauseOnHover: false,
   swipeToSlide: true, // Allow user to swipe to specific slides
@@ -47,18 +47,20 @@ const sliderSettings = {
         arrows: false,
         swipe: true, // Enable swipe on mobile
         autoplay: true, // Auto-play for mobile
-        autoplaySpeed: 3000, // Auto-play speed
+        autoplaySpeed: 0, // Auto-play speed
       },
     },
     {
       breakpoint: 480,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 1,
+        speed: 100000,
+        slidesToScroll: 5,
         arrows: false,
         swipe: true, // Enable swipe for smaller mobile devices
         autoplay: true, // Auto-play for small mobile devices
-        autoplaySpeed: 3000, // Adjust autoplay speed
+        autoplaySpeed: 0, // Adjust autoplay speed
+        pauseOnHover: false,
       },
     },
   ],
