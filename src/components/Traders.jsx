@@ -17,31 +17,25 @@ const imageData = [
   { id: 5, src: virat, alt: "virat Blur 2" },
 ];
 
+// Slider settings for both autoplay and swipe
 const sliderSettings = {
   dots: false,
+  arrows: false,
   infinite: true,
-  speed: 10000,
-  swipe: true,
-  touchMove: true,
+  speed: 10000, // Adjust speed for smoother scroll
   slidesToShow: 5,
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 0,
+  autoplaySpeed: 10000, // Auto-play speed (milliseconds)
   cssEase: "linear",
   pauseOnHover: false,
   swipeToSlide: true,
-  arrows: true, // Ensure arrows are enabled
   responsive: [
     {
       breakpoint: 1024,
       settings: {
         slidesToShow: 3,
         slidesToScroll: 1,
-        swipe: true,
-        autoplay: false,
-        autoplaySpeed: 2000,
-        touchMove: true,
-        arrows: true,
       },
     },
     {
@@ -49,11 +43,10 @@ const sliderSettings = {
       settings: {
         slidesToShow: 2,
         slidesToScroll: 1,
-        swipe: true,
-        autoplay: false,
-        autoplaySpeed: 2000,
-        touchMove: true,
-        arrows: true,
+        arrows: false,
+        swipe: true, // Enable swipe for mobile
+        autoplay: true, // Auto-play for mobile as well
+        autoplaySpeed: 3000, // Auto-play speed
       },
     },
     {
@@ -61,7 +54,10 @@ const sliderSettings = {
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: false,
+        arrows: false,
+        swipe: true, // Enable swipe for small mobile devices
+        autoplay: true, // Auto-play for smaller mobile devices
+        autoplaySpeed: 0, // Auto-play speed
       },
     },
   ],
@@ -77,32 +73,31 @@ const Traders = () => {
         <div className="border-2 w-[200px] border-figmaGreen mx-auto mt-2" />
       </div>
 
-      {/* Slider Container */}
-      <div className="overflow-hidden">
-        <Slider {...sliderSettings}>
-          {[...imageData, ...imageData].map((image) => (
-            <div
-              key={image.id}
+      {/* Marquee Container */}
+      <div className="flex animate-marquee5 space-x-8">
+        {[...imageData, ...imageData].map((image,index) => (
+          <div
+          key={`${image.id}-${index}`}
+            style={{
+              padding: "5px",
+              textAlign: "center",
+              width: "350px",
+              flexShrink: 0,
+            }}
+          >
+            <img
+              src={image.src}
+              alt={image.alt}
+              className="rounded-lg shadow-lg"
               style={{
-                padding: "5px",
-                textAlign: "center",
                 width: "350px",
+                height: "auto",
+                objectFit: "cover",
+                border: "none",
               }}
-            >
-              <img
-                src={image.src}
-                alt={image.alt}
-                className="rounded-lg shadow-lg"
-                style={{
-                  width: "350px",
-                  height: "auto",
-                  objectFit: "cover",
-                  border: "none",
-                }}
-              />
-            </div>
-          ))}
-        </Slider>
+            />
+          </div>
+        ))}
       </div>
 
       <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8">

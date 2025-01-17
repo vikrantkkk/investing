@@ -10,7 +10,7 @@ export default {
         marquee2: "marquee2 25s linear infinite",
         marquee3: "marquee2 25s linear infinite",
         marquee4: "marquee2 25s linear infinite",
-        marquee5: "marquee2 25s linear infinite",
+        marquee5: "marquee5 25s linear infinite",
         marquee6: "marquee2 25s linear infinite",
         marquee7: "marquee2 25s linear infinite",
       },
@@ -22,6 +22,10 @@ export default {
         marquee2: {
           "0%": { transform: "translateX(100%)" },
           "100%": { transform: "translateX(0%)" },
+        },
+        marquee5: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-100%)" },
         },
       },
       screens: {

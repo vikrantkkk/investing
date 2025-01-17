@@ -1,34 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* Custom CSS for Arrows - Ensure arrows are visible */
-.slick-prev, .slick-next {
-    font-size: 24px; /* Increase font size */
-    color: #000; /* Adjust color */
-    background-color: rgba(255, 255, 255, 0.5); /* Optional: semi-transparent background */
-    border-radius: 50%; /* Optional: rounded effect */
-    padding: 10px; /* Add padding for a bigger click area */
-    z-index: 10; /* Ensure arrows are above other elements */
-  }
-  
-  .slick-prev {
-    left: 10px; /* Adjust left position */
-  }
-  
-  .slick-next {
-    right: 10px; /* Adjust right position */
-  }
-  
-  /* Adjust hover effect for better interaction */
-  .slick-prev:hover, .slick-next:hover {
-    background-color: rgba(255, 255, 255, 0.7); /* Optional: more visible on hover */
-  }
-  
-  /* For Mobile - Increase arrow size */
-  @media (max-width: 768px) {
-    .slick-prev, .slick-next {
-      font-size: 30px; /* Increase arrow size on mobile */
-      padding: 12px; /* Larger click area */
-    }
-  }
-  
+
+/* Enable smooth scrolling across the application */
+html {
+  scroll-behavior: smooth;
+}
