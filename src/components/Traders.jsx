@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import kislaysingh from "../assets/jpg/kislaysingh.jpg";
 import manish from "../assets/jpg/manish.jpg";
 import mnn from "../assets/jpg/mnn.jpg";
@@ -17,66 +17,62 @@ const imageData = [
   { id: 5, src: virat, alt: "virat Blur 2" },
 ];
 
+const sliderSettings = {
+  dots: false,
+  infinite: true,
+  speed: 10000,
+  swipe: true,
+  touchMove: true,
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 0,
+  cssEase: "linear",
+  pauseOnHover: false,
+  swipeToSlide: true,
+  arrows: true, // Ensure arrows are enabled
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        swipe: true,
+        autoplay: false,
+        autoplaySpeed: 2000,
+        touchMove: true,
+        arrows: true,
+      },
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        swipe: true,
+        autoplay: false,
+        autoplaySpeed: 2000,
+        touchMove: true,
+        arrows: true,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        swipe: true,
+        autoplay: false,
+        autoplaySpeed: 0,
+        pauseOnHover: false,
+        touchMove: true,
+        arrows: true,
+      },
+    },
+  ],
+};
+
 const Traders = () => {
-  const [autoplay, setAutoplay] = useState(true);
-
-  const handleBeforeChange = () => {
-    setAutoplay(false); // Pause autoplay when user interacts
-  };
-
-  const handleAfterChange = () => {
-    setAutoplay(true); // Resume autoplay after user interaction stops
-  };
-
-  const sliderSettings = {
-    dots: false,
-    infinite: true,
-    speed: 10000,
-    swipe: true, // Allow swipe interaction
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    autoplay: autoplay, // Control autoplay dynamically
-    autoplaySpeed: 0, // Set autoplay speed to 0 for continuous play
-    cssEase: "linear",
-    pauseOnHover: false,
-    swipeToSlide: true,
-    beforeChange: handleBeforeChange, // Pause autoplay before the slide changes
-    afterChange: handleAfterChange, // Resume autoplay after the slide changes
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          swipe: true,
-          autoplay: autoplay,
-          autoplaySpeed: 2000,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          swipe: true,
-          autoplay: autoplay,
-          autoplaySpeed: 2000,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          swipe: true,
-          autoplay: autoplay,
-          autoplaySpeed: 0,
-          pauseOnHover: false,
-        },
-      },
-    ],
-  };
-
   return (
     <div className="relative flex flex-col gap-12 bg-[#F1F1F1] dark:bg-darkBackGround px-4 py-16 md:px-0 md:py-8">
       <div className="font-poppins dark:text-white text-center text-[32px] md:text-[40px] leading-[48px] md:leading-[60px] font-bold">
