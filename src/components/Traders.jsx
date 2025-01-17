@@ -61,12 +61,7 @@ const sliderSettings = {
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
-        swipe: true,
         autoplay: false,
-        autoplaySpeed: 0,
-        pauseOnHover: false,
-        touchMove: true,
-        arrows: true,
       },
     },
   ],
