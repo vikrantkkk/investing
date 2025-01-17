@@ -6,3 +6,7 @@
 html {
   scroll-behavior: smooth;
 }
+
+.slick-dots li.slick-active button:before {
+  color:#26AD00 !important;
+}

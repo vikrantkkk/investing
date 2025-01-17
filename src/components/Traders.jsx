@@ -8,8 +8,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CustomButton from "../common/CustomButton";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 const imageData = [
   { id: 1, src: kislaysingh, alt: "kislaysingh" },
@@ -20,20 +18,12 @@ const imageData = [
 ];
 
 const Traders = () => {
-  const sliderRef = React.useRef(null);
-
-  const goToNext = () => {
-    sliderRef.current.slickNext();
-  };
-
-  const goToPrev = () => {
-    sliderRef.current.slickPrev();
-  };
-
   const sliderSettingsMobile = {
-    dots: false,
-    arrows: false, // Disable default arrows for mobile slider
+    dots: true,
+    arrows: false,
     infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1,
     swipe: true,
@@ -41,7 +31,7 @@ const Traders = () => {
 
   return (
     <div className="relative flex flex-col gap-12 bg-[#F1F1F1] dark:bg-darkBackGround px-4 py-16 md:px-0 md:py-8">
-      {/* Header Section */}
+     
       <div className="font-poppins dark:text-white text-center text-[32px] md:text-[40px] leading-[48px] md:leading-[60px] font-bold">
         Ready To Unlock Secrets Of
         <br />
@@ -49,11 +39,10 @@ const Traders = () => {
         <div className="border-2 w-[200px] border-figmaGreen mx-auto mt-2" />
       </div>
 
-      {/* Desktop View: Marquee Effect */}
       <div className="md:flex hidden animate-marquee md:space-x-8 space-x-4">
         {[...imageData, ...imageData].map((image, index) => (
           <div
-            key={`${image.id}-${index}`}  // Corrected key syntax
+            key={`${image.id}-${index}`} 
             style={{
               padding: "5px",
               textAlign: "center",
@@ -70,15 +59,15 @@ const Traders = () => {
                 height: "auto",
                 objectFit: "cover",
                 border: "none",
+                borderRadius: "15px", 
               }}
             />
           </div>
         ))}
       </div>
 
-      {/* Mobile View: Slider */}
       <div className="block md:hidden">
-        <Slider ref={sliderRef} {...sliderSettingsMobile}>
+        <Slider {...sliderSettingsMobile}>
           {imageData.map((image, index) => (
             <div
               key={`${image.id}-${index}`}
@@ -89,36 +78,20 @@ const Traders = () => {
               <img
                 src={image.src}
                 alt={image.alt}
-                className="rounded-lg"
                 style={{
                   width: "100%",
+                  padding: "0.5rem",
                   height: "auto",
                   objectFit: "cover",
                   border: "none",
+                  borderRadius: "20px",
                 }}
               />
             </div>
           ))}
         </Slider>
-
-        {/* Custom Arrows Below the Slider */}
-        <div className="flex justify-center items-center mt-4">
-          <div
-            onClick={goToPrev}
-            className="bg-gray-300 rounded-full p-2 shadow-lg hover:bg-gray-400 cursor-pointer flex justify-center items-center mx-2"
-          >
-            <ArrowBackIcon fontSize="large" style={{ color: "#26AD00" }} />
-          </div>
-          <div
-            onClick={goToNext}
-            className="bg-gray-300 rounded-full p-2 shadow-lg hover:bg-gray-400 cursor-pointer flex justify-center items-center mx-2"
-          >
-            <ArrowForwardIcon fontSize="large" style={{ color: "#26AD00" }} />
-          </div>
-        </div>
       </div>
 
-      {/* Custom Button Section */}
       <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8">
         <CustomButton />
       </div>
