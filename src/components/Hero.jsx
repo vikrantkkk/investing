@@ -256,7 +256,7 @@ const Hero = () => {
                 className="h-[60px] w-[60px]"
               />
             </div>
-            <div className="absolute top-20 right-[16rem] mds:right-[10rem]  z-10">
+            <div className="absolute top-20 right-[16rem] mds:right-[11rem]  z-10">
               <img
                 src={hero2}
                 alt="MyBrand Logo"
