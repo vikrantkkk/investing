@@ -109,7 +109,7 @@ const Footer = () => {
                 499
               </span>
             </span>
-            <span className="font-normal tetx-[16px] leading-6 line-through text-white">
+            <span className="font-normal tetx-[16px] leading-6 text-white">
               Sunday 26th Jan, 11:00 AM
             </span>
           </div>
