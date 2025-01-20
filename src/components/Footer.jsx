@@ -114,7 +114,18 @@ const Footer = () => {
             </span>
           </div>
 
-          <button className="p-3 font-semibold text-[16px] leading-5 rounded-full bg-white text-black">
+          <button
+            className="p-3 font-semibold text-[16px] leading-5 rounded-full bg-white text-black"
+            onClick={() =>
+              window.open(
+                darkMode
+                  ? "https://parang.exlyapp.com/2fe56a70-ac54-468a-b871-25d191123b4a?init_booking=true&enable_discount=true"
+                  : "https://parang.exlyapp.com/2eaa1e20-9706-461c-9a8f-bac2c175fd31?init_booking=true&enable_discount=true",
+                "_blank",
+                "noopener,noreferrer"
+              )
+            }
+          >
             Register Now
           </button>
         </div>

@@ -53,14 +53,14 @@ const Header = () => {
         </div>
 
         <div className="flex md:gap-6 items-center justify-center">
-          {/* <button
+          <button
             onClick={() => setDarkMode(!darkMode)}
             className={`ml-4 p-2 rounded ${
               darkMode ? "text-figmaGreen" : "text-figmaGreen"
             }`}
           >
             {darkMode ? <LightModeIcon /> : <DarkModeIcon />}
-          </button> */}
+          </button>
           <a
             href="https://wa.me/918949800532"
             target="_blank"
@@ -75,8 +75,19 @@ const Header = () => {
           </a>
 
           <div className="md:block hidden">
-            <CustomButton1 className="shadow-none">Sign Up</CustomButton1>
+            <a
+              href={
+                darkMode
+                  ? "https://parang.exlyapp.com/2fe56a70-ac54-468a-b871-25d191123b4a?init_booking=true&enable_discount=true"
+                  : "https://parang.exlyapp.com/2eaa1e20-9706-461c-9a8f-bac2c175fd31?init_booking=true&enable_discount=true"
+              }
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <CustomButton1 className="shadow-none">Sign Up</CustomButton1>
+            </a>
           </div>
+
           <div className="md:hidden block">
             <TemporaryDrawer />
           </div>
