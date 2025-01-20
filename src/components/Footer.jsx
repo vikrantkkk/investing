@@ -17,7 +17,7 @@ const Footer = () => {
     // <footer className="flex flex-col justify-center items-center h-auto w-screen gap-8  pb-8 px-4 py-16 dark:bg-[#0B0C13] bg-[#F1F1F1]">
     <footer
       className={`flex flex-col justify-center items-center h-auto w-screen gap-8 md:pb-8 px-4 ${
-        isContactPage ? "md:py-8 pt-8" : "md:py-16 pt-16"
+        isContactPage ? "py-8" : "md:py-16 pt-16"
       } dark:bg-[#0B0C13] bg-[#F1F1F1]`}
     >
       <div>
@@ -100,18 +100,25 @@ const Footer = () => {
           Service before proceeding.
         </div>
       </div>
-      <div className="flex md:hidden justify-between items-center bg-[#2ABB01] p-4 w-screen sticky bottom-0">
-        <div className="flex flex-col">
-          <span className="font-bold text-[24px] leading-7 text-white">
-            Rs 199 <span className="font-normal tetx-[20px] leading-6 line-through">499</span>
-          </span>
-          <span className="font-normal tetx-[16px] leading-6 line-through text-white">Sunday 26th Jan, 11:00 AM</span>
-        </div>
+      {!isContactPage && (
+        <div className="flex md:hidden justify-between items-center bg-[#2ABB01] p-4 w-screen sticky bottom-0">
+          <div className="flex flex-col">
+            <span className="font-bold text-[24px] leading-7 text-white">
+              Rs 199{" "}
+              <span className="font-normal tetx-[20px] leading-6 line-through">
+                499
+              </span>
+            </span>
+            <span className="font-normal tetx-[16px] leading-6 line-through text-white">
+              Sunday 26th Jan, 11:00 AM
+            </span>
+          </div>
 
-        <button className="p-3 font-semibold text-[16px] leading-5 rounded-full bg-white text-black">
-          Register Now
-        </button>
-      </div>
+          <button className="p-3 font-semibold text-[16px] leading-5 rounded-full bg-white text-black">
+            Register Now
+          </button>
+        </div>
+      )}
     </footer>
   );
 };
