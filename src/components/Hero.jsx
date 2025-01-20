@@ -166,13 +166,13 @@ const Hero = () => {
         </div>
       </div>
       <div
-        className={`h-auto w-screen bg-darkBackGround md:dark:flex hidden pt-32 px-20 relative  items-center justify-center`}
+        className={`h-auto w-screen bg-darkBackGround md:dark:flex hidden pt-32 mds:pt-28 mds:px-10  px-20 relative  items-center justify-center`}
       >
         {/* Gradient background */}
         <div className="absolute top-0 right-0 left-0 h-[70%] z-0 bg-gradient-to-bl from-figmaGreen via-transparent to-transparent opacity-20"></div>
 
         <div className="relative flex justify-center w-full items-center overflow-hidden bg-[#FFFFFF17]/[0.09] rounded-3xl p-10">
-          <div className="flex-1 flex flex-col md:gap-10 gap-2 justify-center md:items-start items-center pl-20">
+          <div className="flex-1 flex flex-col md:gap-10 gap-2 justify-center md:items-start items-center pl-20 mds:pl-0">
             <div className="font-poppins p-2 font-normal text-figmaGreen rounded-[8px] w-auto px-4 bg-greenbackgrond">
               <span className="font-semibold text-[16px] leading-6">
                 1,00,000+
@@ -243,34 +243,34 @@ const Hero = () => {
 
           {/* CEO Images */}
           <div className="w-[50%] flex justify-center items-center">
-            <div className="absolute z-10 bottom-72 right-16">
-              <img src={circleLogo} alt="CEO" className="w-[80%] opacity-30" />
+            <div className="absolute z-10 bottom-72 right-16 mds:-right-24">
+              <img src={circleLogo} alt="CEO" className="w-[80%] mds:w-[65%] opacity-30" />
             </div>
             <div className="absolute bottom-0 z-10">
-              <img src={ceo} alt="CEO" className="h-[70%]" />
+              <img src={ceo} alt="CEO" className="h-[70vh]" />
             </div>
-            <div className="absolute top-32 right-[43rem]  z-10">
+            <div className="absolute top-32 mds:right-[31rem] right-[43rem]  z-10">
               <img
                 src={hero1}
                 alt="MyBrand Logo"
                 className="h-[60px] w-[60px]"
               />
             </div>
-            <div className="absolute top-20 right-[16rem]  z-10">
+            <div className="absolute top-20 right-[16rem] mds:right-[10rem]  z-10">
               <img
                 src={hero2}
                 alt="MyBrand Logo"
                 className="h-[60px] w-[60px]"
               />
             </div>
-            <div className="absolute top-60 right-[15rem]  z-10">
+            <div className="absolute top-60 right-[15rem] mds:right-[10rem] z-10">
               <img
                 src={hero3}
                 alt="MyBrand Logo"
                 className="h-[60px] w-[60px]"
               />
             </div>
-            <div className="h-auto shadow-2xl border-2  dark:border-[#FFFFFF]/[0.1] .. md:w-[300px] w-[173px] flex-wrap bg-white dark:bg-darkBackGround z-10 absolute  bottom-8  right-[28rem] rounded-md">
+            <div className="h-auto shadow-2xl border-2  dark:border-[#FFFFFF]/[0.1] .. md:w-[300px] w-[173px] flex-wrap bg-white dark:bg-darkBackGround z-10 absolute  bottom-8  right-[28rem] mds:right-[15rem] rounded-md">
               <div className="flex flex-col md:gap-2 gap-1 md:p-4 p-2">
                 <div className="flex flex-col font-poppins font-semibold md:text-[20px] text-[11px] md:leading-8 leading-4 text-[#0E0F19]">
                   <div className="flex justify-start items-center gap-2">
