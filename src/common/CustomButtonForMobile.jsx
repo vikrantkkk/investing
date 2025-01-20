@@ -3,13 +3,13 @@ import React from "react";
 const CustomButtonForMobile = () => {
   const handleClickHindi = () => {
     window.open(
-      "https://parang.exlyapp.com/5b107409-6b3f-48df-9b09-e5fd0004a99f?init_booking=true&enable_discount=true",
+      "https://parang.exlyapp.com/2fe56a70-ac54-468a-b871-25d191123b4a?init_booking=true&enable_discount=true",
       "_blank"
     );
   };
   const handleClickEnglish = () => {
     window.open(
-      "https://parang.exlyapp.com/01b9a72c-8df9-4a85-9859-4bb67fd61cb4?init_booking=true&enable_discount=true",
+      "https://parang.exlyapp.com/2eaa1e20-9706-461c-9a8f-bac2c175fd31?init_booking=true&enable_discount=true",
       "_blank"
     );
   };
@@ -20,7 +20,7 @@ const CustomButtonForMobile = () => {
         onClick={handleClickEnglish}
       
       >
-        <div className="dark:text-white">19th January 2025 | 12:00 PM</div>
+        <div className="dark:text-white">26th January 2025 | 11:00 AM</div>
         <button
           className="p-4 text-black rounded-md w-[300px] transition-all duration-300"
           style={{
@@ -45,7 +45,7 @@ const CustomButtonForMobile = () => {
         className="flex justify-center items-center gap-2 flex-col border-2 border-[#007AFF] p-4 rounded-md"
         onClick={handleClickHindi}
       >
-        <div className="dark:text-white">19th January 2025 | 06:00 PM</div>
+        <div className="dark:text-white">26th January 2025 | 06:00 PM</div>
         <button
           className="p-4 text-white rounded-md w-[300px] transition-all duration-300"
           style={{

@@ -32,6 +32,7 @@ export default {
         ld: "1920px",
         xld: "2560px",
         xs: { max: "375px" },
+        mds: { min: "1200px", max: "1650px" },
       },
       fontFamily: {
         // Primary font is SF Pro Text

@@ -3,13 +3,13 @@ import React from "react";
 const CustomButton = () => {
   const handleClickHindi = () => {
     window.open(
-      "https://parang.exlyapp.com/5b107409-6b3f-48df-9b09-e5fd0004a99f?init_booking=true&enable_discount=true",
+      "https://parang.exlyapp.com/2fe56a70-ac54-468a-b871-25d191123b4a?init_booking=true&enable_discount=true ",
       "_blank"
     );
   };
   const handleClickEnglish = () => {
     window.open(
-      "https://parang.exlyapp.com/01b9a72c-8df9-4a85-9859-4bb67fd61cb4?init_booking=true&enable_discount=true",
+      "https://parang.exlyapp.com/2eaa1e20-9706-461c-9a8f-bac2c175fd31?init_booking=true&enable_discount=true",
       "_blank"
     );
   };

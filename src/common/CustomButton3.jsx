@@ -2,7 +2,7 @@ import React from "react";
 import buttonicon1 from "../assets/svg/buttonicon1.svg";
 const CustomButton3 = () => {
   const handleClick = () => {
-    window.open("https://parang.exlyapp.com/5b107409-6b3f-48df-9b09-e5fd0004a99f?init_booking=true&enable_discount=true ","_blank")
+    window.open("https://parang.exlyapp.com/2fe56a70-ac54-468a-b871-25d191123b4a?init_booking=true&enable_discount=true","_blank")
   };
 
   return (
@@ -52,7 +52,7 @@ const CustomButton3 = () => {
             <span className="text-[#0E0F19B2]/[0.7] dark:text-[#FFFFFFB2]/[0.7] font-normal text-[12px] leading-6">
               DATE & Time
             </span>
-            <span>19th January 2025 | 06:00 PM</span>
+            <span>26th January 2025 | 06:00 PM</span>
           </div>
         </div>
       </button>
