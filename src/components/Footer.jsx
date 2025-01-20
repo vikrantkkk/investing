@@ -17,7 +17,7 @@ const Footer = () => {
     // <footer className="flex flex-col justify-center items-center h-auto w-screen gap-8  pb-8 px-4 py-16 dark:bg-[#0B0C13] bg-[#F1F1F1]">
     <footer
       className={`flex flex-col justify-center items-center h-auto w-screen gap-8 md:pb-8 px-4 ${
-        isContactPage ? "py-8" : "md:py-16 pt-16"
+        isContactPage ? "md:py-8 pt-8" : "md:py-16 pt-16"
       } dark:bg-[#0B0C13] bg-[#F1F1F1]`}
     >
       <div>
