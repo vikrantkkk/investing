@@ -101,7 +101,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-2 md:hidden justify-between items-center bg-[#2ABB01] p-2 w-screen fixed z-20 bottom-0">
+      <div className="flex flex-col gap-2 md:hidden justify-between items-center bg-[#2ABB01] p-3 w-screen fixed z-20 bottom-0">
         <div className="flex gap-4">
           <span className="font-bold text-[24px] leading-7 text-white">
             Rs 199{" "}
@@ -116,7 +116,7 @@ const Footer = () => {
         </div>
         <div className="flex gap-4">
           <button
-            className="py-2 px-3 font-semibold text-[16px] leading-5 rounded-full bg-white text-black"
+            className="p-3 font-semibold text-[16px] leading-5 rounded-full bg-white text-black"
             onClick={() =>
               window.open(
                 darkMode
@@ -130,7 +130,7 @@ const Footer = () => {
             Join Now (English)
           </button>
           <button
-            className="py-2 px-3 font-semibold text-[16px] leading-5 rounded-full bg-white text-black"
+            className="p-3 font-semibold text-[16px] leading-5 rounded-full bg-white text-black"
             onClick={() =>
               window.open(
                 darkMode
