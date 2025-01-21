@@ -116,7 +116,7 @@ const Footer = () => {
         </div>
         <div className="flex gap-4">
           <button
-            className="p-3 font-semibold text-[16px] leading-[19px] rounded-full bg-white text-black"
+            className="py-3 px-4 font-semibold text-[16px] leading-[19px] rounded-full bg-white text-black"
             onClick={() =>
               window.open(
                 darkMode
@@ -130,7 +130,7 @@ const Footer = () => {
             Join Now (English)
           </button>
           <button
-            className="p-3 font-semibold text-[16px] leading-[19px] rounded-full bg-white text-black"
+            className="py-3 px-4 font-semibold text-[16px] leading-[19px] rounded-full bg-white text-black"
             onClick={() =>
               window.open(
                 darkMode
