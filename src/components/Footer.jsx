@@ -16,8 +16,8 @@ const Footer = () => {
   return (
     // <footer className="flex flex-col justify-center items-center h-auto w-screen gap-8  pb-8 px-4 py-16 dark:bg-[#0B0C13] bg-[#F1F1F1]">
     <footer
-      className={`flex flex-col justify-center items-center h-auto w-screen gap-8 md:pb-8 px-4 ${
-        isContactPage ? "py-8" : "md:py-16 pt-16"
+      className={`flex flex-col justify-center items-center h-auto w-screen gap-8 md:pb-8 pb-32 px-4 ${
+        isContactPage ? "py-8" : "py-16"
       } dark:bg-[#0B0C13] bg-[#F1F1F1]`}
     >
       <div>
@@ -100,22 +100,23 @@ const Footer = () => {
           Service before proceeding.
         </div>
       </div>
-      {!isContactPage && (
-        <div className="flex md:hidden justify-between items-center bg-[#2ABB01] p-4 w-screen sticky bottom-0">
-          <div className="flex flex-col">
-            <span className="font-bold text-[24px] leading-7 text-white">
-              Rs 199{" "}
-              <span className="font-normal tetx-[20px] leading-6 line-through">
-                499
-              </span>
-            </span>
-            <span className="font-normal tetx-[16px] leading-6 text-white">
-              Sunday 26th Jan, 11:00 AM
-            </span>
-          </div>
 
+      <div className="flex flex-col gap-4 md:hidden justify-between items-center bg-[#2ABB01] p-3 w-screen fixed z-20 bottom-0">
+        <div className="flex gap-4">
+          <span className="font-bold text-[24px] leading-7 text-white">
+            Rs 199{" "}
+            <span className="font-normal tetx-[20px] leading-6 line-through">
+              499
+            </span>
+          </span>
+          <div className="border-r-2" />
+          <span className="font-normal tetx-[16px] leading-6 text-white">
+            Sunday 26th Jan, 11:00 AM
+          </span>
+        </div>
+        <div className="flex gap-4">
           <button
-            className="p-3 font-semibold text-[16px] leading-5 rounded-full bg-white text-black"
+            className="py-3 px-4 font-semibold text-[16px] leading-5 rounded-full bg-white text-black"
             onClick={() =>
               window.open(
                 darkMode
@@ -126,10 +127,24 @@ const Footer = () => {
               )
             }
           >
-            Register Now
+            Join Now (English)
+          </button>
+          <button
+            className="py-3 px-4 font-semibold text-[16px] leading-5 rounded-full bg-white text-black"
+            onClick={() =>
+              window.open(
+                darkMode
+                  ? "https://parang.exlyapp.com/2fe56a70-ac54-468a-b871-25d191123b4a?init_booking=true&enable_discount=true"
+                  : "https://parang.exlyapp.com/2eaa1e20-9706-461c-9a8f-bac2c175fd31?init_booking=true&enable_discount=true",
+                "_blank",
+                "noopener,noreferrer"
+              )
+            }
+          >
+            Join Now (Hindi)
           </button>
         </div>
-      )}
+      </div>
     </footer>
   );
 };

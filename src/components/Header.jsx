@@ -53,14 +53,14 @@ const Header = () => {
         </div>
 
         <div className="flex md:gap-6 items-center justify-center">
-          {/* <button
+          <button
             onClick={() => setDarkMode(!darkMode)}
             className={`ml-4 p-2 rounded ${
               darkMode ? "text-figmaGreen" : "text-figmaGreen"
             }`}
           >
             {darkMode ? <LightModeIcon /> : <DarkModeIcon />}
-          </button> */}
+          </button>
           <a
             href="https://wa.me/918949800532"
             target="_blank"
