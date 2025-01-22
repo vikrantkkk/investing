@@ -113,7 +113,7 @@ const Hero = () => {
           </div>
 
           <div className="font-poppins md:block hidden md:text-[48px] text-[29px] md:leading-[70px] leading-10 font-bold">
-            Crack the Code to Trade
+            Crack the Code to Trade Trade
             <br /> in the <span className="text-figmaGreen">
               Stock Market
             </span>{" "}
@@ -181,13 +181,13 @@ const Hero = () => {
             </div>
 
             <div className="font-poppins text-white md:block hidden md:text-[48px] text-[29px] md:leading-[70px] leading-10 font-bold">
-              Crack the Code to Trade
+              Crack the Code to Trade Trade
               <br /> in the <span className="">Stock Market</span> With
               <br /> a Proven System
             </div>
 
             <div className="font-poppins text-center md:hidden block md:text-[48px] text-[29px] md:leading-[70px] leading-10 font-bold">
-              Crack the Code to Trade
+              Crack the Code to Trade Trade
               <br /> in the <span className="">Stock Market</span>
               <br /> With a Proven System
             </div>
