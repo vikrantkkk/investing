@@ -4,7 +4,7 @@ import buttonicon2 from "../assets/svg/buttonicon2.svg";
 const CustomButton4 = () => {
 
   const handleClick = () => {
-    window.open("https://parang.exlyapp.com/2eaa1e20-9706-461c-9a8f-bac2c175fd31?init_booking=true&enable_discount=true")
+    window.open("https://parang.exlyapp.com/de2705f6-6089-4bf5-a629-a4abc083275e?init_booking=true&enable_discount=true")
   };
 
   return (
@@ -54,7 +54,7 @@ const CustomButton4 = () => {
             <span className="text-[#0E0F19B2]/[0.7] dark:text-[#FFFFFFB2]/[0.7] font-normal text-[12px] leading-6">
               DATE & Time
             </span>
-            <span>26th January 2025 | 11:00 AM</span>
+            <span>2nd February 2025 | 11:00 AM</span>
           </div>
         </div>
       </button>

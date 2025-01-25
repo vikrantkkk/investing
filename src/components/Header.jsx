@@ -78,8 +78,8 @@ const Header = () => {
             <a
               href={
                 darkMode
-                  ? "https://parang.exlyapp.com/2fe56a70-ac54-468a-b871-25d191123b4a?init_booking=true&enable_discount=true"
-                  : "https://parang.exlyapp.com/2eaa1e20-9706-461c-9a8f-bac2c175fd31?init_booking=true&enable_discount=true"
+                  ? "https://parang.exlyapp.com/0afdd5b0-e599-48fd-a20d-a1de748c44e7?init_booking=true&enable_discount=true"
+                  : "https://parang.exlyapp.com/de2705f6-6089-4bf5-a629-a4abc083275e?init_booking=true&enable_discount=true"
               }
               target="_blank"
               rel="noopener noreferrer"
