@@ -8,9 +8,11 @@ import TemporaryDrawer from "../common/TemporaryDrawer";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import { useDarkMode } from "../hooks/DarkModeContext.jsx";
+import { useWebinarData } from "../hooks/WebinarContext.jsx";
 
 const Header = () => {
-  const { darkMode, setDarkMode } = useDarkMode();
+  const { webinarData } = useWebinarData();
+  const { darkMode } = useDarkMode();
   const location = useLocation();
 
   return (
@@ -78,8 +80,8 @@ const Header = () => {
             <a
               href={
                 darkMode
-                  ? "https://parang.exlyapp.com/0afdd5b0-e599-48fd-a20d-a1de748c44e7?init_booking=true&enable_discount=true"
-                  : "https://parang.exlyapp.com/de2705f6-6089-4bf5-a629-a4abc083275e?init_booking=true&enable_discount=true"
+                  ? webinarData?.invest
+                  : webinarData?.investing
               }
               target="_blank"
               rel="noopener noreferrer"

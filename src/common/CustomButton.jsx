@@ -1,17 +1,14 @@
 import React from "react";
+import { useWebinarData } from "../hooks/WebinarContext";
 
 const CustomButton = () => {
+  const { webinarData } = useWebinarData();
+
   const handleClickHindi = () => {
-    window.open(
-      "https://parang.exlyapp.com/0afdd5b0-e599-48fd-a20d-a1de748c44e7?init_booking=true&enable_discount=true ",
-      "_blank"
-    );
+    window.open(webinarData?.invest, "_blank");
   };
   const handleClickEnglish = () => {
-    window.open(
-      "https://parang.exlyapp.com/de2705f6-6089-4bf5-a629-a4abc083275e?init_booking=true&enable_discount=true",
-      "_blank"
-    );
+    window.open(webinarData?.investing, "_blank");
   };
   return (
     <div className="flex md:flex-row flex-col gap-4 font-bold">

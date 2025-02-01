@@ -1,9 +1,41 @@
 import React from "react";
 import buttonicon1 from "../assets/svg/buttonicon1.svg";
+import { useWebinarData } from "../hooks/WebinarContext";
 const CustomButton3 = () => {
+  const { webinarData } = useWebinarData();
+
   const handleClick = () => {
-    window.open("https://parang.exlyapp.com/0afdd5b0-e599-48fd-a20d-a1de748c44e7?init_booking=true&enable_discount=true","_blank")
+    window.open(webinarData?.invest, "_blank");
   };
+  
+  const formatDateTime = (dateString) => {
+    if (!dateString) return "Date not available";
+
+    const dateObj = new Date(dateString);
+    if (isNaN(dateObj)) return "Invalid Date";
+
+    const day = dateObj.getDate();
+    const daySuffix = (day) => {
+      if (day > 3 && day < 21) return "th";
+      const lastDigit = day % 10;
+      return ["st", "nd", "rd"][lastDigit - 1] || "th";
+    };
+
+    const formattedDate = `${day}${daySuffix(day)} ${dateObj.toLocaleString(
+      "en-US",
+      { month: "long", year: "numeric" }
+    )}`;
+
+    const formattedTime = dateObj.toLocaleString("en-US", {
+      hour: "numeric",
+      minute: "2-digit",
+      hour12: true,
+    });
+
+    return `${formattedDate} | ${formattedTime}`;
+  };
+
+  const formattedDateTime = formatDateTime(webinarData?.hindi_webinar_date_time);
 
   return (
     <div className="flex font-bold" onClick={handleClick}>
@@ -52,7 +84,8 @@ const CustomButton3 = () => {
             <span className="text-[#0E0F19B2]/[0.7] dark:text-[#FFFFFFB2]/[0.7] font-normal text-[12px] leading-6">
               DATE & Time
             </span>
-            <span>2nd February 2025 | 06:00 PM</span>
+            {/* <span>2nd February 2025 | 06:00 PM</span> */}
+            <span>{formattedDateTime}</span>
           </div>
         </div>
       </button>

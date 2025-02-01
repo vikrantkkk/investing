@@ -5,16 +5,47 @@ import instagram from "../assets/svg/instagram.svg";
 import darklogo from "../assets/svg/darklogo.svg";
 import { useDarkMode } from "../hooks/DarkModeContext";
 import { useLocation } from "react-router-dom";
+import { useWebinarData } from "../hooks/WebinarContext";
 
 const Footer = () => {
+  const { webinarData } = useWebinarData();
+
   const { darkMode } = useDarkMode();
   const location = useLocation();
 
-  // Check if the current route is the contact page
   const isContactPage = location.pathname === "/contact";
 
+  const formatDateTime = (dateString) => {
+    if (!dateString) return "Date not available";
+
+    const dateObj = new Date(dateString);
+    if (isNaN(dateObj)) return "Invalid Date";
+
+    const day = dateObj.getDate();
+    const daySuffix = (day) => {
+      if (day > 3 && day < 21) return "th";
+      const lastDigit = day % 10;
+      return ["st", "nd", "rd"][lastDigit - 1] || "th";
+    };
+
+    const formattedDate = `${day}${daySuffix(day)} ${dateObj.toLocaleString(
+      "en-US",
+      // { month: "long", year: "numeric" }
+      { month: "long" }
+    )}`;
+
+    const formattedTime = dateObj.toLocaleString("en-US", {
+      hour: "numeric",
+      minute: "2-digit",
+      hour12: true,
+    });
+
+    return `${formattedDate} | ${formattedTime}`;
+  };
+
+  const formattedDateTime = formatDateTime(webinarData?.webinar_date_time);
+
   return (
-    // <footer className="flex flex-col justify-center items-center h-auto w-screen gap-8  pb-8 px-4 py-16 dark:bg-[#0B0C13] bg-[#F1F1F1]">
     <footer
       className={`flex flex-col justify-center items-center h-auto w-screen gap-8 md:pb-8 pb-32 px-4 ${
         isContactPage ? "py-8" : "py-16"
@@ -111,31 +142,20 @@ const Footer = () => {
           </span>
           <div className="border-r-2" />
           <span className="font-normal tetx-[16px] leading-6 text-white">
-            Sunday 2nd feb, 11:00 AM
+            {/* Sunday 2nd feb, 11:00 AM */}
+            {formattedDateTime}
           </span>
         </div>
         <div className="flex gap-4">
           <button
             className="py-3 px-4 font-semibold text-[16px] leading-[19px] rounded-full bg-white text-black"
-            onClick={() =>
-              window.open(
-                "https://parang.exlyapp.com/de2705f6-6089-4bf5-a629-a4abc083275e?init_booking=true&enable_discount=true",
-                "_blank",
-                "noopener,noreferrer"
-              )
-            }
+            onClick={() => window.open(webinarData?.investing, "_blank", "noopener,noreferrer")}
           >
             Join Now (English)
           </button>
           <button
             className="py-3 px-4 font-semibold text-[16px] leading-[19px] rounded-full bg-white text-black"
-            onClick={() =>
-              window.open(
-                "https://parang.exlyapp.com/0afdd5b0-e599-48fd-a20d-a1de748c44e7?init_booking=true&enable_discount=true",
-                "_blank",
-                "noopener,noreferrer"
-              )
-            }
+            onClick={() => window.open(webinarData?.invest, "_blank", "noopener,noreferrer")}
           >
             Join Now (Hindi)
           </button>

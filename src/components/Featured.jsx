@@ -58,7 +58,6 @@ const sliderSettings = {
         infinite: true,
         speed: 5000,
         autoplay: true,
-        speed: 0,
         autoplaySpeed: 0,
         cssEase: "linear",
       },
