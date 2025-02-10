@@ -6,6 +6,7 @@ import darklogo from "../assets/svg/darklogo.svg";
 import { useDarkMode } from "../hooks/DarkModeContext";
 import { useLocation } from "react-router-dom";
 import { useWebinarData } from "../hooks/WebinarContext";
+import EastIcon from '@mui/icons-material/East';
 
 const Footer = () => {
   const { webinarData } = useWebinarData();
@@ -158,6 +159,35 @@ const Footer = () => {
             onClick={() => window.open(webinarData?.invest, "_blank", "noopener,noreferrer")}
           >
             Join Now (Hindi)
+          </button>
+        </div>
+      </div>
+      <div className=" gap-3 justify-between md:flex hidden items-center bg-[#2ABB01] p-8 w-screen fixed z-20 bottom-0">
+        <div className="flex gap-4">
+          <span className="font-bold text-[24px] leading-7 text-white">
+            Rs 199{" "}
+            <span className="font-medium text-[20px] leading-5 line-through">
+              499
+            </span>
+          </span>
+          <div className="border-r-2" />
+          <span className="font-normal tetx-[16px] leading-6 text-white">
+            {/* Sunday 2nd feb, 11:00 AM */}
+            {formattedDateTime}
+          </span>
+        </div>
+        <div className="flex gap-4">
+          <button
+            className="flex justify-center items-center gap-4 py-3 px-4 font-semibold text-[16px] leading-[19px] rounded-md bg-white text-black hover:shadow-xl transition-all duration-300"
+            onClick={() => window.open(webinarData?.investing, "_blank", "noopener,noreferrer")}
+          >
+            Join Now (English) <EastIcon/>
+          </button>
+          <button
+            className="flex justify-center items-center gap-4 py-3 px-4 font-semibold text-[16px] leading-[19px] rounded-md bg-white text-black hover:shadow-xl transition-all duration-300"
+            onClick={() => window.open(webinarData?.invest, "_blank", "noopener,noreferrer")}
+          >
+            Join Now (Hindi) <EastIcon/>
           </button>
         </div>
       </div>

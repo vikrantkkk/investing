@@ -17,8 +17,8 @@ const Header = () => {
 
   return (
     <header className="bg-white dark:bg-darkBackGround border-b dark:border-none fixed w-screen top-0 z-20">
-      <nav className="mx-auto flex items-center justify-between md:px-10 ld:px-28 pl-4 py-4">
-        <div>
+      <nav className="mx-auto flex items-center justify-between md:px-10 ld:px-28 md:pl-4 py-4">
+        <div className="flex justify-between items-center w-full md:px-0 px-4">
           <a href="/" className="flex items-center">
             <img
               src={darkMode ? darklogo : logo}
@@ -26,9 +26,22 @@ const Header = () => {
               className="h-[50px] w-[167px]"
             />
           </a>
+          <div className="md:hidden block">
+            <a
+              href={
+                darkMode
+                  ? webinarData?.invest
+                  : webinarData?.investing
+              }
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <CustomButton1 className="shadow-none">Sign Up</CustomButton1>
+            </a>
+          </div>
         </div>
 
-        <div className="gap-4 justify-center md:flex hidden items-center">
+        {/* <div className="gap-4 justify-center md:flex hidden items-center">
           <Link to="/">
             <div
               className={`py-2 px-4 rounded-full text-[18px] leading-5 ${
@@ -52,7 +65,7 @@ const Header = () => {
               Contact Us
             </div>
           </Link>
-        </div>
+        </div> */}
 
         <div className="flex md:gap-6 items-center justify-center">
           {/* <button
@@ -63,7 +76,7 @@ const Header = () => {
           >
             {darkMode ? <LightModeIcon /> : <DarkModeIcon />}
           </button> */}
-          <a
+          {/* <a
             href="https://wa.me/918949800532"
             target="_blank"
             rel="noopener noreferrer"
@@ -74,7 +87,7 @@ const Header = () => {
               alt="WhatsApp"
               className="h-[24px] w-[24px]"
             />
-          </a>
+          </a> */}
 
           <div className="md:block hidden">
             <a
@@ -90,9 +103,9 @@ const Header = () => {
             </a>
           </div>
 
-          <div className="md:hidden block">
+          {/* <div className="md:hidden block">
             <TemporaryDrawer />
-          </div>
+          </div> */}
         </div>
       </nav>
     </header>
