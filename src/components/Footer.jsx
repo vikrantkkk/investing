@@ -48,7 +48,7 @@ const Footer = () => {
 
   return (
     <footer
-      className={`flex flex-col justify-center items-center h-auto w-screen gap-8 md:pb-8 pb-32 px-4 ${
+      className={`flex flex-col justify-center items-center h-auto w-screen gap-8 pb-32 px-4 ${
         isContactPage ? "py-8" : "py-16"
       } dark:bg-[#0B0C13] bg-[#F1F1F1]`}
     >
@@ -162,32 +162,38 @@ const Footer = () => {
           </button>
         </div>
       </div>
-      <div className=" gap-3 justify-between md:flex hidden items-center bg-[#2ABB01] py-8 pr-96 pl-60 w-screen fixed z-20 bottom-0">
-        <div className="flex gap-4">
-          <span className="font-bold text-[24px] leading-7 text-white">
-            Rs 199{" "}
-            <span className="font-medium text-[20px] leading-5 line-through">
-              499
+      <div className="mx-auto gap-3 justify-between md:flex hidden items-center bg-[#2ABB01] px-28 py-4 w-screen fixed z-20 bottom-0">
+        <div className="flex justify-center items-center gap-4">
+          <span className="flex items-center justify-center gap-2 font-bold text-[40px] leading-[48px] text-white">
+            ₹199{" "}
+            <span className="font-medium text-[28px] leading-5 line-through">
+              ₹499
             </span>
           </span>
-          <div className="border-r-2" />
-          <span className="font-normal tetx-[16px] leading-6 text-white">
-            {/* Sunday 2nd feb, 11:00 AM */}
+          <span className="font-medium tetx-[24px] leading-8 text-white">
             {formattedDateTime}
           </span>
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-8">
           <button
-            className="flex justify-center items-center gap-4 py-3 px-4 font-semibold text-[16px] leading-[19px] rounded-md bg-white text-black hover:shadow-xl transition-all duration-300"
-            onClick={() => window.open(webinarData?.investing, "_blank", "noopener,noreferrer")}
+            className="flex justify-center items-center gap-4 py-3 px-8 font-semibold text-[20px] leading-[19px] rounded-md bg-white text-black hover:shadow-xl transition-all duration-300"
+            onClick={() =>
+              window.open(
+                webinarData?.investing,
+                "_blank",
+                "noopener,noreferrer"
+              )
+            }
           >
-            Join Now (English) <EastIcon/>
+            Join Now (English) <EastIcon />
           </button>
           <button
-            className="flex justify-center items-center gap-4 py-3 px-4 font-semibold text-[16px] leading-[19px] rounded-md bg-white text-black hover:shadow-xl transition-all duration-300"
-            onClick={() => window.open(webinarData?.invest, "_blank", "noopener,noreferrer")}
+            className="flex justify-center items-center gap-4 py-3 px-8 font-semibold text-[20px] leading-[19px] rounded-md bg-white text-black hover:shadow-xl transition-all duration-300"
+            onClick={() =>
+              window.open(webinarData?.invest, "_blank", "noopener,noreferrer")
+            }
           >
-            Join Now (Hindi) <EastIcon/>
+            Join Now (Hindi) <EastIcon />
           </button>
         </div>
       </div>
