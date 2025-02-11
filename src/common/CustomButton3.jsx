@@ -82,7 +82,7 @@ const CustomButton3 = () => {
           </span>
           <div className="flex flex-col justify-center items-start">
             <span className="text-[#0E0F19B2]/[0.7] dark:text-[#FFFFFFB2]/[0.7] font-normal text-[12px] leading-6">
-              DATE & Time
+              Date & Time
             </span>
             {/* <span>2nd February 2025 | 06:00 PM</span> */}
             <span>{formattedDateTime}</span>
