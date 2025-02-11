@@ -162,7 +162,7 @@ const Footer = () => {
           </button>
         </div>
       </div>
-      <div className=" gap-3 justify-between md:flex hidden items-center bg-[#2ABB01] p-8 w-screen fixed z-20 bottom-0">
+      <div className=" gap-3 justify-between md:flex hidden items-center bg-[#2ABB01] py-8 pr-96 pl-60 w-screen fixed z-20 bottom-0">
         <div className="flex gap-4">
           <span className="font-bold text-[24px] leading-7 text-white">
             Rs 199{" "}
